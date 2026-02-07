@@ -10,11 +10,11 @@
 
 | نوع کانفیگ     | لینک Subscription (Raw)                                                                 | توضیحات                  |
 |----------------|------------------------------------------------------------------------------------------|---------------------------|
-| Mixed (همه)    | https://raw.githubusercontent.com/USERNAME/My-Config-Collector/main/configs/mixed_iran.txt     | همه پروتکل‌ها با هم     |
-| VMess          | https://raw.githubusercontent.com/USERNAME/My-Config-Collector/main/configs/vmess_iran.txt     | فقط VMess                |
-| VLESS          | https://raw.githubusercontent.com/USERNAME/My-Config-Collector/main/configs/vless_iran.txt     | فقط VLESS                |
-| Trojan         | https://raw.githubusercontent.com/USERNAME/My-Config-Collector/main/configs/trojan_iran.txt    | فقط Trojan               |
-| Shadowsocks    | https://raw.githubusercontent.com/USERNAME/My-Config-Collector/main/configs/ss_iran.txt        | فقط SS                   |
+| Mixed (همه)    | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/mixed_iran.txt     | همه پروتکل‌ها با هم     |
+| VMess          | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/vmess_iran.txt    | فقط VMess                |
+| VLESS          | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/vless_iran.txt     | فقط VLESS                |
+| Trojan         | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/trojan_iran.txt    | فقط Trojan               |
+| Shadowsocks    | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/ss_iran.txt        | فقط SS                   |
 
 **نکته مهم**: `USERNAME` رو با نام کاربری گیتهابت عوض کن (مثلاً اگر یوزرنیمت amir123 باشه → amir123/My-Config-Collector)
 
@@ -34,4 +34,5 @@
 موفق باشی! 🚀
 
 ---
+
 ⭐ اگر مفید بود ستاره بده  
