@@ -80,13 +80,15 @@ def crawl_for_v2ray(channel_url, all_messages_flag, channel_name):
             for conf in configs_for_line:
                 if not conf.strip():
                     continue
-                proto = "mixed"
+                proto = "mixed"  # پیش‌فرض mixed
                 if not all_messages_flag:
                     for p, reg in MY_REGEX.items():
                         if re.match(reg, conf):
                             proto = p
                             break
                 CONFIGS[proto] += conf.strip() + "|SEP|" + channel_name + "\n"
+                # فیکس: همیشه به mixed اضافه کن
+                CONFIGS["mixed"] += conf.strip() + "|SEP|" + channel_name + "\n"
 
 def get_messages(length, soup, number, channel):
     url = f"{channel}?before={number}"
