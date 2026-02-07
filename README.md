@@ -16,23 +16,16 @@
 | Trojan         | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/trojan_iran.txt    | فقط Trojan               |
 | Shadowsocks    | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/ss_iran.txt        | فقط SS                   |
 
-**نکته مهم**: `USERNAME` رو با نام کاربری گیتهابت عوض کن (مثلاً اگر یوزرنیمت amir123 باشه → amir123/My-Config-Collector)
 
-## آخرین آپدیت
-آخرین اجرا: اتوماتیک هر ساعت (چک کن توی تب Actions)
 
 ## چطور استفاده کنی؟
-1. لینک بالا رو کپی کن
+1. لینک های بالا رو کپی کن
 2. توی کلاینت → Subscription → Add from clipboard یا Import from URL
 3. Update بزن تا کانفیگ‌های تازه لود بشن
 
-کانفیگ‌ها از کانال‌های عمومی تلگرام استخراج می‌شن و ممکنه بعضی‌هاشون کار نکنن (تست زنده توصیه می‌شه).
 
-## کانال‌های منبع
-(لیست رو توی channels.csv می‌تونی ویرایش کنی و commit کنی)
-
-موفق باشی! 🚀
 
 ---
 
-⭐ اگر مفید بود ستاره بده  
+⭐ ممنون میشم با star کردن حمایت کنید  
+
