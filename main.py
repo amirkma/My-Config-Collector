@@ -18,7 +18,7 @@ CONFIGS = {
     "trojan": "",
     "vless": "",
     "mixed": "",
-    "proxy": ""  # فولدر جدید برای پروکسی تلگرام
+    "proxy": ""
 }
 CONFIG_FILE_IDS = {
     "ss": 0,
@@ -34,7 +34,7 @@ MY_REGEX = {
     "trojan": r'(?m)trojan:\/\/.+?(%3A%40|#|$)',
     "vless": r'(?m)vless:\/\/.+?(%3A%40|#|$)'
 }
-PROXY_REGEX = r'(?m)tg:\/\/proxy\/.+|mtproto:\/\/.+|socks5:\/\/.+|https:\/\/t.me\/proxy\?.+'  # regex برای پروکسی تلگرام (tg://proxy, mtproto, socks5 از ت.me/proxy)
+PROXY_REGEX = r'(?m)tg:\/\/proxy\/.+|mtproto:\/\/.+|socks5:\/\/.+|https:\/\/t.me\/proxy\?.+|tg:\/\/socks\?.+'  # بهبود regex برای لینک‌های encoded و دکمه‌دار
 
 def change_url_to_telegram_web_url(url):
     if url.startswith("https://t.me/"):
@@ -59,13 +59,20 @@ def extract_config(txt, temp_configs):
             return extract_config(txt, temp_configs)
     return "\n".join(temp_configs)
 
-def extract_proxy(txt, temp_configs):
+def extract_proxy(txt, hrefs, temp_configs):
+    # استخراج از متن خام
     match = re.search(PROXY_REGEX, txt)
     if match:
         proxy = match.group(0)
         temp_configs.append(proxy)
         txt = txt.replace(proxy, "")
-        return extract_proxy(txt, temp_configs)
+        return extract_proxy(txt, hrefs, temp_configs)
+
+    # استخراج از href تگ <a> برای دکمه‌ها
+    for href in hrefs:
+        if re.match(PROXY_REGEX, href):
+            temp_configs.append(href)
+
     return "\n".join(temp_configs)
 
 def crawl_for_v2ray(channel_url, all_messages_flag, channel_name):
@@ -83,9 +90,10 @@ def crawl_for_v2ray(channel_url, all_messages_flag, channel_name):
     selector = "code, pre" if not all_messages_flag else ".tgme_widget_message_text"
     for elem in soup.select(selector):
         message_text = elem.get_text().replace("<br>", "\n")
+        # استخراج hrefها برای دکمه‌ها
+        hrefs = [a['href'] for a in elem.find_all('a') if 'href' in a.attrs and 'proxy' in a['href']]
         lines = message_text.split("\n")
         for data in lines:
-            # استخراج کانفیگ‌های V2Ray و غیره
             extracted = extract_config(data.strip(), [])
             if extracted:
                 configs_for_line = extracted.split("\n")
@@ -100,13 +108,14 @@ def crawl_for_v2ray(channel_url, all_messages_flag, channel_name):
                         CONFIGS[proto] += conf.strip() + "|SEP|" + channel_name + "\n"
                         CONFIGS["mixed"] += conf.strip() + "|SEP|" + channel_name + "\n"
 
-            # استخراج پروکسی تلگرام
-            extracted_proxy = extract_proxy(data.strip(), [])
+            # استخراج پروکسی
+            extracted_proxy = extract_proxy(data.strip(), hrefs, [])
             if extracted_proxy:
                 proxies_for_line = extracted_proxy.split("\n")
                 for proxy in proxies_for_line:
                     if proxy.strip():
                         CONFIGS["proxy"] += proxy.strip() + "|SEP|" + channel_name + "\n"
+                        CONFIGS["mixed"] += proxy.strip() + "|SEP|" + channel_name + "\n"  # اگر بخوای به mixed اضافه کن
 
 def get_messages(length, soup, number, channel):
     url = f"{channel}?before={number}"
