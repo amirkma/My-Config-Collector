@@ -17,14 +17,16 @@ CONFIGS = {
     "vmess": "",
     "trojan": "",
     "vless": "",
-    "mixed": ""
+    "mixed": "",
+    "proxy": ""  # فولدر جدید برای پروکسی تلگرام
 }
 CONFIG_FILE_IDS = {
     "ss": 0,
     "vmess": 0,
     "trojan": 0,
     "vless": 0,
-    "mixed": 0
+    "mixed": 0,
+    "proxy": 0
 }
 MY_REGEX = {
     "ss": r'(?m)(...ss:|^ss:)\/\/.+?(%3A%40|#|$)',
@@ -32,6 +34,7 @@ MY_REGEX = {
     "trojan": r'(?m)trojan:\/\/.+?(%3A%40|#|$)',
     "vless": r'(?m)vless:\/\/.+?(%3A%40|#|$)'
 }
+PROXY_REGEX = r'(?m)tg:\/\/proxy\/.+|mtproto:\/\/.+|socks5:\/\/.+|https:\/\/t.me\/proxy\?.+'  # regex برای پروکسی تلگرام (tg://proxy, mtproto, socks5 از ت.me/proxy)
 
 def change_url_to_telegram_web_url(url):
     if url.startswith("https://t.me/"):
@@ -56,6 +59,15 @@ def extract_config(txt, temp_configs):
             return extract_config(txt, temp_configs)
     return "\n".join(temp_configs)
 
+def extract_proxy(txt, temp_configs):
+    match = re.search(PROXY_REGEX, txt)
+    if match:
+        proxy = match.group(0)
+        temp_configs.append(proxy)
+        txt = txt.replace(proxy, "")
+        return extract_proxy(txt, temp_configs)
+    return "\n".join(temp_configs)
+
 def crawl_for_v2ray(channel_url, all_messages_flag, channel_name):
     channel_url = change_url_to_telegram_web_url(channel_url)
     resp = http_request(channel_url)
@@ -73,22 +85,28 @@ def crawl_for_v2ray(channel_url, all_messages_flag, channel_name):
         message_text = elem.get_text().replace("<br>", "\n")
         lines = message_text.split("\n")
         for data in lines:
+            # استخراج کانفیگ‌های V2Ray و غیره
             extracted = extract_config(data.strip(), [])
-            if not extracted:
-                continue
-            configs_for_line = extracted.split("\n")
-            for conf in configs_for_line:
-                if not conf.strip():
-                    continue
-                proto = "mixed"  # پیش‌فرض mixed
-                if not all_messages_flag:
-                    for p, reg in MY_REGEX.items():
-                        if re.match(reg, conf):
-                            proto = p
-                            break
-                CONFIGS[proto] += conf.strip() + "|SEP|" + channel_name + "\n"
-                # فیکس: همیشه به mixed اضافه کن
-                CONFIGS["mixed"] += conf.strip() + "|SEP|" + channel_name + "\n"
+            if extracted:
+                configs_for_line = extracted.split("\n")
+                for conf in configs_for_line:
+                    if conf.strip():
+                        proto = "mixed"
+                        if not all_messages_flag:
+                            for p, reg in MY_REGEX.items():
+                                if re.match(reg, conf):
+                                    proto = p
+                                    break
+                        CONFIGS[proto] += conf.strip() + "|SEP|" + channel_name + "\n"
+                        CONFIGS["mixed"] += conf.strip() + "|SEP|" + channel_name + "\n"
+
+            # استخراج پروکسی تلگرام
+            extracted_proxy = extract_proxy(data.strip(), [])
+            if extracted_proxy:
+                proxies_for_line = extracted_proxy.split("\n")
+                for proxy in proxies_for_line:
+                    if proxy.strip():
+                        CONFIGS["proxy"] += proxy.strip() + "|SEP|" + channel_name + "\n"
 
 def get_messages(length, soup, number, channel):
     url = f"{channel}?before={number}"
@@ -162,9 +180,10 @@ def main():
         unique = remove_duplicates(config_content)
         final_output = add_config_names(unique, proto)
         final_output = final_output.strip()
-        with open(f"configs/{proto}_iran.txt", "w", encoding="utf-8") as f:
+        file_name = f"proxies_iran.txt" if proto == "proxy" else f"{proto}_iran.txt"
+        with open(f"configs/{file_name}", "w", encoding="utf-8") as f:
             f.write(final_output)
-        logger.info(f"Saved {proto}_iran.txt")
+        logger.info(f"Saved {file_name}")
 
     logger.info("All Done :D")
 
