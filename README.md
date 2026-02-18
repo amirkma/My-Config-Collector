@@ -15,6 +15,7 @@
 | VLESS          | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/vless_iran.txt     | فقط VLESS                |
 | Trojan         | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/trojan_iran.txt    | فقط Trojan               |
 | Shadowsocks    | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/ss_iran.txt        | فقط SS                   |
+| Lite    | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/mixed_light_iran.txt       | همه پرتکل ها lite                   |
 
 
 
@@ -28,4 +29,5 @@
 ---
 
 ⭐ ممنون میشم با star کردن حمایت کنید  
+
 
