@@ -12,14 +12,15 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 MAX_MESSAGES = 100
-MAX_CONFIGS_PER_CHANNEL = 10  # حداکثر ۱۰ کانفیگ از هر کانال
+MAX_CONFIGS_PER_CHANNEL_LIGHT = 10   # فقط برای فایل لایت
+
 CONFIGS = {
     "ss": "",
     "vmess": "",
     "trojan": "",
     "vless": "",
-    "mixed": "",
-    "mixed_light": "",  # فایل لایت جدید
+    "mixed": "",           # همه کانفیگ‌ها (بدون محدودیت)
+    "mixed_light": "",     # فقط حداکثر ۱۰ تا از هر کانال
     "proxy": ""
 }
 CONFIG_FILE_IDS = {
@@ -89,19 +90,13 @@ def crawl_for_v2ray(channel_url, all_messages_flag, channel_name):
             soup = get_messages(MAX_MESSAGES, soup, post_id, channel_url)
 
     selector = "code, pre" if not all_messages_flag else ".tgme_widget_message_text"
-    extracted_count = 0  # شمارنده برای ۱۰ تا
+    light_count = 0  # فقط برای mixed_light
 
     for elem in soup.select(selector):
-        if extracted_count >= MAX_CONFIGS_PER_CHANNEL:
-            break  # اگر ۱۰ تا رسید، متوقف شو
-
         message_text = elem.get_text().replace("<br>", "\n")
         hrefs = [a['href'] for a in elem.find_all('a') if 'href' in a.attrs and 'proxy' in a['href']]
         lines = message_text.split("\n")
         for data in lines:
-            if extracted_count >= MAX_CONFIGS_PER_CHANNEL:
-                break
-
             extracted = extract_config(data.strip(), [])
             if extracted:
                 configs_for_line = extracted.split("\n")
@@ -113,10 +108,14 @@ def crawl_for_v2ray(channel_url, all_messages_flag, channel_name):
                                 if re.match(reg, conf):
                                     proto = p
                                     break
+                        # اضافه به فایل‌های کامل (بدون محدودیت)
                         CONFIGS[proto] += conf.strip() + "|SEP|" + channel_name + "\n"
                         CONFIGS["mixed"] += conf.strip() + "|SEP|" + channel_name + "\n"
-                        CONFIGS["mixed_light"] += conf.strip() + "|SEP|" + channel_name + "\n"  # برای لایت
-                        extracted_count += 1
+
+                        # اضافه به فایل لایت (حداکثر ۱۰ تا)
+                        if light_count < MAX_CONFIGS_PER_CHANNEL_LIGHT:
+                            CONFIGS["mixed_light"] += conf.strip() + "|SEP|" + channel_name + "\n"
+                            light_count += 1
 
             extracted_proxy = extract_proxy(data.strip(), hrefs, [])
             if extracted_proxy:
@@ -125,8 +124,10 @@ def crawl_for_v2ray(channel_url, all_messages_flag, channel_name):
                     if proxy.strip():
                         CONFIGS["proxy"] += proxy.strip() + "|SEP|" + channel_name + "\n"
                         CONFIGS["mixed"] += proxy.strip() + "|SEP|" + channel_name + "\n"
-                        CONFIGS["mixed_light"] += proxy.strip() + "|SEP|" + channel_name + "\n"  # برای لایت
-                        extracted_count += 1
+
+                        if light_count < MAX_CONFIGS_PER_CHANNEL_LIGHT:
+                            CONFIGS["mixed_light"] += proxy.strip() + "|SEP|" + channel_name + "\n"
+                            light_count += 1
 
 def get_messages(length, soup, number, channel):
     url = f"{channel}?before={number}"
