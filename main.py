@@ -20,7 +20,7 @@ CONFIGS = {
     "trojan": "",
     "vless": "",
     "mixed": "",           # همه کانفیگ‌ها (بدون محدودیت)
-    "mixed_light": "",     # فقط حداکثر ۱۰ تا از هر کانال
+    "mixed-light": "",     # فقط حداکثر ۱۰ تا از هر کانال
     "proxy": ""
 }
 CONFIG_FILE_IDS = {
@@ -201,7 +201,7 @@ def main():
         unique = remove_duplicates(config_content)
         final_output = add_config_names(unique, proto)
         final_output = final_output.strip()
-        file_name = f"proxies_iran.txt" if proto == "proxy" else f"{proto}_iran.txt"
+        file_name = f"proxies-all.txt" if proto == "proxy" else f"{proto}-all.txt"
         with open(f"configs/{file_name}", "w", encoding="utf-8") as f:
             f.write(final_output)
         logger.info(f"Saved {file_name}")
@@ -210,3 +210,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
