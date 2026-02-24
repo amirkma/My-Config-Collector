@@ -10,12 +10,12 @@
 
 | نوع کانفیگ     | لینک Subscription (Raw)                                                                 | توضیحات                  |
 |----------------|------------------------------------------------------------------------------------------|---------------------------|
-| Mixed (همه)    | https://github.com/amirkma/My-Config-Collector/raw/refs/heads/main/configs/mixed-all.txt     | همه پروتکل‌ها با هم     |
-| VMess          | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/vmess_iran.txt    | فقط VMess                |
-| VLESS          | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/vless_iran.txt     | فقط VLESS                |
-| Trojan         | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/trojan_iran.txt    | فقط Trojan               |
-| Shadowsocks    | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/ss_iran.txt        | فقط SS                   |
-| Lite    | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/mixed_light_iran.txt       | همه پرتکل ها lite                   |
+| Mixed (همه)    | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/mixed-all.txt     | همه پروتکل‌ها با هم     |
+| VMess          | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/vmess-all.txt    | فقط VMess                |
+| VLESS          | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/vless-all.txt     | فقط VLESS                |
+| Trojan         | http://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/trojan-all.txt    | فقط Trojan               |
+| Shadowsocks    | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/ss-all.txt        | فقط SS                   |
+| Lite    | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/mixed-light-all.txt       | همه پرتکل ها lite                   |
 
 
 
@@ -29,6 +29,7 @@
 ---
 
 ⭐ ممنون میشم با star کردن حمایت کنید  
+
 
 
 
