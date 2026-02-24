@@ -29,7 +29,7 @@ CONFIG_FILE_IDS = {
     "trojan": 0,
     "vless": 0,
     "mixed": 0,
-    "mixed_light": 0,
+    "mixed-light": 0,
     "proxy": 0
 }
 MY_REGEX = {
@@ -114,7 +114,7 @@ def crawl_for_v2ray(channel_url, all_messages_flag, channel_name):
 
                         # اضافه به فایل لایت (حداکثر ۱۰ تا)
                         if light_count < MAX_CONFIGS_PER_CHANNEL_LIGHT:
-                            CONFIGS["mixed_light"] += conf.strip() + "|SEP|" + channel_name + "\n"
+                            CONFIGS["mixed-light"] += conf.strip() + "|SEP|" + channel_name + "\n"
                             light_count += 1
 
             extracted_proxy = extract_proxy(data.strip(), hrefs, [])
@@ -126,7 +126,7 @@ def crawl_for_v2ray(channel_url, all_messages_flag, channel_name):
                         CONFIGS["mixed"] += proxy.strip() + "|SEP|" + channel_name + "\n"
 
                         if light_count < MAX_CONFIGS_PER_CHANNEL_LIGHT:
-                            CONFIGS["mixed_light"] += proxy.strip() + "|SEP|" + channel_name + "\n"
+                            CONFIGS["mixed-light"] += proxy.strip() + "|SEP|" + channel_name + "\n"
                             light_count += 1
 
 def get_messages(length, soup, number, channel):
@@ -210,4 +210,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
