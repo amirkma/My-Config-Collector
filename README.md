@@ -10,7 +10,7 @@
 
 | نوع کانفیگ     | لینک Subscription (Raw)                                                                 | توضیحات                  |
 |----------------|------------------------------------------------------------------------------------------|---------------------------|
-| Mixed (همه)    | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/mixed_iran.txt     | همه پروتکل‌ها با هم     |
+| Mixed (همه)    | https://github.com/amirkma/My-Config-Collector/raw/refs/heads/main/configs/mixed-all.txt     | همه پروتکل‌ها با هم     |
 | VMess          | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/vmess_iran.txt    | فقط VMess                |
 | VLESS          | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/vless_iran.txt     | فقط VLESS                |
 | Trojan         | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/trojan_iran.txt    | فقط Trojan               |
@@ -29,5 +29,6 @@
 ---
 
 ⭐ ممنون میشم با star کردن حمایت کنید  
+
 
 
