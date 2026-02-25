@@ -1,11 +1,16 @@
 import requests
 import re
-from bs4 import BeautifulSoup
 import os
 import logging
+from bs4 import BeautifulSoup
+import pandas as pd   # ← این خط رو حتماً داشته باش
 from collections import defaultdict
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s | %(levelname)s | %(message)s')
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s | %(levelname)s | %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
 logger = logging.getLogger(__name__)
 
 MAX_MESSAGES = 200
@@ -52,7 +57,7 @@ def extract_proxies(text, hrefs):
     for h in hrefs:
         if re.match(PROXY_REGEX, h):
             matches.append(h)
-    return list(set(matches))
+    return list(set([h.strip() for h in matches if h.strip()]))
 
 def crawl_for_v2ray(channel_url, all_messages_flag, channel_name):
     url = change_url_to_telegram_web_url(channel_url)
@@ -69,37 +74,36 @@ def crawl_for_v2ray(channel_url, all_messages_flag, channel_name):
 
     selector = ".tgme_widget_message_text" if all_messages_flag else "code, pre, .tgme_widget_message_text"
     light_count = 0
-    channel_count = 0
+    channel_configs = 0
+    channel_proxies = 0
 
     for elem in soup.select(selector):
         text = elem.get_text(separator="\n", strip=True)
         hrefs = [a.get("href", "") for a in elem.find_all("a")]
 
-        # کانفیگ‌ها (خام، بدون تغییر)
+        # کانفیگ‌ها - خام بدون هیچ تغییری
         configs = extract_configs(text)
         for conf in configs:
-            conf = conf.strip()
-            if not conf:
-                continue
             CONFIGS["mixed"] += conf + "|SEP|" + channel_name + "\n"
-            CONFIGS[conf.split("://")[0].lower()] += conf + "|SEP|" + channel_name + "\n"
-            channel_count += 1
+            proto_key = conf.split("://")[0].lower()
+            if proto_key in ["ss", "vmess", "trojan", "vless"]:
+                CONFIGS[proto_key] += conf + "|SEP|" + channel_name + "\n"
+            channel_configs += 1
             if light_count < MAX_CONFIGS_PER_CHANNEL_LIGHT:
                 CONFIGS["mixed-light"] += conf + "|SEP|" + channel_name + "\n"
                 light_count += 1
 
-        # پروکسی‌ها (فقط در proxy)
+        # پروکسی‌ها - فقط در proxy
         proxies = extract_proxies(text, hrefs)
         for p in proxies:
-            p = p.strip()
-            if p:
-                CONFIGS["proxy"] += p + "|SEP|" + channel_name + "\n"
+            CONFIGS["proxy"] += p + "|SEP|" + channel_name + "\n"
+            channel_proxies += 1
 
-    total = channel_count + len(proxies)
+    total = channel_configs + channel_proxies
     if total > 0:
-        logger.info(f"کانال {channel_name:20} → کانفیگ: {channel_count} | پروکسی: {len(proxies)} | مجموع: {total}")
+        logger.info(f"{channel_name:20} → کانفیگ: {channel_configs} | پروکسی: {channel_proxies} | مجموع: {total}")
     else:
-        logger.warning(f"کانال {channel_name} → هیچی پیدا نشد")
+        logger.warning(f"{channel_name} → هیچ کانفیگی پیدا نشد")
 
 def get_messages(target, soup, post_id, channel):
     url = f"{channel}?before={post_id}"
@@ -124,7 +128,7 @@ def remove_duplicates(text):
     seen = set()
     result = []
     for line in lines:
-        conf = line.split("|SEP|")[0].strip()
+        conf = line.split("|SEP|", 1)[0].strip()
         if conf not in seen:
             seen.add(conf)
             result.append(line)
@@ -134,7 +138,7 @@ def main():
     try:
         df = pd.read_csv("channels.csv")
     except Exception as e:
-        logger.error(f"channels.csv مشکل دارد: {e}")
+        logger.error(f"channels.csv پیدا نشد یا مشکل دارد: {e}")
         return
 
     for row in df.to_dict("records"):
@@ -143,11 +147,11 @@ def main():
             continue
         all_flag = bool(row.get("AllMessagesFlag", False))
         ch_name = url.rstrip("/").split("/")[-1].lstrip("@")
-        logger.info(f"شروع → {ch_name}")
+        logger.info(f"شروع کراول → {ch_name}")
         crawl_for_v2ray(url, all_flag, ch_name)
 
     os.makedirs("configs", exist_ok=True)
-    logger.info("ذخیره...")
+    logger.info("ذخیره فایل‌ها...")
 
     for key in ["mixed", "mixed-light", "proxy", "ss", "vmess", "trojan", "vless"]:
         content = CONFIGS.get(key, "")
@@ -161,7 +165,7 @@ def main():
         count = len([l for l in cleaned.splitlines() if l.strip()])
         logger.info(f"ذخیره شد → {path:25} ({count} کانفیگ)")
 
-    logger.info("تموم شد ✓")
+    logger.info("کار تموم شد ✓")
 
 if __name__ == "__main__":
     main()
