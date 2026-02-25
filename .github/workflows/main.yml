@@ -30,7 +30,7 @@ jobs:
 
       # 1️⃣ جمع‌آوری کانفیگ‌ها
       - name: Run config collector
-        run: python collector.py
+        run: python main.py
 
       # 2️⃣ ساخت Clash YAML
       - name: Generate Clash config
