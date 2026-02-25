@@ -11,16 +11,16 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-MAX_MESSAGES = 100
-MAX_CONFIGS_PER_CHANNEL_LIGHT = 10   # فقط برای فایل لایت
+MAX_MESSAGES = 200  # افزایش برای پوشش بیشتر
+MAX_CONFIGS_PER_CHANNEL_LIGHT = 10
 
 CONFIGS = {
     "ss": "",
     "vmess": "",
     "trojan": "",
     "vless": "",
-    "mixed": "",           # همه کانفیگ‌ها (بدون محدودیت)
-    "mixed-light": "",     # فقط حداکثر ۱۰ تا از هر کانال
+    "mixed": "",
+    "mixed-light": "",
     "proxy": ""
 }
 CONFIG_FILE_IDS = {
@@ -32,13 +32,16 @@ CONFIG_FILE_IDS = {
     "mixed-light": 0,
     "proxy": 0
 }
+
+# regexهای بهبودیافته بر اساس استانداردهای V2Ray (از منابع مثل Sub-Config-Extractor و wikiها)
 MY_REGEX = {
-    "ss": r'(?m)(...ss:|^ss:)\/\/.+?(%3A%40|#|$)',
-    "vmess": r'(?m)vmess:\/\/.+',
-    "trojan": r'(?m)trojan:\/\/.+?(%3A%40|#|$)',
-    "vless": r'(?m)vless:\/\/.+?(%3A%40|#|$)'
+    "ss": r'(?i)ss://(?:[A-Za-z0-9+/=]+@)?[\w\.-]+:\d+(?:#[^#\n\r]*)?',
+    "vmess": r'(?i)vmess://[A-Za-z0-9+/=]+',
+    "trojan": r'(?i)trojan://(?:[^@#\n\r]+@)?[\w\.-]+:\d+(?:\?[^#\n\r]*)?(?:#[^#\n\r]*)?',
+    "vless": r'(?i)vless://(?:[0-9a-f-]+@)?[\w\.-]+:\d+(?:\?[^#\n\r]*)?(?:#[^#\n\r]*)?'
 }
-PROXY_REGEX = r'(?m)tg:\/\/proxy\/.+|mtproto:\/\/.+|socks5:\/\/.+|https:\/\/t.me\/proxy\?.+|tg:\/\/socks\?.+'
+
+PROXY_REGEX = r'(?i)(tg://(?:proxy|socks)\?.+|mtproto://.+|socks5://.+|https?://t.me/proxy\?.+)'
 
 def change_url_to_telegram_web_url(url):
     if url.startswith("https://t.me/"):
@@ -48,102 +51,121 @@ def change_url_to_telegram_web_url(url):
     return url
 
 def http_request(url):
-    headers = {"User-Agent": "Mozilla/5.0"}
-    resp = requests.get(url, headers=headers)
-    resp.raise_for_status()
-    return resp
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"}
+    try:
+        resp = requests.get(url, headers=headers, timeout=10)
+        resp.raise_for_status()
+        return resp
+    except requests.RequestException as e:
+        logger.error(f"Error fetching {url}: {e}")
+        return None
 
-def extract_config(txt, temp_configs):
-    for regex_value in MY_REGEX.values():
-        match = re.search(regex_value, txt)
-        if match:
-            config = match.group(0)
-            temp_configs.append(config)
-            txt = txt.replace(config, "")
-            return extract_config(txt, temp_configs)
-    return "\n".join(temp_configs)
+def extract_configs(text):
+    all_configs = []
+    for proto, regex in MY_REGEX.items():
+        matches = re.findall(regex, text)
+        for match in matches:
+            all_configs.append((proto, match))
+    return all_configs
 
-def extract_proxy(txt, hrefs, temp_configs):
-    match = re.search(PROXY_REGEX, txt)
-    if match:
-        proxy = match.group(0)
-        temp_configs.append(proxy)
-        txt = txt.replace(proxy, "")
-        return extract_proxy(txt, hrefs, temp_configs)
-
+def extract_proxies(text, hrefs):
+    matches = re.findall(PROXY_REGEX, text)
     for href in hrefs:
         if re.match(PROXY_REGEX, href):
-            temp_configs.append(href)
-
-    return "\n".join(temp_configs)
+            matches.append(href)
+    return list(set(matches))  # حذف duplicate زودرس
 
 def crawl_for_v2ray(channel_url, all_messages_flag, channel_name):
     channel_url = change_url_to_telegram_web_url(channel_url)
     resp = http_request(channel_url)
+    if not resp:
+        return
     soup = BeautifulSoup(resp.text, 'html.parser')
 
     messages = soup.select(".tgme_widget_message_wrap")
-    if len(messages) < MAX_MESSAGES:
+    loaded_messages = len(messages)
+    if loaded_messages < MAX_MESSAGES:
         last_post = soup.select_one(".tgme_widget_message_wrap .js-widget_message:last-child")
         if last_post:
             post_id = last_post.get("data-post", "").split("/")[-1]
             soup = get_messages(MAX_MESSAGES, soup, post_id, channel_url)
 
     selector = "code, pre" if not all_messages_flag else ".tgme_widget_message_text"
-    light_count = 0  # فقط برای mixed_light
+    light_count = 0
 
     for elem in soup.select(selector):
-        message_text = elem.get_text().replace("<br>", "\n")
-        hrefs = [a['href'] for a in elem.find_all('a') if 'href' in a.attrs and 'proxy' in a['href']]
-        lines = message_text.split("\n")
-        for data in lines:
-            extracted = extract_config(data.strip(), [])
-            if extracted:
-                configs_for_line = extracted.split("\n")
-                for conf in configs_for_line:
-                    if conf.strip():
-                        proto = "mixed"
-                        if not all_messages_flag:
-                            for p, reg in MY_REGEX.items():
-                                if re.match(reg, conf):
-                                    proto = p
-                                    break
-                        # اضافه به فایل‌های کامل (بدون محدودیت)
-                        CONFIGS[proto] += conf.strip() + "|SEP|" + channel_name + "\n"
-                        CONFIGS["mixed"] += conf.strip() + "|SEP|" + channel_name + "\n"
+        message_text = elem.get_text().replace("<br>", "\n").strip()
+        hrefs = [a.get('href', '') for a in elem.find_all('a') if 'href' in a.attrs]
 
-                        # اضافه به فایل لایت (حداکثر ۱۰ تا)
-                        if light_count < MAX_CONFIGS_PER_CHANNEL_LIGHT:
-                            CONFIGS["mixed-light"] += conf.strip() + "|SEP|" + channel_name + "\n"
-                            light_count += 1
+        # استخراج configs
+        extracted_configs = extract_configs(message_text)
+        for proto, conf in extracted_configs:
+            if conf.strip():
+                CONFIGS[proto] += conf.strip() + "|SEP|" + channel_name + "\n"
+                CONFIGS["mixed"] += conf.strip() + "|SEP|" + channel_name + "\n"
+                if light_count < MAX_CONFIGS_PER_CHANNEL_LIGHT:
+                    CONFIGS["mixed-light"] += conf.strip() + "|SEP|" + channel_name + "\n"
+                    light_count += 1
 
-            extracted_proxy = extract_proxy(data.strip(), hrefs, [])
-            if extracted_proxy:
-                proxies_for_line = extracted_proxy.split("\n")
-                for proxy in proxies_for_line:
-                    if proxy.strip():
-                        CONFIGS["proxy"] += proxy.strip() + "|SEP|" + channel_name + "\n"
-                        CONFIGS["mixed"] += proxy.strip() + "|SEP|" + channel_name + "\n"
+        # استخراج proxies
+        extracted_proxies = extract_proxies(message_text, hrefs)
+        for proxy in extracted_proxies:
+            if proxy.strip():
+                CONFIGS["proxy"] += proxy.strip() + "|SEP|" + channel_name + "\n"
+                CONFIGS["mixed"] += proxy.strip() + "|SEP|" + channel_name + "\n"
+                if light_count < MAX_CONFIGS_PER_CHANNEL_LIGHT:
+                    CONFIGS["mixed-light"] += proxy.strip() + "|SEP|" + channel_name + "\n"
+                    light_count += 1
 
-                        if light_count < MAX_CONFIGS_PER_CHANNEL_LIGHT:
-                            CONFIGS["mixed-light"] += proxy.strip() + "|SEP|" + channel_name + "\n"
-                            light_count += 1
-
-def get_messages(length, soup, number, channel):
-    url = f"{channel}?before={number}"
-    resp = http_request(url)
-    new_soup = BeautifulSoup(resp.text, 'html.parser')
-    soup.select_one("body").append(new_soup.select_one("body"))
-    if len(soup.select(".js-widget_message_wrap")) > length:
+def get_messages(target_length, soup, post_id, channel):
+    if not post_id:
         return soup
-    num = int(number) - 21
-    if num > 0:
-        return get_messages(length, soup, str(num), channel)
+    url = f"{channel}?before={post_id}"
+    resp = http_request(url)
+    if not resp:
+        return soup
+    new_soup = BeautifulSoup(resp.text, 'html.parser')
+    new_messages = new_soup.select(".tgme_widget_message_wrap")
+    if new_messages:
+        soup.select_one("body").append(new_soup.select_one("body"))
+    current_length = len(soup.select(".tgme_widget_message_wrap"))
+    if current_length >= target_length or not new_messages:
+        return soup
+    last_post = soup.select_one(".tgme_widget_message_wrap .js-widget_message:last-child")
+    if last_post:
+        new_post_id = last_post.get("data-post", "").split("/")[-1]
+        if new_post_id == post_id:  # جلوگیری از لوپ
+            return soup
+        return get_messages(target_length, soup, new_post_id, channel)
     return soup
+
+def normalize_config(conf):
+    if conf.startswith("vmess://"):
+        try:
+            decoded = base64.b64decode(conf[8:])
+            data = json.loads(decoded)
+            return json.dumps(data, sort_keys=True)
+        except:
+            pass
+    return conf.split("#")[0]
+
+def remove_duplicates(text):
+    lines = text.strip().split("\n")
+    seen = set()
+    unique_lines = []
+    for line in lines:
+        if not line:
+            continue
+        conf, sep, channel = line.partition("|SEP|")
+        norm = normalize_config(conf)
+        if norm not in seen:
+            seen.add(norm)
+            unique_lines.append(line)
+    return "\n".join(unique_lines)
 
 def add_config_names(config, config_type):
     lines = config.split("\n")
-    new_configs = ""
+    new_configs = []
     for line in lines:
         if not line:
             continue
@@ -153,44 +175,45 @@ def add_config_names(config, config_type):
         if extracted_config.startswith("vmess://"):
             formatted = edit_vmess_ps(extracted_config, config_type, channel_name)
             if formatted:
-                new_configs += formatted + "\n"
+                new_configs.append(formatted)
         else:
             CONFIG_FILE_IDS[config_type] += 1
-            clean_config = extracted_config.split("#")[0]
-            new_configs += f"{clean_config}#{channel_name}-{CONFIG_FILE_IDS[config_type]}\n"
-    return new_configs
+            clean_config = extracted_config.split("#")[0].rstrip()
+            new_configs.append(f"{clean_config}#{channel_name}-{CONFIG_FILE_IDS[config_type]}")
+    return "\n".join(new_configs)
 
-def edit_vmess_ps(config, file_name, channel_name):
-    slice_ = config.split("vmess://")
-    if len(slice_) < 2:
+def edit_vmess_ps(config, config_type, channel_name):
+    if not config.startswith("vmess://"):
         return ""
     try:
-        decoded = base64.b64decode(slice_[1])
+        decoded = base64.b64decode(config[8:])
         data = json.loads(decoded)
-        CONFIG_FILE_IDS[file_name] += 1
-        data["ps"] = f"{channel_name}-{CONFIG_FILE_IDS[file_name]}"
+        CONFIG_FILE_IDS[config_type] += 1
+        data["ps"] = f"{channel_name}-{CONFIG_FILE_IDS[config_type]}"
         json_data = json.dumps(data)
         return "vmess://" + base64.b64encode(json_data.encode()).decode()
-    except:
+    except Exception as e:
+        logger.warning(f"Error editing vmess: {e}")
         return ""
 
-def remove_duplicates(text):
-    lines = set(text.split("\n"))
-    return "\n".join(lines)
-
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--sort", action="store_true", help="sort from latest to oldest")
+    parser = argparse.ArgumentParser(description="Telegram Channel V2Ray Config Crawler")
+    parser.add_argument("--sort", action="store_true", help="sort from latest to oldest (not implemented yet)")
     args = parser.parse_args()
 
-    df = pd.read_csv("channels.csv")
-    channels = df.to_dict(orient="records")
+    try:
+        df = pd.read_csv("channels.csv")
+        channels = df.to_dict(orient="records")
+    except FileNotFoundError:
+        logger.error("channels.csv not found!")
+        return
 
     for channel in channels:
         url = channel.get("URL", "")
+        if not url:
+            continue
         all_flag = channel.get("AllMessagesFlag", False)
-        parts = url.rstrip("/").split("/")
-        channel_name = parts[-1]
+        channel_name = url.rstrip("/").split("/")[-1].lstrip("@")
         logger.info(f"Crawling {url}")
         crawl_for_v2ray(url, all_flag, channel_name)
         logger.info(f"Crawled {url}!")
@@ -198,6 +221,8 @@ def main():
     logger.info("Creating output files!")
     os.makedirs("configs", exist_ok=True)
     for proto, config_content in CONFIGS.items():
+        if not config_content:
+            continue
         unique = remove_duplicates(config_content)
         final_output = add_config_names(unique, proto)
         final_output = final_output.strip()
