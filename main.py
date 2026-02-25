@@ -33,12 +33,12 @@ CONFIG_FILE_IDS = {
     "proxy": 0
 }
 MY_REGEX = {
-    "ss": r'(?m)(?:ss|shadowsocks)://.+?(?:%3A%40|#|$)',
-    "vmess": r'(?m)vmess://.+',
-    "trojan": r'(?m)trojan://.+?(?:%3A%40|#|$)',
-    "vless": r'(?m)vless://.+?(?:%3A%40|#|$)'
+    "ss": r'(?m)(...ss:|^ss:)\/\/.+?(%3A%40|#|$)',
+    "vmess": r'(?m)vmess:\/\/.+',
+    "trojan": r'(?m)trojan:\/\/.+?(%3A%40|#|$)',
+    "vless": r'(?m)vless:\/\/.+?(%3A%40|#|$)'
 }
-PROXY_REGEX = r'(?m)tg://proxy/.+|mtproto://.+|socks5://.+|https://t.me/proxy\?.+|tg://socks\?.+'
+PROXY_REGEX = r'(?m)tg:\/\/proxy\/.+|mtproto:\/\/.+|socks5:\/\/.+|https:\/\/t.me\/proxy\?.+|tg:\/\/socks\?.+'
 
 def change_url_to_telegram_web_url(url):
     if url.startswith("https://t.me/"):
@@ -53,22 +53,28 @@ def http_request(url):
     resp.raise_for_status()
     return resp
 
-def extract_config(txt):
-    temp_configs = []
+def extract_config(txt, temp_configs):
     for regex_value in MY_REGEX.values():
-        matches = re.findall(regex_value, txt)
-        for match in matches:
-            temp_configs.append(match)
+        match = re.search(regex_value, txt)
+        if match:
+            config = match.group(0)
+            temp_configs.append(config)
+            txt = txt.replace(config, "")
+            return extract_config(txt, temp_configs)
     return "\n".join(temp_configs)
 
-def extract_proxy(txt, hrefs):
-    temp_configs = []
-    matches = re.findall(PROXY_REGEX, txt)
-    for match in matches:
-        temp_configs.append(match)
+def extract_proxy(txt, hrefs, temp_configs):
+    match = re.search(PROXY_REGEX, txt)
+    if match:
+        proxy = match.group(0)
+        temp_configs.append(proxy)
+        txt = txt.replace(proxy, "")
+        return extract_proxy(txt, hrefs, temp_configs)
+
     for href in hrefs:
         if re.match(PROXY_REGEX, href):
             temp_configs.append(href)
+
     return "\n".join(temp_configs)
 
 def crawl_for_v2ray(channel_url, all_messages_flag, channel_name):
@@ -88,10 +94,10 @@ def crawl_for_v2ray(channel_url, all_messages_flag, channel_name):
 
     for elem in soup.select(selector):
         message_text = elem.get_text().replace("<br>", "\n")
-        hrefs = [a['href'] for a in elem.find_all('a') if 'href' in a.attrs]
+        hrefs = [a['href'] for a in elem.find_all('a') if 'href' in a.attrs and 'proxy' in a['href']]
         lines = message_text.split("\n")
         for data in lines:
-            extracted = extract_config(data.strip())
+            extracted = extract_config(data.strip(), [])
             if extracted:
                 configs_for_line = extracted.split("\n")
                 for conf in configs_for_line:
@@ -111,7 +117,7 @@ def crawl_for_v2ray(channel_url, all_messages_flag, channel_name):
                             CONFIGS["mixed-light"] += conf.strip() + "|SEP|" + channel_name + "\n"
                             light_count += 1
 
-            extracted_proxy = extract_proxy(data.strip(), hrefs)
+            extracted_proxy = extract_proxy(data.strip(), hrefs, [])
             if extracted_proxy:
                 proxies_for_line = extracted_proxy.split("\n")
                 for proxy in proxies_for_line:
