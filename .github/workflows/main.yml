@@ -2,7 +2,7 @@ name: Collect and Update Configs (Hourly)
 
 on:
   schedule:
-    - cron: '0 * * * *'           # هر ساعت یک بار
+    - cron: '0 * * * *'   # every hour
   workflow_dispatch:
 
 jobs:
@@ -26,19 +26,27 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4 pandas
+          pip install requests beautifulsoup4 pandas pyyaml
 
+      # 1️⃣ جمع‌آوری کانفیگ‌ها
       - name: Run config collector
-        run: python main.py
+        run: python collector.py
 
-      - name: Commit and push if changes exist
+      # 2️⃣ ساخت Clash YAML
+      - name: Generate Clash config
+        run: python generate_clash.py
+
+      # 3️⃣ Commit & Push
+      - name: Commit and push changes
         run: |
-          git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "actions@github.com"
-          
-          git add configs/ || true
-          
-          # فقط اگر تغییری بود commit و push کن
-          git diff --staged --quiet || git commit -m "Hourly auto update configs - $(date '+%Y-%m-%d %H:%M UTC')"
-          
-          git push origin HEAD:${{ github.ref_name }}
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add configs/
+
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: hourly update configs ($(date -u '+%Y-%m-%d %H:%M'))"
+            git push
+          else
+            echo "No changes to commit"
+          fi
