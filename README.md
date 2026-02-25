@@ -16,6 +16,7 @@
 | Trojan         | http://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/trojan-all.txt    | فقط Trojan               |
 | Shadowsocks    | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/ss-all.txt        | فقط SS                   |
 | Lite    | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/mixed-light-all.txt       | همه پرتکل ها lite                   |
+| clash    | https://raw.githubusercontent.com/amirkma/My-Config-Collector/refs/heads/main/configs/clash.yaml       | همه پرتکل ها lite                   |
 
 
 
@@ -29,6 +30,7 @@
 ---
 
 ⭐ ممنون میشم با star کردن حمایت کنید  
+
 
 
 
