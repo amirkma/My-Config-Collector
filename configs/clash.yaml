@@ -1,1 +1,54 @@
-
+allow-lan: true
+log-level: silent
+mode: rule
+port: 7890
+proxies:
+- alterId: 0
+  cipher: auto
+  name: '@meliproxyy-177'
+  port: 8080
+  server: 104.19.37.10
+  tls: false
+  type: vmess
+  udp: true
+  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
+- alterId: 0
+  cipher: auto
+  name: '@meliproxyy-296'
+  port: 35034
+  server: 165.154.195.38
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
+- alterId: 0
+  cipher: auto
+  name: '@proxy_kafee-358'
+  port: 35925
+  server: nett118.servernettt.shop
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 28979b80-47b6-452a-81ef-2f5415698553
+- alterId: 0
+  cipher: auto
+  name: hope of freedom - @anotherme_night-563
+  port: 1004
+  server: 8.210.197.138
+  tls: false
+  type: vmess
+  udp: true
+  uuid: a13d3f6b-b961-4512-fc8a-9f1d908937b8
+proxy-groups:
+- interval: 300
+  name: AUTO
+  proxies:
+  - '@meliproxyy-177'
+  - '@meliproxyy-296'
+  - '@proxy_kafee-358'
+  - hope of freedom - @anotherme_night-563
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+rules:
+- MATCH,AUTO
+socks-port: 7891
