@@ -1,171 +1,139 @@
 import requests
 import re
-import os
-import logging
+import base64
+import time
+import random
 from bs4 import BeautifulSoup
-import pandas as pd   # ← این خط رو حتماً داشته باش
-from collections import defaultdict
+import pandas as pd
+import logging
+import os
 
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s | %(levelname)s | %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S'
-)
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-MAX_MESSAGES = 200
-MAX_CONFIGS_PER_CHANNEL_LIGHT = 10
+MAX_PAGES = 6               # ≈ ۱۰۰–۱۸۰ پیام اخیر (بیشتر از این اغلب بلاک می‌شه)
+MAX_LIGHT_PER_CHANNEL = 20
+OUTPUT_DIR = "configs"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-CONFIGS = defaultdict(str)
+REGEX_CONFIG = r'(vmess|vless|trojan|ss)://[^\s#|]+'
 
-MY_REGEX = {
-    "ss": r'(?i)(?:ss|shadowsocks)://[^\s#|]+(?:#[^\s|]*)?',
-    "vmess": r'(?i)vmess://[A-Za-z0-9+/=_-]{20,}',
-    "trojan": r'(?i)trojan://[^\s#|]+(?:#[^\s|]*)?',
-    "vless": r'(?i)vless://[^\s#|]+(?:#[^\s|]*)?'
-}
+SUBCONVERTER_API = "https://pub-api-1.bianyuan.xyz/sub"   # یکی از پایدارترین عمومی‌ها در ۲۰۲۶ (اگر کار نکرد، بگو عوض کنیم)
 
-PROXY_REGEX = r'(?i)(?:tg://(?:proxy|socks)\?.+|mtproto://.+|socks5://.+|https?://t\.me/proxy\?.+)'
-
-def change_url_to_telegram_web_url(url):
+def get_preview_url(url):
     url = url.strip()
-    if url.startswith("https://t.me/"):
-        return url.replace("https://t.me/", "https://t.me/s/")
-    if url.startswith("@"):
-        return f"https://t.me/s/{url.lstrip('@')}"
-    return url
+    if url.startswith('@'):
+        return f"https://t.me/s/{url[1:]}"
+    if 't.me/' in url:
+        return url.replace('https://t.me/', 'https://t.me/s/')
+    return f"https://t.me/s/{url}"
 
-def http_request(url):
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
-    try:
-        r = requests.get(url, headers=headers, timeout=12)
-        r.raise_for_status()
-        return r
-    except Exception as e:
-        logger.error(f"خطا در دریافت {url} → {e}")
+def scrape_channel(channel_url, channel_name):
+    url = get_preview_url(channel_url)
+    configs = []
+    before = None
+    page = 0
+
+    while page < MAX_PAGES:
+        try:
+            page_url = f"{url}?before={before}" if before else url
+            headers = {"User-Agent": random.choice([
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+            ])}
+            r = requests.get(page_url, headers=headers, timeout=15)
+            r.raise_for_status()
+
+            soup = BeautifulSoup(r.text, 'html.parser')
+            messages = soup.select('.tgme_widget_message_text')
+
+            if not messages:
+                break
+
+            for msg in messages:
+                text = msg.get_text(separator='\n', strip=True)
+                found = re.findall(REGEX_CONFIG, text, re.IGNORECASE)
+                configs.extend(found)
+
+            last = soup.select_one('.tgme_widget_message[data-post]')
+            if last:
+                before = last['data-post'].split('/')[-1]
+            else:
+                break
+
+            page += 1
+            time.sleep(random.uniform(5, 12))
+
+        except Exception as e:
+            logger.warning(f"خطا در {channel_name} صفحه {page}: {e}")
+            break
+
+    return list(set(configs))
+
+def save_base64(name, cfgs):
+    if not cfgs:
         return None
+    content = '\n'.join(cfgs).strip()
+    b64 = base64.b64encode(content.encode('utf-8')).decode('utf-8')
+    path = os.path.join(OUTPUT_DIR, f"{name}.txt")
+    with open(path, 'w', encoding='utf-8') as f:
+        f.write(b64)
+    logger.info(f"ذخیره شد: {path}")
+    return f"https://raw.githubusercontent.com/{os.getenv('GITHUB_REPOSITORY', 'unknown/repo')}/main/{path}"
 
-def extract_configs(text):
-    found = []
-    for regex in MY_REGEX.values():
-        matches = re.findall(regex, text)
-        found.extend([m.strip() for m in matches if m.strip()])
-    return found
-
-def extract_proxies(text, hrefs):
-    matches = re.findall(PROXY_REGEX, text)
-    for h in hrefs:
-        if re.match(PROXY_REGEX, h):
-            matches.append(h)
-    return list(set([h.strip() for h in matches if h.strip()]))
-
-def crawl_for_v2ray(channel_url, all_messages_flag, channel_name):
-    url = change_url_to_telegram_web_url(channel_url)
-    resp = http_request(url)
-    if not resp:
+def convert_to_clash(sub_raw_url, output_name):
+    if not sub_raw_url:
         return
-
-    soup = BeautifulSoup(resp.text, 'html.parser')
-
-    if len(soup.select(".tgme_widget_message_wrap")) < MAX_MESSAGES:
-        last_msg = soup.select_one(".tgme_widget_message_wrap:last-child .js-widget_message")
-        if last_msg and (pid := last_msg.get("data-post", "").split("/")[-1]):
-            soup = get_messages(MAX_MESSAGES, soup, pid, url)
-
-    selector = ".tgme_widget_message_text" if all_messages_flag else "code, pre, .tgme_widget_message_text"
-    light_count = 0
-    channel_configs = 0
-    channel_proxies = 0
-
-    for elem in soup.select(selector):
-        text = elem.get_text(separator="\n", strip=True)
-        hrefs = [a.get("href", "") for a in elem.find_all("a")]
-
-        # کانفیگ‌ها - خام بدون هیچ تغییری
-        configs = extract_configs(text)
-        for conf in configs:
-            CONFIGS["mixed"] += conf + "|SEP|" + channel_name + "\n"
-            proto_key = conf.split("://")[0].lower()
-            if proto_key in ["ss", "vmess", "trojan", "vless"]:
-                CONFIGS[proto_key] += conf + "|SEP|" + channel_name + "\n"
-            channel_configs += 1
-            if light_count < MAX_CONFIGS_PER_CHANNEL_LIGHT:
-                CONFIGS["mixed-light"] += conf + "|SEP|" + channel_name + "\n"
-                light_count += 1
-
-        # پروکسی‌ها - فقط در proxy
-        proxies = extract_proxies(text, hrefs)
-        for p in proxies:
-            CONFIGS["proxy"] += p + "|SEP|" + channel_name + "\n"
-            channel_proxies += 1
-
-    total = channel_configs + channel_proxies
-    if total > 0:
-        logger.info(f"{channel_name:20} → کانفیگ: {channel_configs} | پروکسی: {channel_proxies} | مجموع: {total}")
-    else:
-        logger.warning(f"{channel_name} → هیچ کانفیگی پیدا نشد")
-
-def get_messages(target, soup, post_id, channel):
-    url = f"{channel}?before={post_id}"
-    resp = http_request(url)
-    if not resp:
-        return soup
-    new_soup = BeautifulSoup(resp.text, "html.parser")
-    new_msgs = new_soup.select(".tgme_widget_message_wrap")
-    if new_msgs:
-        soup.select_one("body").append(new_soup.select_one("body"))
-    if len(soup.select(".tgme_widget_message_wrap")) >= target or not new_msgs:
-        return soup
-    last = soup.select_one(".tgme_widget_message_wrap:last-child .js-widget_message")
-    if last and (new_pid := last.get("data-post", "").split("/")[-1]):
-        if new_pid == post_id:
-            return soup
-        return get_messages(target, soup, new_pid, channel)
-    return soup
-
-def remove_duplicates(text):
-    lines = [l.strip() for l in text.splitlines() if l.strip()]
-    seen = set()
-    result = []
-    for line in lines:
-        conf = line.split("|SEP|", 1)[0].strip()
-        if conf not in seen:
-            seen.add(conf)
-            result.append(line)
-    return "\n".join(result)
+    try:
+        params = {
+            'target': 'clash',
+            'url': sub_raw_url,
+            'config': 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini',
+            'emoji': 'true',
+            'new_name': 'true'
+        }
+        resp = requests.get(SUBCONVERTER_API, params=params, timeout=40)
+        if resp.status_code == 200 and 'proxies:' in resp.text:
+            yaml_path = os.path.join(OUTPUT_DIR, f"{output_name}.yaml")
+            with open(yaml_path, 'w', encoding='utf-8') as f:
+                f.write(resp.text)
+            logger.info(f"Clash yaml ساخته شد: {yaml_path}")
+        else:
+            logger.warning(f"Clash تبدیل نشد: status {resp.status_code}")
+    except Exception as e:
+        logger.error(f"خطا Clash تبدیل: {e}")
 
 def main():
-    try:
-        df = pd.read_csv("channels.csv")
-    except Exception as e:
-        logger.error(f"channels.csv پیدا نشد یا مشکل دارد: {e}")
+    if not os.path.exists('channels.csv'):
+        logger.error("channels.csv نیست!")
         return
 
-    for row in df.to_dict("records"):
-        url = str(row.get("URL", "")).strip()
-        if not url:
-            continue
-        all_flag = bool(row.get("AllMessagesFlag", False))
-        ch_name = url.rstrip("/").split("/")[-1].lstrip("@")
-        logger.info(f"شروع کراول → {ch_name}")
-        crawl_for_v2ray(url, all_flag, ch_name)
+    df = pd.read_csv('channels.csv')
+    channels = df['URL'].dropna().tolist()
 
-    os.makedirs("configs", exist_ok=True)
-    logger.info("ذخیره فایل‌ها...")
+    all_cfgs = []
+    lite_cfgs = []
 
-    for key in ["mixed", "mixed-light", "proxy", "ss", "vmess", "trojan", "vless"]:
-        content = CONFIGS.get(key, "")
-        if not content.strip():
-            continue
-        cleaned = remove_duplicates(content)
-        fname = "proxies-all.txt" if key == "proxy" else f"{key}-all.txt"
-        path = f"configs/{fname}"
-        with open(path, "w", encoding="utf-8") as f:
-            f.write(cleaned.strip() + "\n")
-        count = len([l for l in cleaned.splitlines() if l.strip()])
-        logger.info(f"ذخیره شد → {path:25} ({count} کانفیگ)")
+    for ch_url in channels:
+        name = ch_url.split('/')[-1].replace('@', '')
+        logger.info(f"جمع‌آوری از: {name}")
 
-    logger.info("کار تموم شد ✓")
+        cfgs = scrape_channel(ch_url, name)
+        all_cfgs.extend(cfgs)
+        lite_cfgs.extend(cfgs[:MAX_LIGHT_PER_CHANNEL])
 
-if __name__ == "__main__":
+        time.sleep(random.uniform(8, 18))
+
+    all_cfgs = list(set(all_cfgs))
+    lite_cfgs = list(set(lite_cfgs))
+
+    logger.info(f"مجموع mixed: {len(all_cfgs)} | lite: {len(lite_cfgs)}")
+
+    mixed_url = save_base64('mixed', all_cfgs)
+    lite_url = save_base64('lite-mixed', lite_cfgs)
+
+    convert_to_clash(mixed_url, 'clash-mixed')
+    convert_to_clash(lite_url, 'clash-lite-mixed')
+
+if __name__ == '__main__':
     main()
