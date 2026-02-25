@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 import os
 import argparse
 import logging
+from collections import deque
 from urllib.parse import urlparse, parse_qs
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -23,6 +24,15 @@ CONFIGS = {
     "mixed": "",
     "mixed-light": "",
     "proxy": ""
+}
+
+# اضافه کردن دیکشنری برای ذخیره آخرین کانفیگ‌ها
+LAST_CONFIGS = {
+    "ss": deque(maxlen=MAX_CONFIGS_PER_CHANNEL_LIGHT),
+    "vmess": deque(maxlen=MAX_CONFIGS_PER_CHANNEL_LIGHT),
+    "trojan": deque(maxlen=MAX_CONFIGS_PER_CHANNEL_LIGHT),
+    "vless": deque(maxlen=MAX_CONFIGS_PER_CHANNEL_LIGHT),
+    "proxy": deque(maxlen=MAX_CONFIGS_PER_CHANNEL_LIGHT)
 }
 
 CONFIG_FILE_IDS = {
@@ -43,7 +53,7 @@ MY_REGEX = {
     "vless": r'(?i)vless:\/\/[a-zA-Z0-9@:%._\+~#?&=/-]+'
 }
 
-# بهبود یافته: پشتیبانی از همه فرمت‌های پروکسی تلگرام
+# بهبود یافته: پشتیبانی از همه فرمت‌های پروکسی
 PROXY_REGEX = r'(?i)(tg:\/\/proxy\/[a-zA-Z0-9@.\-_&=?]+|mtproto:\/\/[a-zA-Z0-9@.\-_&=?]+|https:\/\/t\.me\/proxy\?[a-zA-Z0-9=&._-]+|tg:\/\/socks\?[a-zA-Z0-9=&._-]+)'
 
 def change_url_to_telegram_web_url(url):
@@ -72,30 +82,30 @@ def http_request(url, retries=3):
     return None
 
 def extract_all_configs(text):
-    """استخراج همه کانفیگ‌ها از متن - بهبود یافته"""
+    """استخراج همه کانفیگ‌ها از متن"""
     found_configs = []
     
-    # بررسی همه regexها روی کل متن
     for proto, pattern in MY_REGEX.items():
         matches = re.findall(pattern, text)
         for match in matches:
             if isinstance(match, tuple):
                 match = match[0] if match[0] else match[-1]
-            if match and match not in found_configs:
-                found_configs.append((proto, match.strip()))
+            if match and match.strip():
+                # پاکسازی کانفیگ
+                clean_config = match.strip().split('#')[0] if '#' in match else match.strip()
+                found_configs.append((proto, clean_config))
     
     return found_configs
 
 def extract_all_proxies(text):
-    """استخراج همه پروکسی‌ها از متن - بهبود یافته"""
+    """استخراج همه پروکسی‌ها از متن"""
     found_proxies = []
     
-    # پیدا کردن همه پروکسی‌ها با regex
     matches = re.findall(PROXY_REGEX, text)
     for match in matches:
         if isinstance(match, tuple):
             match = match[0] if match[0] else match[-1]
-        if match and match not in found_proxies:
+        if match and match.strip():
             found_proxies.append(match.strip())
     
     return found_proxies
@@ -112,6 +122,7 @@ def crawl_for_v2ray(channel_url, all_messages_flag, channel_name):
             
         soup = BeautifulSoup(resp.text, 'html.parser')
         
+        # دریافت همه پیام‌ها
         messages = soup.select(".tgme_widget_message_wrap")
         if len(messages) < MAX_MESSAGES:
             last_post = soup.select_one(".tgme_widget_message_wrap .js-widget_message:last-child")
@@ -119,40 +130,52 @@ def crawl_for_v2ray(channel_url, all_messages_flag, channel_name):
                 post_id = last_post.get("data-post", "").split("/")[-1]
                 soup = get_messages(MAX_MESSAGES, soup, post_id, channel_url)
         
-        # انتخاب المان‌های مناسب بر اساس فلگ
+        # انتخاب المان‌ها بر اساس فلگ
         if all_messages_flag:
             elements = soup.select(".tgme_widget_message_text")
         else:
             elements = soup.select("code, pre, .tgme_widget_message_text")
         
-        light_count = 0
+        # لیست برای ذخیره موقت کانفیگ‌های این کانال
+        channel_configs = []
         
         for elem in elements:
             message_text = elem.get_text()
             
-            # استخراج همه کانفیگ‌ها
+            # استخراج کانفیگ‌ها
             configs = extract_all_configs(message_text)
             for proto, config in configs:
-                # اضافه به فایل کامل
-                CONFIGS[proto] += f"{config}|SEP|{channel_name}\n"
-                CONFIGS["mixed"] += f"{config}|SEP|{channel_name}\n"
-                
-                # اضافه به فایل لایت (با محدودیت)
-                if light_count < MAX_CONFIGS_PER_CHANNEL_LIGHT:
-                    CONFIGS["mixed-light"] += f"{config}|SEP|{channel_name}\n"
-                    light_count += 1
+                channel_configs.append({
+                    'proto': proto,
+                    'config': config,
+                    'channel': channel_name
+                })
             
-            # استخراج همه پروکسی‌ها
+            # استخراج پروکسی‌ها
             proxies = extract_all_proxies(message_text)
             for proxy in proxies:
-                CONFIGS["proxy"] += f"{proxy}|SEP|{channel_name}\n"
-                CONFIGS["mixed"] += f"{proxy}|SEP|{channel_name}\n"
-                
-                if light_count < MAX_CONFIGS_PER_CHANNEL_LIGHT:
-                    CONFIGS["mixed-light"] += f"{proxy}|SEP|{channel_name}\n"
-                    light_count += 1
+                channel_configs.append({
+                    'proto': 'proxy',
+                    'config': proxy,
+                    'channel': channel_name
+                })
         
-        logger.info(f"✅ Finished crawling {channel_url}")
+        # اضافه کردن به CONFIGS (به ترتیب دریافت)
+        for item in reversed(channel_configs):  # معکوس کردن برای آخرین‌ها اول باشن
+            proto = item['proto']
+            config = item['config']
+            channel = item['channel']
+            
+            # اضافه به فایل کامل
+            if proto in CONFIGS:
+                CONFIGS[proto] += f"{config}|SEP|{channel}\n"
+                CONFIGS["mixed"] += f"{config}|SEP|{channel}\n"
+            
+            # ذخیره در LAST_CONFIGS برای mixed-light (آخرین‌ها)
+            if proto in LAST_CONFIGS:
+                LAST_CONFIGS[proto].appendleft(f"{config}|SEP|{channel}")
+        
+        logger.info(f"✅ Finished crawling {channel_url} - Found {len(channel_configs)} items")
         
     except Exception as e:
         logger.error(f"❌ Error crawling {channel_url}: {e}")
@@ -166,9 +189,12 @@ def get_messages(length, soup, number, channel):
             return soup
             
         new_soup = BeautifulSoup(resp.text, 'html.parser')
-        soup.body.append(new_soup.body)
         
-        if len(soup.select(".js-widget_message_wrap")) > length:
+        # اضافه کردن پیام‌های جدید به soup اصلی
+        for msg in new_soup.select(".tgme_widget_message_wrap"):
+            soup.body.append(msg)
+        
+        if len(soup.select(".tgme_widget_message_wrap")) > length:
             return soup
             
         num = int(number) - 21
@@ -180,33 +206,68 @@ def get_messages(length, soup, number, channel):
     
     return soup
 
+def safe_base64_decode(data):
+    """دیکد ایمن base64 با مدیریت خطا"""
+    try:
+        # پاکسازی data
+        data = data.strip()
+        
+        # اضافه کردن padding در صورت نیاز
+        missing_padding = len(data) % 4
+        if missing_padding:
+            data += '=' * (4 - missing_padding)
+        
+        # تلاش برای دیکد با utf-8
+        try:
+            decoded = base64.b64decode(data).decode('utf-8')
+            return decoded
+        except UnicodeDecodeError:
+            # اگه utf-8 جواب نداد، latin-1 رو امتحان کن
+            decoded = base64.b64decode(data).decode('latin-1')
+            return decoded
+            
+    except Exception as e:
+        logger.debug(f"Base64 decode failed: {e}")
+        return None
+
 def edit_vmess_ps(config, channel_name, config_id):
-    """ویرایش نام VMess برای شناسایی بهتر"""
+    """ویرایش نام VMess برای شناسایی بهتر - با مدیریت خطای بهتر"""
     try:
         if not config.startswith("vmess://"):
             return config
             
-        encoded = config[8:]  # حذف "vmess://"
-        # اطمینان از صحت base64
-        missing_padding = len(encoded) % 4
-        if missing_padding:
-            encoded += '=' * (4 - missing_padding)
-            
-        decoded = base64.b64decode(encoded).decode('utf-8')
-        data = json.loads(decoded)
+        encoded_part = config[8:]  # حذف "vmess://"
+        
+        # دیکد کردن بخش encoded
+        decoded_json = safe_base64_decode(encoded_part)
+        if not decoded_json:
+            return config  # اگه دیکد نشد، همون config اصلی رو برگردون
+        
+        # پارس کردن JSON
+        try:
+            data = json.loads(decoded_json)
+        except json.JSONDecodeError:
+            return config
+        
+        # اضافه کردن نام کانال
         data["ps"] = f"{channel_name}-{config_id}"
+        
+        # انکد دوباره
         new_json = json.dumps(data, separators=(',', ':'))
-        return "vmess://" + base64.b64encode(new_json.encode()).decode()
+        encoded = base64.b64encode(new_json.encode()).decode()
+        
+        return f"vmess://{encoded}"
+        
     except Exception as e:
-        logger.warning(f"Failed to edit vmess ps: {e}")
-        return config
+        logger.debug(f"Failed to edit vmess ps for {channel_name}: {e}")
+        return config  # برگردوندن config اصلی به جای حذف
 
 def add_config_names(config_text, config_type):
     """اضافه کردن نام کانال به کانفیگ‌ها"""
     if not config_text:
         return ""
     
-    lines = config_text.split("\n")
+    lines = config_text.strip().split("\n")
     new_configs = []
     
     for line in lines:
@@ -248,9 +309,12 @@ def remove_duplicates(text):
     for line in lines:
         if not line:
             continue
-            
+        
         # استخراج بخش اصلی کانفیگ بدون کامنت
-        base_config = line.split("#")[0] if "#" in line else line.split("|SEP|")[0]
+        if "|SEP|" in line:
+            base_config = line.split("|SEP|")[0].split("#")[0]
+        else:
+            base_config = line.split("#")[0]
         
         if base_config not in seen:
             seen.add(base_config)
@@ -258,11 +322,38 @@ def remove_duplicates(text):
     
     return "\n".join(unique_lines)
 
+def create_mixed_light():
+    """ایجاد mixed-light از آخرین کانفیگ‌های هر کانال"""
+    mixed_light = []
+    
+    # از هر پروتکل، آخرین کانفیگ‌ها رو بردار
+    for proto, configs in LAST_CONFIGS.items():
+        for config in configs:
+            if config and config not in mixed_light:
+                mixed_light.append(config)
+    
+    # محدود کردن به MAX_CONFIGS_PER_CHANNEL_LIGHT
+    mixed_light = mixed_light[:MAX_CONFIGS_PER_CHANNEL_LIGHT * len(LAST_CONFIGS)]
+    
+    return "\n".join(mixed_light)
+
 def save_configs_to_file(configs, filename):
     """ذخیره کانفیگ‌ها در فایل"""
     try:
+        if not configs:
+            # فایل خالی ایجاد کن
+            with open(f"configs/{filename}", "w", encoding="utf-8") as f:
+                f.write("")
+            logger.info(f"📄 Created empty {filename}")
+            return
+        
         unique_configs = remove_duplicates(configs)
-        final_output = add_config_names(unique_configs, filename.replace("-all.txt", ""))
+        
+        # برای mixed-light از متد خاص استفاده کن
+        if filename == "mixed-light-all.txt":
+            final_output = add_config_names(unique_configs, "mixed-light")
+        else:
+            final_output = add_config_names(unique_configs, filename.replace("-all.txt", ""))
         
         with open(f"configs/{filename}", "w", encoding="utf-8") as f:
             f.write(final_output.strip())
@@ -279,6 +370,11 @@ def main():
     args = parser.parse_args()
 
     try:
+        # خوندن کانال‌ها
+        if not os.path.exists("channels.csv"):
+            logger.error("channels.csv not found!")
+            return
+            
         df = pd.read_csv("channels.csv")
         channels = df.to_dict(orient="records")
         
@@ -288,6 +384,7 @@ def main():
         
         logger.info(f"Found {len(channels)} channels to crawl")
         
+        # کراول کردن کانال‌ها
         for channel in channels:
             url = channel.get("URL", "").strip()
             all_flag = channel.get("AllMessagesFlag", False)
@@ -301,6 +398,9 @@ def main():
         logger.info("📁 Creating output files...")
         os.makedirs("configs", exist_ok=True)
         
+        # ایجاد mixed-light از آخرین کانفیگ‌ها
+        CONFIGS["mixed-light"] = create_mixed_light()
+        
         # ذخیره فایل‌ها
         file_mapping = {
             "ss": "ss-all.txt",
@@ -313,7 +413,7 @@ def main():
         }
         
         for proto, filename in file_mapping.items():
-            if CONFIGS[proto]:
+            if proto in CONFIGS and CONFIGS[proto]:
                 save_configs_to_file(CONFIGS[proto], filename)
             else:
                 # فایل خالی ایجاد کن
@@ -321,7 +421,9 @@ def main():
                     f.write("")
                 logger.info(f"📄 Created empty {filename}")
         
-        logger.info("🎉 All Done! Configs updated successfully.")
+        # گزارش نهایی
+        total_configs = sum(len(CONFIGS[p].strip().split("\n")) if CONFIGS[p] else 0 for p in CONFIGS)
+        logger.info(f"🎉 All Done! Total configs collected: {total_configs}")
         
     except Exception as e:
         logger.error(f"Fatal error in main: {e}")
