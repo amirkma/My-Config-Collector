@@ -150,125 +150,135 @@ proxies:
   skip-cert-verify: true
 - name: Farah_VPN-37
   type: vless
-  server: ru-nl01-vlr01.tcp-reset-club.net
-  port: 17443
-  uuid: 46c9a909-2e81-4f6f-b999-def280062188
+  server: 107.174.181.241
+  port: 8443
+  uuid: b4adc526-acc0-4347-a836-0e179451c82d
   udp: true
   tls: false
   skip-cert-verify: true
 - name: Farah_VPN-39
   type: vless
-  server: 188.114.98.0
-  port: 2096
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-41
-  type: vless
-  server: ipbaz.ping-box.com
+  server: 156.225.72.238
   port: 2096
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-43
+- name: Farah_VPN-41
+  type: trojan
+  server: 172.64.152.23
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-42
   type: vless
-  server: 185.158.133.138
-  port: 2096
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  server: 91.132.51.160
+  port: 443
+  uuid: fed05faf-401f-3412-b658-5c96f3095dd0
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-44
+  type: vless
+  server: 162.159.38.119
+  port: 443
+  uuid: 47702dbb-6607-4d76-80e9-cd75327be3e7
   udp: true
   tls: true
   skip-cert-verify: true
 - name: Farah_VPN-46
   type: vless
-  server: 45.131.7.238
-  port: 2096
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  server: 57.129.53.182
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Farah_VPN-49
+- name: Farah_VPN-48
   type: vless
-  server: chatgpt.com
-  port: 443
-  uuid: 2ad80cff-5ef8-416a-a663-22c147264faa
+  server: 152.228.134.105
+  port: 2053
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-51
+- name: Farah_VPN-50
   type: vless
-  server: 154.194.12.238
-  port: 2096
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-53
-  type: vless
-  server: 162.159.153.231
-  port: 2096
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  server: 51.158.206.87
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   udp: true
   tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-52
+  type: vless
+  server: 131.186.26.129
+  port: 30443
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: true
   skip-cert-verify: true
 - name: Farah_VPN-55
-  type: trojan
-  server: 188.116.22.217
-  port: 2083
-  password: 0zmdDXd0Qt5ff_7Qg67R-Rtq4Tmt4c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-59
   type: vless
-  server: 92.60.78.221
-  port: 443
-  uuid: 6897c181-24b1-4880-8660-e6c5c7ee13c7
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-61
-  type: vless
-  server: 45.130.125.69
-  port: 8443
-  uuid: cff6f361-828a-43c8-a8b5-8d10b32e57fb
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-63
-  type: vless
-  server: 162.19.228.119
-  port: 80
-  uuid: dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-65
-  type: vless
-  server: 190.93.244.138
-  port: 2096
+  server: 158.101.152.6
+  port: 2919
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-57
+  type: vless
+  server: nl.jojack.ru
+  port: 443
+  uuid: eb071647-72a6-46be-8e89-ff3d228d52f6
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-60
+  type: vless
+  server: 57.128.176.82
+  port: 8443
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-62
+  type: vless
+  server: 57.129.63.154
+  port: 2053
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-65
+  type: vmess
+  server: 162.159.152.4
+  port: 443
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
   udp: true
   tls: true
   skip-cert-verify: true
 - name: Farah_VPN-67
   type: vless
-  server: 194.59.5.238
+  server: all.tellmethetrue.shop
+  port: 443
+  uuid: e4824193-4f54-453b-d037-88368e85ef0e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-70
+  type: vless
+  server: 188.244.122.138
   port: 2096
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-69
-  type: vless
-  server: 104.16.89.18
-  port: 443
-  uuid: e6eec2e9-f98d-4fd4-afac-c504123231cf
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: configraygan-71
+- name: configraygan-72
   type: vless
   server: 2.144.6.9
   port: 14032
@@ -276,7 +286,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-73
+- name: proxy_kafee-74
   type: vless
   server: q1.aparatrat1.info
   port: 4646
@@ -284,7 +294,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-75
+- name: vmess_iran-76
   type: vless
   server: eu1hwenyx1ox9x348j81ncfyv62noyv0rskrrhe5ix7xifbk0n2o6npgrjsuiqrjzcj7tj+ppdd7id9xrkg5inqii2jbstuibodtnlairhpbbx3urfdgksi4pnpwllpvk5dc2lo063fpc+wjtvjndq==
   port: null
@@ -292,7 +302,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-76
+- name: vmess_iran-77
   type: vless
   server: dl.recordstodio.ir
   port: 3486
@@ -300,7 +310,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-77
+- name: vmess_iran-78
   type: vless
   server: ge.configfast.site
   port: 3013
@@ -308,7 +318,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-78
+- name: vmess_iran-79
   type: vless
   server: 212.80.8.212
   port: 38941
@@ -316,7 +326,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-79
+- name: vmess_iran-80
   type: vless
   server: gb1.vnet500.xyz
   port: 32030
@@ -324,7 +334,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-80
+- name: vmess_iran-81
   type: vless
   server: s2de1.kingsera.shop
   port: 22101
@@ -332,7 +342,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-87
+- name: vmess_iran-88
   type: vless
   server: cdnuser2048mb.wrongguy.ir
   port: 443
@@ -340,7 +350,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: vmess_iran-88
+- name: vmess_iran-89
   type: vless
   server: v3.dabache.top
   port: 2052
@@ -348,7 +358,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-89
+- name: vmess_iran-90
   type: vless
   server: pqh29v4.globalfymain.com
   port: 8880
@@ -356,7 +366,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-90
+- name: vmess_iran-91
   type: vless
   server: us1.maxservice.life
   port: 443
@@ -364,7 +374,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-91
+- name: vmess_iran-92
   type: vless
   server: vip-meli2.nightgemshop.com
   port: 443
@@ -372,7 +382,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@filembad-98'
+- name: '@filembad-99'
   type: vmess
   server: turk1.net.net
   port: 80
@@ -382,7 +392,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@filembad-99'
+- name: '@filembad-100'
   type: vmess
   server: uk.arabies.net
   port: 6502
@@ -392,7 +402,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-100
+- name: vmess_iran-101
   type: vless
   server: server5-sub5.netkhorplus.ir
   port: 4433
@@ -400,7 +410,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-101
+- name: vmess_iran-102
   type: vless
   server: 212.80.8.212
   port: 38941
@@ -408,7 +418,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-102
+- name: vmess_iran-103
   type: vless
   server: hv344zom.novinpardazanpayam.net
   port: 48908
@@ -416,7 +426,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-108
+- name: vmess_iran-109
   type: vless
   server: gb1.wiziii.xyz
   port: 8085
@@ -424,7 +434,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-110
+- name: vmess_iran-111
   type: vless
   server: vzb.piko-network.top
   port: 3306
@@ -432,7 +442,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-112
+- name: vmess_iran-113
   type: vless
   server: ir2.mahsanrz.ir
   port: 2023
@@ -440,7 +450,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-114
+- name: vmess_iran-115
   type: vless
   server: unlimited.sibvpn.pro
   port: 2083
@@ -448,7 +458,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-118
+- name: vmess_iran-119
   type: vless
   server: sr-d-2.sedarchahar.top
   port: 9102
@@ -456,7 +466,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-129
+- name: anotherme_night-130
   type: vless
   server: 85.133.250.87
   port: 41679
@@ -464,7 +474,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-130
+- name: anotherme_night-131
   type: vless
   server: pan1.tanupload.top
   port: 61443
@@ -472,7 +482,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-131
+- name: anotherme_night-132
   type: vless
   server: 81.12.33.166
   port: 1001
@@ -480,7 +490,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-132
+- name: anotherme_night-133
   type: vless
   server: 81.12.33.175
   port: 1029
@@ -488,7 +498,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-133
+- name: anotherme_night-134
   type: vless
   server: tun1.newdigitalstore.ir
   port: 40229
@@ -496,7 +506,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-134
+- name: anotherme_night-135
   type: vless
   server: quick.reloc.cyou
   port: 43281
@@ -504,7 +514,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-135
+- name: anotherme_night-136
   type: vless
   server: vip-meli2.nightgemshop.com
   port: 443
@@ -512,7 +522,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-136
+- name: anotherme_night-137
   type: vless
   server: 51.rexg.ir
   port: 11001
@@ -520,7 +530,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-137
+- name: anotherme_night-138
   type: trojan
   server: ir1.iobase.ir
   port: 443
@@ -528,7 +538,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: anotherme_night-146
+- name: anotherme_night-147
   type: vless
   server: 81.12.46.79
   port: 2087
@@ -536,7 +546,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-147
+- name: anotherme_night-148
   type: vless
   server: 81.12.46.79
   port: 2096
@@ -544,7 +554,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-148
+- name: anotherme_night-149
   type: vless
   server: 81.12.46.80
   port: 2092
@@ -552,7 +562,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-152
+- name: anotherme_night-153
   type: vless
   server: 85.133.221.61
   port: 543
@@ -560,7 +570,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-153
+- name: anotherme_night-154
   type: vless
   server: 81.12.92.125
   port: 5050
@@ -568,7 +578,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-154
+- name: anotherme_night-155
   type: vless
   server: vipconfig.esrtz.onl
   port: 29655
@@ -576,7 +586,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-155
+- name: anotherme_night-156
   type: vless
   server: ag.sanflow.ir
   port: 921
@@ -584,7 +594,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-156
+- name: anotherme_night-157
   type: vless
   server: pan1.tanupload.top
   port: 61443
@@ -592,7 +602,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-157
+- name: anotherme_night-158
   type: vless
   server: 5.10.248.106
   port: 2058
@@ -600,7 +610,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-158
+- name: anotherme_night-159
   type: vless
   server: porttt4.webchipro2.ir
   port: 3040
@@ -608,7 +618,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-159
+- name: anotherme_night-160
   type: vless
   server: porttt1.webchipro2.ir
   port: 4030
@@ -616,7 +626,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-160
+- name: anotherme_night-161
   type: vless
   server: red1.iran-ont.co.uk
   port: 335
@@ -624,7 +634,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-161
+- name: anotherme_night-162
   type: vless
   server: 94.183.241.83
   port: 443
@@ -632,7 +642,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-172
+- name: anotherme_night-173
   type: vless
   server: vip.new10server.ir
   port: 1300
@@ -640,7 +650,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-173
+- name: anotherme_night-174
   type: vless
   server: melli.ciliko.ir
   port: 4010
@@ -648,7 +658,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-174
+- name: anotherme_night-175
   type: vless
   server: s5.amirdmv2.site
   port: 27010
@@ -656,7 +666,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-175
+- name: anotherme_night-176
   type: vless
   server: samfine.thisisdomain.monster
   port: 3322
@@ -664,7 +674,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-176
+- name: anotherme_night-177
   type: vless
   server: srv7.digispeed.shop
   port: 30806
@@ -697,42 +707,42 @@ proxy-groups:
   - Farah_VPN-37
   - Farah_VPN-39
   - Farah_VPN-41
-  - Farah_VPN-43
+  - Farah_VPN-42
+  - Farah_VPN-44
   - Farah_VPN-46
-  - Farah_VPN-49
-  - Farah_VPN-51
-  - Farah_VPN-53
+  - Farah_VPN-48
+  - Farah_VPN-50
+  - Farah_VPN-52
   - Farah_VPN-55
-  - Farah_VPN-59
-  - Farah_VPN-61
-  - Farah_VPN-63
-  - Farah_VPN-65
+  - Farah_VPN-57
+  - Farah_VPN-60
+  - Farah_VPN-62
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-65
   - Farah_VPN-67
-  - Farah_VPN-69
-  - configraygan-71
-  - proxy_kafee-73
-  - vmess_iran-75
+  - Farah_VPN-70
+  - configraygan-72
+  - proxy_kafee-74
   - vmess_iran-76
   - vmess_iran-77
   - vmess_iran-78
   - vmess_iran-79
   - vmess_iran-80
-  - vmess_iran-87
+  - vmess_iran-81
   - vmess_iran-88
   - vmess_iran-89
   - vmess_iran-90
   - vmess_iran-91
-  - '@filembad-98'
+  - vmess_iran-92
   - '@filembad-99'
-  - vmess_iran-100
+  - '@filembad-100'
   - vmess_iran-101
   - vmess_iran-102
-  - vmess_iran-108
-  - vmess_iran-110
-  - vmess_iran-112
-  - vmess_iran-114
-  - vmess_iran-118
-  - anotherme_night-129
+  - vmess_iran-103
+  - vmess_iran-109
+  - vmess_iran-111
+  - vmess_iran-113
+  - vmess_iran-115
+  - vmess_iran-119
   - anotherme_night-130
   - anotherme_night-131
   - anotherme_night-132
@@ -741,10 +751,10 @@ proxy-groups:
   - anotherme_night-135
   - anotherme_night-136
   - anotherme_night-137
-  - anotherme_night-146
+  - anotherme_night-138
   - anotherme_night-147
   - anotherme_night-148
-  - anotherme_night-152
+  - anotherme_night-149
   - anotherme_night-153
   - anotherme_night-154
   - anotherme_night-155
@@ -754,11 +764,12 @@ proxy-groups:
   - anotherme_night-159
   - anotherme_night-160
   - anotherme_night-161
-  - anotherme_night-172
+  - anotherme_night-162
   - anotherme_night-173
   - anotherme_night-174
   - anotherme_night-175
   - anotherme_night-176
+  - anotherme_night-177
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:
