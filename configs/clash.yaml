@@ -6,25 +6,25 @@ log-level: silent
 proxies:
 - name: GetXConfig-1
   type: vless
-  server: 151.101.1.194
-  port: 80
-  uuid: 7e39161f-e79f-40aa-9a4d-f85684cb820e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-3
-  type: vless
   server: 104.16.158.162
   port: 80
   uuid: a7444b2b-20fb-461f-9840-63e5c8c7d883
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-5
+- name: GetXConfig-3
   type: vless
   server: 45.15.170.222
   port: 8443
   uuid: 9f9f5d92-c61f-45f2-a017-babd28b91888
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-5
+  type: vless
+  server: 151.101.1.194
+  port: 80
+  uuid: 7e39161f-e79f-40aa-9a4d-f85684cb820e
   udp: true
   tls: false
   skip-cert-verify: true
@@ -124,103 +124,87 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-31
+- name: GetXConfig-31
   type: vless
-  server: 46.62.128.207
-  port: 443
-  uuid: 309fa273-6579-4cb2-9143-7cad50401eba
+  server: 185.112.59.134
+  port: 9443
+  uuid: ed609427-35be-4fe6-a8dd-a23f0bd1916a
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Farah_VPN-33
+- name: Farah_VPN-34
   type: vless
-  server: 170.130.40.20
-  port: 443
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-36
-  type: vless
-  server: ipbaz.ping-box.com
-  port: 2096
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-38
-  type: vless
-  server: 192.3.127.51
-  port: 8443
+  server: 178.32.43.41
+  port: 2053
   uuid: 26524cce-d514-4014-a426-365fb266a14d
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-40
+- name: Farah_VPN-37
   type: vless
-  server: ipbaz.ping-box.com
+  server: 188.165.137.202
+  port: 8443
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-39
+  type: trojan
+  server: 212.193.18.144
+  port: 36158
+  password: ZblhWr0mqMakCPg.N
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-41
+  type: vless
+  server: 83.222.20.64
+  port: 17910
+  uuid: 079c1b04-7ef9-4c49-8a7a-849a18ba7b9b
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-43
+  type: vless
+  server: 185.16.110.238
   port: 2096
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-45
+  type: vless
+  server: 104.18.86.181
+  port: 443
+  uuid: ad3b1a22-3678-43a4-a0c2-ddd5b7da5b5a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-51
+  type: vless
+  server: 194.135.22.181
+  port: 443
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-53
+  type: vless
+  server: 168.138.46.67
+  port: 443
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-57
+  type: vless
+  server: 155.248.181.189
+  port: 443
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-42
-  type: vless
-  server: de2.pink-service.ru
-  port: 443
-  uuid: e5a33157-a449-4a25-8bd4-d2b02d66aa38
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-44
-  type: vless
-  server: 109.172.55.232
-  port: 13760
-  uuid: 5fad3ad2-1a94-40d0-85bb-51eb83f5c7df
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-47
-  type: vless
-  server: 95.164.85.109
-  port: 59374
-  uuid: bfc78cd8-5951-4803-8d6c-4cedef8cd420
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-49
-  type: vless
-  server: 89.35.73.250
-  port: 443
-  uuid: 30dc00c9-16c5-4573-b5b2-532940febfd6
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-51
-  type: vless
-  server: 2.56.179.207
-  port: 443
-  uuid: 395b4d7b-0abf-4b48-b9da-7432d800ef65
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-53
-  type: vless
-  server: 45.12.143.191
-  port: 20329
-  uuid: e105e56a-5f81-41a2-ab44-bfffc9b00674
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-55
-  type: trojan
-  server: v1.dabache.top
-  port: 8443
-  password: T9BpZIVMNv
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: meliproxyy-62
+- name: meliproxyy-60
   type: vless
   server: ninja.thegameuhb.ir
   port: 1340
@@ -228,7 +212,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@meliproxyy-64'
+- name: '@meliproxyy-62'
   type: vmess
   server: dC-2.cENtRaLnEt.ClIcK
   port: 3003
@@ -238,7 +222,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@meliproxyy-65'
+- name: '@meliproxyy-63'
   type: vmess
   server: Dc-2.CeNtRaLnEt.cV
   port: 3003
@@ -248,7 +232,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@meliproxyy-66'
+- name: '@meliproxyy-64'
   type: vmess
   server: dC-1.cEnTrAlNeT.Cv
   port: 3003
@@ -258,7 +242,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@meliproxyy-67'
+- name: '@meliproxyy-65'
   type: vmess
   server: dC-1.cEnTrAlNeT.Cv
   port: 3003
@@ -268,11 +252,19 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-72
+- name: meliproxyy-70
   type: vless
   server: gerfan.rjwarehousing.ir
   port: 9987
   uuid: ee33fe22-aae6-4f52-8ce4-b5373c9af35f
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: meliproxyy-72
+  type: vless
+  server: ja1.diiginet.ir
+  port: 2000
+  uuid: 8b3eb5a9-2f8d-435f-865d-3437b02444b6
   udp: true
   tls: false
   skip-cert-verify: true
@@ -635,23 +627,22 @@ proxy-groups:
   - GetXConfig-25
   - GetXConfig-27
   - GetXConfig-29
-  - Farah_VPN-31
-  - Farah_VPN-33
-  - Farah_VPN-36
-  - Farah_VPN-38
-  - Farah_VPN-40
-  - Farah_VPN-42
-  - Farah_VPN-44
-  - Farah_VPN-47
-  - Farah_VPN-49
+  - GetXConfig-31
+  - Farah_VPN-34
+  - Farah_VPN-37
+  - Farah_VPN-39
+  - Farah_VPN-41
+  - Farah_VPN-43
+  - Farah_VPN-45
   - Farah_VPN-51
   - Farah_VPN-53
-  - Farah_VPN-55
-  - meliproxyy-62
+  - Farah_VPN-57
+  - meliproxyy-60
+  - '@meliproxyy-62'
+  - '@meliproxyy-63'
   - '@meliproxyy-64'
   - '@meliproxyy-65'
-  - '@meliproxyy-66'
-  - '@meliproxyy-67'
+  - meliproxyy-70
   - meliproxyy-72
   - vmess_iran-74
   - vmess_iran-76
