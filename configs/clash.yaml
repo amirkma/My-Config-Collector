@@ -94,161 +94,141 @@ proxies:
   skip-cert-verify: true
 - name: Farah_VPN-23
   type: vless
-  server: 144.31.103.37
-  port: 10121
-  uuid: d1209ffb-c159-48d5-b40d-542ce11fc768
+  server: 162.159.12.151
+  port: 443
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
 - name: Farah_VPN-25
-  type: trojan
-  server: ubu.okaoclax.me
+  type: vless
+  server: 162.159.44.109
   port: 443
-  password: 13c169be-8592-4eaa-94cb-69c859e7d987
+  uuid: 47702dbb-6607-4d76-80e9-cd75327be3e7
   udp: true
   tls: true
   skip-cert-verify: true
-- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-26
-  type: vmess
-  server: nmju.1jj.ccwu.cc
-  port: 80
-  uuid: 4e45c1b4-9107-45dd-9995-cdf7cbb44d9d
-  alterId: 0
-  cipher: auto
+- name: Farah_VPN-27
+  type: vless
+  server: 57.129.47.12
+  port: 2053
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Farah_VPN-28
+- name: Farah_VPN-29
   type: vless
-  server: norman.ns.cloudflare.com
-  port: 443
-  uuid: 94daa8ad-75ed-4dbf-a6de-d05036d98df5
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-30
-  type: vless
-  server: 116.203.233.255
+  server: 135.84.74.43
   port: 443
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-32
+- name: Farah_VPN-31
   type: vless
-  server: 159.223.24.65
+  server: 162.159.38.119
   port: 443
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  uuid: 47702dbb-6607-4d76-80e9-cd75327be3e7
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-34
+- name: Farah_VPN-33
   type: vless
-  server: brenna.ns.cloudflare.com
+  server: 51.77.140.254
   port: 443
-  uuid: 1b2c91ab-f6c9-42f8-b2c6-8de0ac133d63
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-36
+- name: Farah_VPN-35
   type: vless
-  server: 143.20.213.206
-  port: 8443
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-38
-  type: vless
-  server: 78.41.109.69
-  port: 443
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-40
-  type: vless
-  server: 57.129.14.56
-  port: 8443
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-42
-  type: vless
-  server: 51.158.206.97
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-44
-  type: vless
-  server: 5.253.43.216
-  port: 443
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: 🇨🇳 Join+Telegram:@Farah_VPN 🇨🇳-46
-  type: vmess
-  server: n1761214911.74qxv.top
-  port: 443
-  uuid: 372c1939-299d-4946-9633-5ffa971f8b67
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-48
-  type: vless
-  server: cz.denditop.site
-  port: 443
-  uuid: 256c5f48-4908-4255-83d1-c86cb58f22b4
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-50
-  type: vless
-  server: 94.156.115.109
-  port: 443
-  uuid: 9357d31a-97f5-492b-9a9d-24dcb3449fb9
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-52
-  type: vless
-  server: 144.31.213.102
-  port: 10121
-  uuid: d1209ffb-c159-48d5-b40d-542ce11fc768
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-54
-  type: vless
-  server: 144.31.213.103
-  port: 10121
-  uuid: d1209ffb-c159-48d5-b40d-542ce11fc768
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-57
-  type: vless
-  server: 87.229.108.103
-  port: 5443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-59
-  type: vless
-  server: chatgpt.com
+  server: 188.244.122.138
   port: 2096
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
   tls: true
   skip-cert-verify: true
-- name: '@proxy_kafee3-64'
+- name: Farah_VPN-37
+  type: vless
+  server: fi3.axinode.sbs
+  port: 10965
+  uuid: d1209ffb-c159-48d5-b40d-542ce11fc768
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-39
+  type: vless
+  server: 152.228.134.60
+  port: 443
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-41
+  type: vless
+  server: 141.94.77.169
+  port: 2053
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-44
+  type: vless
+  server: 156.243.83.138
+  port: 2096
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-46
+  type: vless
+  server: 95.182.96.30
+  port: 2053
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-48
+  type: vless
+  server: 45.131.5.138
+  port: 2096
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-50
+  type: vless
+  server: 185.16.110.238
+  port: 2096
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-52
+  type: vless
+  server: 194.36.39.98
+  port: 8443
+  uuid: cadadce7-0daa-44c1-9f7a-05fe4ebcbb30
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-54
+  type: vless
+  server: 141.95.127.132
+  port: 2053
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-58
+  type: vless
+  server: 185.148.104.238
+  port: 2096
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: '@proxy_kafee3-63'
   type: vmess
   server: dl4.kendoole.store
   port: 443
@@ -258,7 +238,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-65
+- name: proxy_kafee-64
   type: vless
   server: 151.101.193.57
   port: 80
@@ -266,7 +246,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-66
+- name: proxy_kafee-65
   type: vless
   server: 151.101.1.57
   port: 80
@@ -274,7 +254,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-67
+- name: proxy_kafee-66
   type: vless
   server: mp.sanflow.ir
   port: 921
@@ -282,7 +262,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-68
+- name: proxy_kafee-67
   type: vless
   server: aa.blue-world.fun
   port: 443
@@ -290,7 +270,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-75
+- name: proxy_kafee-74
   type: vless
   server: f2.hamrahconf.ir
   port: 8443
@@ -298,7 +278,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: proxy_kafee-76
+- name: proxy_kafee-75
   type: vless
   server: 188.114.98.0
   port: 443
@@ -306,7 +286,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: vmess_iran-79
+- name: vmess_iran-78
   type: vless
   server: 1sofewhite.legendperm.ir
   port: 1312
@@ -314,7 +294,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-81
+- name: vmess_iran-80
   type: vless
   server: sv.letknow.shop
   port: 1001
@@ -322,7 +302,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-82
+- name: vmess_iran-81
   type: vless
   server: 104.21.17.104
   port: 8880
@@ -330,7 +310,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-83
+- name: vmess_iran-82
   type: vless
   server: 46.34.163.42
   port: 80
@@ -338,7 +318,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-87
+- name: vmess_iran-86
   type: vless
   server: 85.133.202.80
   port: 27497
@@ -346,7 +326,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-89
+- name: vmess_iran-88
   type: vless
   server: 185.206.92.110
   port: 52478
@@ -354,7 +334,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-90
+- name: vmess_iran-89
   type: vless
   server: 91.192.160.135
   port: 28
@@ -362,7 +342,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-91
+- name: vmess_iran-90
   type: vless
   server: ::ffff:5eb8:1a6f
   port: 58396
@@ -370,7 +350,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-92
+- name: vmess_iran-91
   type: vless
   server: sofewhite.legendperm.ir
   port: 4722
@@ -378,7 +358,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@RUSSIAPROXYY 🇷🇺-100'
+- name: '@RUSSIAPROXYY 🇷🇺-99'
   type: vmess
   server: 8.210.141.149
   port: 443
@@ -388,7 +368,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: '@EsTunnel - Psiphon+V2rayNG-101'
+- name: '@EsTunnel - Psiphon+V2rayNG-100'
   type: vmess
   server: gsmvpn.gsmvx.com
   port: 5006
@@ -398,7 +378,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@Hiddify_Nexttt + Psiphon-102'
+- name: '@Hiddify_Nexttt + Psiphon-101'
   type: vmess
   server: gsmvpn.gsmvx.com
   port: 5006
@@ -408,7 +388,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-103
+- name: vmess_iran-102
   type: vless
   server: snt1.shahramv1.site
   port: 443
@@ -416,7 +396,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: vmess_iran-104
+- name: vmess_iran-103
   type: vless
   server: 54.93.56.163
   port: 22224
@@ -424,7 +404,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: vmess_iran-105
+- name: vmess_iran-104
   type: vless
   server: 199.241.138.38
   port: 25631
@@ -432,7 +412,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: vmess_iran-106
+- name: vmess_iran-105
   type: vless
   server: emg6.saipasamandemg6.sbs
   port: 2006
@@ -440,7 +420,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-107
+- name: vmess_iran-106
   type: trojan
   server: 54.93.56.163
   port: 22222
@@ -448,7 +428,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: vmess_iran-115
+- name: vmess_iran-114
   type: vless
   server: viptun2.persianv2.ir
   port: 2096
@@ -456,7 +436,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-116
+- name: vmess_iran-115
   type: vless
   server: outbounde.iran-mehrbu.ir
   port: 16446
@@ -464,7 +444,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-117
+- name: vmess_iran-116
   type: vless
   server: viptun2.persianv2.ir
   port: 2096
@@ -472,7 +452,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@Spotify_Porteghali 4183-121'
+- name: '@Spotify_Porteghali 4183-120'
   type: vmess
   server: tr1.iranishops.com
   port: 443
@@ -482,7 +462,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@Spotify_Porteghali 3518-123'
+- name: '@Spotify_Porteghali 3518-122'
   type: vmess
   server: uk1.iranishops.com
   port: 443
@@ -492,7 +472,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Spotify_Porteghali-125
+- name: Spotify_Porteghali-124
   type: vless
   server: turbo.unlimiteds.site
   port: 550
@@ -500,7 +480,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Spotify_Porteghali-127
+- name: Spotify_Porteghali-126
   type: vless
   server: lord.socialxxmedia.pro
   port: 440
@@ -525,54 +505,52 @@ proxy-groups:
   - GetXConfig-21
   - Farah_VPN-23
   - Farah_VPN-25
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-26
-  - Farah_VPN-28
-  - Farah_VPN-30
-  - Farah_VPN-32
-  - Farah_VPN-34
-  - Farah_VPN-36
-  - Farah_VPN-38
-  - Farah_VPN-40
-  - Farah_VPN-42
+  - Farah_VPN-27
+  - Farah_VPN-29
+  - Farah_VPN-31
+  - Farah_VPN-33
+  - Farah_VPN-35
+  - Farah_VPN-37
+  - Farah_VPN-39
+  - Farah_VPN-41
   - Farah_VPN-44
-  - 🇨🇳 Join+Telegram:@Farah_VPN 🇨🇳-46
+  - Farah_VPN-46
   - Farah_VPN-48
   - Farah_VPN-50
   - Farah_VPN-52
   - Farah_VPN-54
-  - Farah_VPN-57
-  - Farah_VPN-59
-  - '@proxy_kafee3-64'
+  - Farah_VPN-58
+  - '@proxy_kafee3-63'
+  - proxy_kafee-64
   - proxy_kafee-65
   - proxy_kafee-66
   - proxy_kafee-67
-  - proxy_kafee-68
+  - proxy_kafee-74
   - proxy_kafee-75
-  - proxy_kafee-76
-  - vmess_iran-79
+  - vmess_iran-78
+  - vmess_iran-80
   - vmess_iran-81
   - vmess_iran-82
-  - vmess_iran-83
-  - vmess_iran-87
+  - vmess_iran-86
+  - vmess_iran-88
   - vmess_iran-89
   - vmess_iran-90
   - vmess_iran-91
-  - vmess_iran-92
-  - '@RUSSIAPROXYY 🇷🇺-100'
-  - '@EsTunnel - Psiphon+V2rayNG-101'
-  - '@Hiddify_Nexttt + Psiphon-102'
+  - '@RUSSIAPROXYY 🇷🇺-99'
+  - '@EsTunnel - Psiphon+V2rayNG-100'
+  - '@Hiddify_Nexttt + Psiphon-101'
+  - vmess_iran-102
   - vmess_iran-103
   - vmess_iran-104
   - vmess_iran-105
   - vmess_iran-106
-  - vmess_iran-107
+  - vmess_iran-114
   - vmess_iran-115
   - vmess_iran-116
-  - vmess_iran-117
-  - '@Spotify_Porteghali 4183-121'
-  - '@Spotify_Porteghali 3518-123'
-  - Spotify_Porteghali-125
-  - Spotify_Porteghali-127
+  - '@Spotify_Porteghali 4183-120'
+  - '@Spotify_Porteghali 3518-122'
+  - Spotify_Porteghali-124
+  - Spotify_Porteghali-126
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:
