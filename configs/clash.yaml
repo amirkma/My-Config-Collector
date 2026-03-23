@@ -372,22 +372,6 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Spotify_Porteghali-92
-  type: vless
-  server: turbo.unlimiteds.site
-  port: 550
-  uuid: 58155c74-43b1-1581-8712-293e05be56dd
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Spotify_Porteghali-94
-  type: vless
-  server: lord.socialxxmedia.pro
-  port: 440
-  uuid: 7f6bd5dd-4f3f-c4d3-72bc-f9c24ce33936
-  udp: true
-  tls: false
-  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -437,8 +421,6 @@ proxy-groups:
   - vmess_iran-86
   - vmess_iran-87
   - vmess_iran-88
-  - Spotify_Porteghali-92
-  - Spotify_Porteghali-94
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:
