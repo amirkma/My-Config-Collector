@@ -52,33 +52,39 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Farah_VPN-13
+- name: Farah_VPN-21
   type: vless
-  server: 84.17.37.19
-  port: 8443
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  server: 152.53.200.42
+  port: 7443
+  uuid: 4ab1088a-9f8a-4fcc-8805-8353a8b3cf44
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-- name: 🏳️ Join+Telegram:@Farah_VPN 🏳️-15
-  type: vmess
-  server: 23.162.200.227
+- name: Farah_VPN-24
+  type: vless
+  server: 157.173.127.225
   port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
+  uuid: 11beaf11-726d-4c11-8ce9-27308c1c608c
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-27
+  type: vless
+  server: 38.60.212.251
+  port: 29059
+  uuid: d706bf16-124a-417b-aaa0-0d6d5efd58fd
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-32
+  type: vless
+  server: 220.128.110.108
+  port: 43
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-25
-  type: trojan
-  server: glowing-deer.rooster465.autos
-  port: 443
-  password: ZY07256934
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: meliproxyy-33
+- name: meliproxyy-34
   type: vless
   server: my4.tehranhost.mom
   port: 37004
@@ -86,7 +92,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@RUSSIAPROXYY 🇷🇺-35'
+- name: '@RUSSIAPROXYY 🇷🇺-36'
   type: vmess
   server: 8.210.141.149
   port: 443
@@ -96,7 +102,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: '@EsTunnel - Psiphon+V2rayNG-36'
+- name: '@EsTunnel - Psiphon+V2rayNG-37'
   type: vmess
   server: gsmvpn.gsmvx.com
   port: 5006
@@ -106,7 +112,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@Hiddify_Nexttt + Psiphon-37'
+- name: '@Hiddify_Nexttt + Psiphon-38'
   type: vmess
   server: gsmvpn.gsmvx.com
   port: 5006
@@ -116,7 +122,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-38
+- name: vmess_iran-39
   type: vless
   server: snt1.shahramv1.site
   port: 443
@@ -124,7 +130,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: vmess_iran-39
+- name: vmess_iran-40
   type: vless
   server: 54.93.56.163
   port: 22224
@@ -132,7 +138,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: vmess_iran-40
+- name: vmess_iran-41
   type: vless
   server: 199.241.138.38
   port: 25631
@@ -140,7 +146,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: vmess_iran-41
+- name: vmess_iran-42
   type: vless
   server: emg6.saipasamandemg6.sbs
   port: 2006
@@ -148,7 +154,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-42
+- name: vmess_iran-43
   type: trojan
   server: 54.93.56.163
   port: 22222
@@ -156,7 +162,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: vmess_iran-50
+- name: vmess_iran-51
   type: vless
   server: viptun2.persianv2.ir
   port: 2096
@@ -164,7 +170,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-51
+- name: vmess_iran-52
   type: vless
   server: outbounde.iran-mehrbu.ir
   port: 16446
@@ -172,7 +178,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-52
+- name: vmess_iran-53
   type: vless
   server: viptun2.persianv2.ir
   port: 2096
@@ -190,21 +196,22 @@ proxy-groups:
   - GetXConfig-7
   - GetXConfig-9
   - GetXConfig-11
-  - Farah_VPN-13
-  - 🏳️ Join+Telegram:@Farah_VPN 🏳️-15
-  - Farah_VPN-25
-  - meliproxyy-33
-  - '@RUSSIAPROXYY 🇷🇺-35'
-  - '@EsTunnel - Psiphon+V2rayNG-36'
-  - '@Hiddify_Nexttt + Psiphon-37'
-  - vmess_iran-38
+  - Farah_VPN-21
+  - Farah_VPN-24
+  - Farah_VPN-27
+  - Farah_VPN-32
+  - meliproxyy-34
+  - '@RUSSIAPROXYY 🇷🇺-36'
+  - '@EsTunnel - Psiphon+V2rayNG-37'
+  - '@Hiddify_Nexttt + Psiphon-38'
   - vmess_iran-39
   - vmess_iran-40
   - vmess_iran-41
   - vmess_iran-42
-  - vmess_iran-50
+  - vmess_iran-43
   - vmess_iran-51
   - vmess_iran-52
+  - vmess_iran-53
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:
