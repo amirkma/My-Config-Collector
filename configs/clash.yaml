@@ -100,83 +100,15 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Farah_VPN-25
+- name: Farah_VPN-26
   type: vless
-  server: 88.218.0.184
-  port: 8085
-  uuid: 00000000-0000-4000-8000-000000000000
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-27
-  type: vless
-  server: 89.248.207.37
+  server: 88.218.78.167
   port: 443
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-30
-  type: vless
-  server: 90.156.254.74
-  port: 443
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-32
-  type: vless
-  server: 162.159.36.5
-  port: 80
-  uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-34
-  type: vless
-  server: 147.78.140.238
-  port: 2096
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-36
-  type: vless
-  server: 45.148.117.94
-  port: 443
-  uuid: 443fd8ea-3cfd-4286-a4e2-91276e41fe51
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 🏳️ Join+Telegram:@Farah_VPN 🏳️-38
-  type: vmess
-  server: pe1.bctuo.top
-  port: 443
-  uuid: 31801968-9877-4ef5-be87-56503c34a69d
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 🇵🇪 Join+Telegram:@Farah_VPN 🇵🇪-40
-  type: vmess
-  server: pe1.bctuo.top
-  port: 443
-  uuid: 31801968-9877-4ef5-be87-56503c34a69d
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-43
-  type: vless
-  server: 202.155.11.137
-  port: 8443
-  uuid: f3a1017d-1ebf-11f1-8cae-c3845d39d2de
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-45
+- name: Farah_VPN-28
   type: vless
   server: download.lastilhame.monster
   port: 443
@@ -184,33 +116,113 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: 🏳️ Join+Telegram:@Farah_VPN 🏳️-48
+- name: Farah_VPN-30
+  type: vless
+  server: 138.197.183.219
+  port: 443
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-32
+  type: vless
+  server: 45.148.31.0
+  port: 15855
+  uuid: e4fc4761-154f-490e-bbaa-b4fa193f1073
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-34
+  type: trojan
+  server: 160.16.132.38
+  port: 3057
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-35
+  type: vless
+  server: chatgpt.com
+  port: 2096
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-37
+  type: vless
+  server: 5.178.110.39
+  port: 2053
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: 🏳️ Join+Telegram:@Farah_VPN 🏳️-39
   type: vmess
-  server: 149.30.232.103
-  port: 31469
-  uuid: 5381445d-6ae4-4948-b61a-a16d9498d21b
+  server: 165.140.216.141
+  port: 443
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
   alterId: 0
   cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Farah_VPN-50
+- name: Farah_VPN-41
   type: vless
-  server: 45.149.115.148
+  server: 57.129.47.29
+  port: 2053
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-43
+  type: vless
+  server: us2.404-it.ru
   port: 443
-  uuid: 8b648e4c-ac38-4809-951b-e1c8862b13d1
+  uuid: 6d0e9ded-d23d-4ffb-b165-7bc757be84d3
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Farah_VPN-52
+- name: Farah_VPN-46
+  type: trojan
+  server: n2.chateditimage.com
+  port: 443
+  password: 4123ae62-0999-4984-8ead-091630e594a9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-49
   type: vless
-  server: 45.66.163.95
-  port: 5443
-  uuid: 1955433c-a18a-4f0c-8837-390226193372
+  server: 94.130.132.180
+  port: 8443
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-54
+- name: Farah_VPN-51
+  type: vless
+  server: 152.53.50.126
+  port: 22955
+  uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-54
+  type: vless
+  server: 45.131.4.192
+  port: 80
+  uuid: 5f4845b4-11dc-41d6-9508-4ff6a02e36c1
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-56
+  type: vless
+  server: 57.129.49.1
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: meliproxyy-58
   type: vless
   server: my4.tehranhost.mom
   port: 37004
@@ -218,7 +230,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-56
+- name: vmess_iran-60
   type: vless
   server: viptun2.persianv2.ir
   port: 2096
@@ -226,7 +238,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-57
+- name: vmess_iran-61
   type: vless
   server: outbounde.iran-mehrbu.ir
   port: 16446
@@ -234,7 +246,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-58
+- name: vmess_iran-62
   type: vless
   server: viptun2.persianv2.ir
   port: 2096
@@ -258,23 +270,25 @@ proxy-groups:
   - GetXConfig-19
   - GetXConfig-21
   - GetXConfig-23
-  - Farah_VPN-25
-  - Farah_VPN-27
+  - Farah_VPN-26
+  - Farah_VPN-28
   - Farah_VPN-30
   - Farah_VPN-32
   - Farah_VPN-34
-  - Farah_VPN-36
-  - 🏳️ Join+Telegram:@Farah_VPN 🏳️-38
-  - 🇵🇪 Join+Telegram:@Farah_VPN 🇵🇪-40
+  - Farah_VPN-35
+  - Farah_VPN-37
+  - 🏳️ Join+Telegram:@Farah_VPN 🏳️-39
+  - Farah_VPN-41
   - Farah_VPN-43
-  - Farah_VPN-45
-  - 🏳️ Join+Telegram:@Farah_VPN 🏳️-48
-  - Farah_VPN-50
-  - Farah_VPN-52
-  - meliproxyy-54
-  - vmess_iran-56
-  - vmess_iran-57
-  - vmess_iran-58
+  - Farah_VPN-46
+  - Farah_VPN-49
+  - Farah_VPN-51
+  - Farah_VPN-54
+  - Farah_VPN-56
+  - meliproxyy-58
+  - vmess_iran-60
+  - vmess_iran-61
+  - vmess_iran-62
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:
