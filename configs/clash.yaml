@@ -92,75 +92,83 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Farah_VPN-24
+- name: Farah_VPN-23
   type: vless
-  server: 89.124.93.150
-  port: 443
-  uuid: 181ae5ba-0be0-4f00-be30-14451a33bd35
+  server: 172.64.146.198
+  port: 2096
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-25
+  type: vless
+  server: 162.159.38.62
+  port: 80
+  uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Farah_VPN-26
+- name: Farah_VPN-27
   type: vless
-  server: 95.164.85.109
-  port: 59374
-  uuid: bfc78cd8-5951-4803-8d6c-4cedef8cd420
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-29
-  type: vless
-  server: 51.158.206.98
+  server: 57.129.53.181
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Farah_VPN-31
-  type: vless
-  server: 64.227.174.213
-  port: 2053
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 🇦🇺 Join+Telegram:@Farah_VPN 🇦🇺-34
+- name: 🏳️ Join+Telegram:@Farah_VPN 🏳️-29
   type: vmess
-  server: 45.15.185.17
-  port: 80
-  uuid: c503a96a-a2f5-4847-a31f-20c17ecf3be4
+  server: 165.140.216.141
+  port: 443
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
   alterId: 0
   cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
-- name: 🏳️ Join+Telegram:@Farah_VPN 🏳️-36
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-31
   type: vmess
-  server: 45.15.185.17
-  port: 80
-  uuid: c503a96a-a2f5-4847-a31f-20c17ecf3be4
+  server: 165.140.216.141
+  port: 443
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
   alterId: 0
   cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Farah_VPN-38
+- name: Farah_VPN-33
   type: vless
-  server: 90.156.255.198
-  port: 51114
-  uuid: 8b575b35-3c7c-42b0-ac80-2aa6b0d7717c
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-40
-  type: vless
-  server: 176.96.138.17
-  port: 2087
+  server: 88.218.78.167
+  port: 443
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-42
+- name: Farah_VPN-40
+  type: vless
+  server: ov-france1.09vpn.com
+  port: 80
+  uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-43
+  type: vless
+  server: 185.158.133.138
+  port: 2096
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-46
+  type: vless
+  server: vpnpro.eshghiabolfazl2009.workers.dev
+  port: 80
+  uuid: 14e1775b-d92c-455b-8db3-e6c6d61909e0
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: meliproxyy-49
   type: vless
   server: 104.18.12.149
   port: 2082
@@ -168,7 +176,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-44
+- name: meliproxyy-51
   type: vless
   server: 104.18.12.149
   port: 443
@@ -176,7 +184,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-46
+- name: meliproxyy-53
   type: vless
   server: 104.18.12.149
   port: 8880
@@ -184,7 +192,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-48
+- name: proxy_kafee-55
   type: vless
   server: snapp.ir
   port: 80
@@ -192,7 +200,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-50
+- name: proxy_kafee-57
   type: vless
   server: 185.79.157.56
   port: 433
@@ -200,7 +208,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-52
+- name: proxy_kafee-59
   type: trojan
   server: 188.114.98.0
   port: 443
@@ -223,20 +231,21 @@ proxy-groups:
   - GetXConfig-17
   - GetXConfig-19
   - GetXConfig-21
-  - Farah_VPN-24
-  - Farah_VPN-26
-  - Farah_VPN-29
-  - Farah_VPN-31
-  - 🇦🇺 Join+Telegram:@Farah_VPN 🇦🇺-34
-  - 🏳️ Join+Telegram:@Farah_VPN 🏳️-36
-  - Farah_VPN-38
+  - Farah_VPN-23
+  - Farah_VPN-25
+  - Farah_VPN-27
+  - 🏳️ Join+Telegram:@Farah_VPN 🏳️-29
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-31
+  - Farah_VPN-33
   - Farah_VPN-40
-  - meliproxyy-42
-  - meliproxyy-44
-  - meliproxyy-46
-  - proxy_kafee-48
-  - proxy_kafee-50
-  - proxy_kafee-52
+  - Farah_VPN-43
+  - Farah_VPN-46
+  - meliproxyy-49
+  - meliproxyy-51
+  - meliproxyy-53
+  - proxy_kafee-55
+  - proxy_kafee-57
+  - proxy_kafee-59
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:
