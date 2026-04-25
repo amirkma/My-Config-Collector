@@ -234,17 +234,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@proxy_kafee24-61'
-  type: vmess
-  server: 185.11.89.38
-  port: 12809
-  uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: proxy_kafee-63
+- name: proxy_kafee-61
   type: vless
   server: 193.151.153.47
   port: 34661
@@ -252,7 +242,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@proxy_kafee👑-65'
+- name: '@proxy_kafee👑-63'
   type: vmess
   server: 185.11.89.38
   port: 12809
@@ -262,7 +252,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@proxy_kafee چنلمو-66'
+- name: '@proxy_kafee چنلمو-64'
   type: vmess
   server: 185.11.89.38
   port: 12809
@@ -272,7 +262,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@proxy_kafee کانال تلگرامی ما :-69'
+- name: '@proxy_kafee کانال تلگرامی ما :-67'
   type: vmess
   server: 185.11.89.38
   port: 12809
@@ -282,7 +272,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: ویتوری و سایفون @proxy_kafee-71
+- name: ویتوری و سایفون @proxy_kafee-69
   type: vmess
   server: 185.11.89.38
   port: 12809
@@ -292,7 +282,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@proxy_kafee-73'
+- name: '@proxy_kafee-71'
   type: vmess
   server: 185.11.89.38
   port: 12809
@@ -302,7 +292,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@proxy_kafee |  تلگرام جوین باش✅️-74'
+- name: '@proxy_kafee |  تلگرام جوین باش✅️-72'
   type: vmess
   server: 185.11.89.38
   port: 12809
@@ -312,13 +302,21 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-75
+- name: proxy_kafee-73
   type: vless
   server: varzesh3.com
   port: 8080
   uuid: c334010c-b5eb-4d80-bc93-9d7b52b03e6e
   udp: true
   tls: false
+  skip-cert-verify: true
+- name: proxy_kafee-77
+  type: vless
+  server: khan10.tarfandgallery.sbs
+  port: 443
+  uuid: ff6d6f8e-79f2-441e-ac39-bc3406f86e5c
+  udp: true
+  tls: true
   skip-cert-verify: true
 - name: vmess_iran-79
   type: vless
@@ -360,15 +358,15 @@ proxy-groups:
   - meliproxyy-54
   - meliproxyy-55
   - meliproxyy-56
-  - '@proxy_kafee24-61'
-  - proxy_kafee-63
-  - '@proxy_kafee👑-65'
-  - '@proxy_kafee چنلمو-66'
-  - '@proxy_kafee کانال تلگرامی ما :-69'
-  - ویتوری و سایفون @proxy_kafee-71
-  - '@proxy_kafee-73'
-  - '@proxy_kafee |  تلگرام جوین باش✅️-74'
-  - proxy_kafee-75
+  - proxy_kafee-61
+  - '@proxy_kafee👑-63'
+  - '@proxy_kafee چنلمو-64'
+  - '@proxy_kafee کانال تلگرامی ما :-67'
+  - ویتوری و سایفون @proxy_kafee-69
+  - '@proxy_kafee-71'
+  - '@proxy_kafee |  تلگرام جوین باش✅️-72'
+  - proxy_kafee-73
+  - proxy_kafee-77
   - vmess_iran-79
   url: http://www.gstatic.com/generate_204
   interval: 300
