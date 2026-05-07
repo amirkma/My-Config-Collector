@@ -338,7 +338,15 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-86
+- name: proxy_kafee-86
+  type: vless
+  server: 79.143.85.9
+  port: 4430
+  uuid: 4ea381a1-6af5-4d2f-af08-4ba432fd7210
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: vmess_iran-88
   type: vless
   server: 185.143.234.235
   port: 80
@@ -346,7 +354,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@saministamm-88'
+- name: '@saministamm-90'
   type: vmess
   server: mig-sin.darkube.ir
   port: 443
@@ -356,7 +364,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: '@saministamm-89'
+- name: '@saministamm-91'
   type: vmess
   server: i-love-iran.amlakayuni.ir
   port: 2053
@@ -411,9 +419,10 @@ proxy-groups:
   - proxy_kafee-78
   - '@proxy_kafee  کانال تلگرامی ما-82'
   - proxy_kafee-83
-  - vmess_iran-86
-  - '@saministamm-88'
-  - '@saministamm-89'
+  - proxy_kafee-86
+  - vmess_iran-88
+  - '@saministamm-90'
+  - '@saministamm-91'
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:
