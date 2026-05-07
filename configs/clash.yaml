@@ -282,21 +282,13 @@ proxies:
   skip-cert-verify: true
 - name: proxy_kafee-72
   type: vless
-  server: anten.ir
-  port: 2052
-  uuid: 96930f31-8e68-4186-a101-5593f0b2b274
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: proxy_kafee-74
-  type: vless
   server: sr.novatechsapr.ir
   port: 80
   uuid: 255b8da7-01c7-4cf9-a8e2-3313f73d0b8a
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-76
+- name: proxy_kafee-74
   type: vless
   server: red.nahidapp.com
   port: 443
@@ -304,7 +296,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: proxy_kafee-78
+- name: proxy_kafee-76
   type: vless
   server: faraaa.darakio.ir
   port: 80
@@ -312,7 +304,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-79
+- name: proxy_kafee-77
   type: vless
   server: snapp.ir
   port: 2052
@@ -320,7 +312,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-80
+- name: proxy_kafee-78
   type: vless
   server: 185.143.233.5
   port: 80
@@ -328,7 +320,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: vmess_iran-84
+- name: vmess_iran-82
   type: vless
   server: 185.143.234.235
   port: 80
@@ -336,7 +328,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@saministamm-86'
+- name: '@saministamm-84'
   type: vmess
   server: mig-sin.darkube.ir
   port: 443
@@ -346,7 +338,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: '@saministamm-87'
+- name: '@saministamm-85'
   type: vmess
   server: i-love-iran.amlakayuni.ir
   port: 2053
@@ -397,12 +389,11 @@ proxy-groups:
   - proxy_kafee-72
   - proxy_kafee-74
   - proxy_kafee-76
+  - proxy_kafee-77
   - proxy_kafee-78
-  - proxy_kafee-79
-  - proxy_kafee-80
-  - vmess_iran-84
-  - '@saministamm-86'
-  - '@saministamm-87'
+  - vmess_iran-82
+  - '@saministamm-84'
+  - '@saministamm-85'
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:
