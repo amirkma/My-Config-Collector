@@ -86,77 +86,21 @@ proxies:
   skip-cert-verify: true
 - name: Farah_VPN-21
   type: vless
-  server: 146.185.142.231
-  port: 443
-  uuid: bafacd98-136a-4530-838d-4e5c51838dac
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-23
-  type: vless
-  server: 57.128.177.176
-  port: 8443
+  server: 149.104.31.39
+  port: 64445
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-25
+- name: Farah_VPN-24
   type: vless
-  server: 178.159.10.78
-  port: 443
-  uuid: 43488128-319e-f480-64ea-0acdc712e2a8
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-28
-  type: vless
-  server: 159.65.82.25
-  port: 2053
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  server: 103.15.90.134
+  port: 49678
+  uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-30
-  type: vless
-  server: 151.242.69.59
-  port: 443
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-32
-  type: vless
-  server: tr-1.illusion-vpn.ru
-  port: 52000
-  uuid: fd2bfdd2-68eb-49b0-98ad-ed82f901edde
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-34
-  type: vless
-  server: 188.253.6.139
-  port: 443
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-36
-  type: vless
-  server: 134.209.27.216
-  port: 2083
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-38
-  type: vless
-  server: 212.34.148.122
-  port: 2053
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-41
+- name: Farah_VPN-26
   type: vless
   server: 57.129.63.154
   port: 2053
@@ -164,39 +108,57 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-44
+- name: Farah_VPN-29
+  type: vless
+  server: 162.159.38.62
+  port: 80
+  uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-31
+  type: vless
+  server: 173.245.59.249
+  port: 443
+  uuid: df862b4c-2150-4b36-81ac-405036cf9ff6
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-33
   type: vless
   server: 45.87.3.224
   port: 8443
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-39
+  type: vless
+  server: 72.56.62.253
+  port: 22231
+  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-41
+  type: vless
+  server: 144.31.131.33
+  port: 443
+  uuid: ae852d97-85f5-45cf-82a4-254eba345480
+  udp: true
   tls: false
   skip-cert-verify: true
-- name: Farah_VPN-46
-  type: vless
-  server: 57.128.177.176
-  port: 8443
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-44
+  type: vmess
+  server: 82.198.246.214
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-- name: Farah_VPN-48
-  type: trojan
-  server: yespaintstudio.rav-kraski.ru
-  port: 50824
-  password: 7aXwJPnpAJ
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-50
-  type: vless
-  server: 51.91.253.60
-  port: 443
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: proxy_kafee-52
+- name: proxy_kafee-46
   type: vless
   server: snapp.ir
   port: 80
@@ -204,7 +166,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-53
+- name: proxy_kafee-47
   type: vless
   server: snapp.ir
   port: 8880
@@ -212,7 +174,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-54
+- name: proxy_kafee-48
   type: vless
   server: snapp.ir
   port: 8880
@@ -220,7 +182,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-55
+- name: proxy_kafee-49
   type: vless
   server: 185.164.73.133
   port: 16657
@@ -228,7 +190,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-56
+- name: proxy_kafee-50
   type: vless
   server: red.nahidapp.com
   port: 443
@@ -236,7 +198,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: proxy_kafee-62
+- name: proxy_kafee-56
   type: vless
   server: 5.56.132.22
   port: 8086
@@ -244,7 +206,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-64
+- name: proxy_kafee-58
   type: vless
   server: hi.nahidapp.com
   port: 443
@@ -252,7 +214,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: proxy_kafee-65
+- name: proxy_kafee-59
   type: vless
   server: hi.nahidapp.com
   port: 443
@@ -260,7 +222,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: proxy_kafee-66
+- name: proxy_kafee-60
   type: vless
   server: snapp.ir
   port: 80
@@ -268,7 +230,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-67
+- name: proxy_kafee-61
   type: vless
   server: hi.nahidapp.com
   port: 443
@@ -276,7 +238,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: proxy_kafee-68
+- name: proxy_kafee-62
   type: vless
   server: hi.nahidapp.com
   port: 443
@@ -284,7 +246,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: proxy_kafee-69
+- name: proxy_kafee-63
   type: vless
   server: hi.nahidapp.com
   port: 443
@@ -292,7 +254,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: proxy_kafee-70
+- name: proxy_kafee-64
   type: vless
   server: hi.nahidapp.com
   port: 443
@@ -300,7 +262,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: '@saministamm-78'
+- name: '@saministamm-72'
   type: vmess
   server: mig-sin.darkube.ir
   port: 443
@@ -310,7 +272,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: '@saministamm-79'
+- name: '@saministamm-73'
   type: vmess
   server: i-love-iran.amlakayuni.ir
   port: 2053
@@ -335,34 +297,29 @@ proxy-groups:
   - GetXConfig-17
   - GetXConfig-19
   - Farah_VPN-21
-  - Farah_VPN-23
-  - Farah_VPN-25
-  - Farah_VPN-28
-  - Farah_VPN-30
-  - Farah_VPN-32
-  - Farah_VPN-34
-  - Farah_VPN-36
-  - Farah_VPN-38
+  - Farah_VPN-24
+  - Farah_VPN-26
+  - Farah_VPN-29
+  - Farah_VPN-31
+  - Farah_VPN-33
+  - Farah_VPN-39
   - Farah_VPN-41
-  - Farah_VPN-44
-  - Farah_VPN-46
-  - Farah_VPN-48
-  - Farah_VPN-50
-  - proxy_kafee-52
-  - proxy_kafee-53
-  - proxy_kafee-54
-  - proxy_kafee-55
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-44
+  - proxy_kafee-46
+  - proxy_kafee-47
+  - proxy_kafee-48
+  - proxy_kafee-49
+  - proxy_kafee-50
   - proxy_kafee-56
+  - proxy_kafee-58
+  - proxy_kafee-59
+  - proxy_kafee-60
+  - proxy_kafee-61
   - proxy_kafee-62
+  - proxy_kafee-63
   - proxy_kafee-64
-  - proxy_kafee-65
-  - proxy_kafee-66
-  - proxy_kafee-67
-  - proxy_kafee-68
-  - proxy_kafee-69
-  - proxy_kafee-70
-  - '@saministamm-78'
-  - '@saministamm-79'
+  - '@saministamm-72'
+  - '@saministamm-73'
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:
