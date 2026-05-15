@@ -78,13 +78,21 @@ proxies:
   skip-cert-verify: true
 - name: Farah_VPN-19
   type: vless
-  server: 104.20.6.134
-  port: 8443
+  server: 194.247.186.199
+  port: 443
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
   tls: true
   skip-cert-verify: true
 - name: Farah_VPN-21
+  type: vless
+  server: 34.143.213.202
+  port: 443
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-23
   type: vless
   server: 195.123.211.204
   port: 81
@@ -92,7 +100,15 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-23
+- name: Farah_VPN-25
+  type: vless
+  server: 50.228.203.26
+  port: 443
+  uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-27
   type: vless
   server: 212.118.52.236
   port: 8443
@@ -100,15 +116,15 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-25
+- name: Farah_VPN-29
   type: vless
-  server: 167.68.42.191
-  port: 2096
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  server: 162.159.38.62
+  port: 80
+  uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-- name: Farah_VPN-27
+- name: Farah_VPN-31
   type: vless
   server: 104.17.101.139
   port: 443
@@ -116,7 +132,23 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-29
+- name: Farah_VPN-33
+  type: vless
+  server: 50.228.203.26
+  port: 443
+  uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-35
+  type: vless
+  server: 50.228.203.26
+  port: 443
+  uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-37
   type: vless
   server: 212.183.88.238
   port: 2096
@@ -124,17 +156,27 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-31
+- name: 🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧-39
   type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+  server: fsdns1.ectunnelvpn.me
+  port: 80
+  uuid: 6b2d86e5-df05-4511-a79f-82d53ce99b36
   alterId: 0
   cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Farah_VPN-33
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-41
+  type: vmess
+  server: 82.198.246.250
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-43
   type: vless
   server: 126.220.82.161
   port: 443
@@ -142,90 +184,18 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-35
-  type: vless
-  server: 8.216.5.125
-  port: 2096
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-37
-  type: trojan
-  server: 172.67.180.92
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-38
-  type: trojan
-  server: v1.dabache.top
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-39
-  type: vless
-  server: 138.2.59.112
-  port: 443
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-41
-  type: vless
-  server: 211.228.207.178
-  port: 18001
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-43
-  type: vless
-  server: 220.118.83.101
-  port: 60004
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: true
-  skip-cert-verify: true
 - name: Farah_VPN-45
   type: vless
-  server: 151.242.69.214
-  port: 2053
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  server: 34.136.119.149
+  port: 443
+  uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
   udp: true
   tls: true
   skip-cert-verify: true
 - name: Farah_VPN-47
   type: vless
-  server: 183.99.227.24
-  port: 26257
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-49
-  type: vless
-  server: 138.124.16.38
-  port: 8443
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-51
-  type: vless
-  server: 121.191.33.84
-  port: 30303
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-53
-  type: vless
-  server: 59.31.107.42
-  port: 13720
+  server: 8.216.5.125
+  port: 2096
   uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
   tls: true
@@ -249,19 +219,15 @@ proxy-groups:
   - Farah_VPN-25
   - Farah_VPN-27
   - Farah_VPN-29
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-31
+  - Farah_VPN-31
   - Farah_VPN-33
   - Farah_VPN-35
   - Farah_VPN-37
-  - Farah_VPN-38
-  - Farah_VPN-39
-  - Farah_VPN-41
+  - 🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧-39
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-41
   - Farah_VPN-43
   - Farah_VPN-45
   - Farah_VPN-47
-  - Farah_VPN-49
-  - Farah_VPN-51
-  - Farah_VPN-53
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:
