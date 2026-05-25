@@ -52,7 +52,59 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-22
+- name: Farah_VPN-22
+  type: vless
+  server: 162.159.12.151
+  port: 443
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-24
+  type: vless
+  server: 190.93.244.138
+  port: 2096
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-26
+  type: vmess
+  server: sanjose01.zgjok.com
+  port: 443
+  uuid: 96d21cfe-b264-4bf3-8349-fb076d40837e
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-28
+  type: vless
+  server: 212.183.88.238
+  port: 2096
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: 🇰🇷 Join+Telegram:@Farah_VPN 🇰🇷-30
+  type: vmess
+  server: 152.67.218.38
+  port: 443
+  uuid: b5e9480a-b7aa-40a4-f9a7-5299b5e363b4
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-32
+  type: vless
+  server: 91.107.188.182
+  port: 443
+  uuid: 57565f1e-d42a-49a0-a909-5fff0f07b146
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: meliproxyy-34
   type: vless
   server: varzesh3.com
   port: 2052
@@ -60,7 +112,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-24
+- name: proxy_kafee-36
   type: vless
   server: snapp.ir
   port: 2095
@@ -68,7 +120,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-25
+- name: proxy_kafee-37
   type: trojan
   server: 127.0.0.1
   port: 40443
@@ -86,9 +138,15 @@ proxy-groups:
   - GetXConfig-7
   - GetXConfig-9
   - GetXConfig-11
-  - meliproxyy-22
-  - proxy_kafee-24
-  - proxy_kafee-25
+  - Farah_VPN-22
+  - Farah_VPN-24
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-26
+  - Farah_VPN-28
+  - 🇰🇷 Join+Telegram:@Farah_VPN 🇰🇷-30
+  - Farah_VPN-32
+  - meliproxyy-34
+  - proxy_kafee-36
+  - proxy_kafee-37
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:
