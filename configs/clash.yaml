@@ -3008,6 +3008,70 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
+- name: anotherme_night-744
+  type: vless
+  server: sigb01.jumpernode.online
+  port: 19001
+  uuid: 890e0f5e-e78a-4f92-e249-eab974fa4b6a
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: anotherme_night-745
+  type: vless
+  server: 91.193.59.112
+  port: 443
+  uuid: 7612dd26-d0ce-4fe0-be7c-d093bb8645da
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: anotherme_night-746
+  type: vless
+  server: 160.153.168.16
+  port: 2087
+  uuid: 38a43f18-b4d9-443f-9ff1-4cf9de3d666e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: anotherme_night-747
+  type: vless
+  server: 135.84.73.20
+  port: 443
+  uuid: 7612dd26-d0ce-4fe0-be7c-d093bb8645da
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: anotherme_night-748
+  type: vless
+  server: 172.64.52.97
+  port: 443
+  uuid: 7612dd26-d0ce-4fe0-be7c-d093bb8645da
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: anotherme_night-749
+  type: vless
+  server: 154.211.8.20
+  port: 443
+  uuid: 7612dd26-d0ce-4fe0-be7c-d093bb8645da
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: anotherme_night-750
+  type: vless
+  server: zaplio-gook.ru
+  port: 443
+  uuid: 8f0560ec-ba22-4431-a6a7-318dc59d5233
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: anotherme_night-751
+  type: vless
+  server: 147.45.136.213
+  port: 40443
+  uuid: f040b49a-14d3-4b83-af82-1f84ec7317c2
+  udp: true
+  tls: false
+  skip-cert-verify: true
 proxy-groups:
 - name: AUTO
   type: url-test
@@ -3380,6 +3444,14 @@ proxy-groups:
   - anotherme_night-732
   - anotherme_night-733
   - anotherme_night-734
+  - anotherme_night-744
+  - anotherme_night-745
+  - anotherme_night-746
+  - anotherme_night-747
+  - anotherme_night-748
+  - anotherme_night-749
+  - anotherme_night-750
+  - anotherme_night-751
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:
