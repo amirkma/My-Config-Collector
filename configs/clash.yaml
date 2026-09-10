@@ -4,139 +4,23 @@ allow-lan: true
 mode: rule
 log-level: silent
 proxies:
-- name: 'ترکیه 🇹🇷 | @GetXConfig | #5471-1'
-  type: vmess
-  server: 188.132.232.85
-  port: 2086
-  uuid: f6361af8-bb8f-4609-bf5d-3fc0f688f47b
-  alterId: 0
-  cipher: auto
+- name: GetXConfig-1
+  type: vless
+  server: 35.180.170.215
+  port: 22224
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   udp: true
   tls: false
   skip-cert-verify: true
 - name: GetXConfig-3
   type: vless
-  server: 188.132.232.85
-  port: 8060
-  uuid: 811cd6db-2287-47e9-8a06-9e38b5be9c55
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-5
-  type: vless
-  server: 153.52.92.95
-  port: 8443
-  uuid: 5559d7b9-96ca-4bbe-888e-d1e67e5eb191
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-7
-  type: vless
-  server: 15.188.69.42
-  port: 22223
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-9
-  type: vless
-  server: 15.188.69.42
-  port: 22224
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-11
-  type: vless
-  server: 15.188.69.42
-  port: 22222
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-13
-  type: vless
-  server: 170.39.216.98
-  port: 1102
-  uuid: 1964139b-ad1e-449f-8ca0-416ad62c4241
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-15
-  type: vless
-  server: 65.109.187.82
-  port: 51629
-  uuid: 60339d95-eacb-428d-88e4-caedaddf5159
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 'هلند 🇳🇱 | @GetXConfig | #5479-17'
-  type: vmess
-  server: 85.234.65.189
-  port: 2083
-  uuid: a63049c0-67ce-400c-beda-1403be8b8de8
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: GetXConfig-19
-  type: vless
-  server: 2.26.178.129
-  port: 443
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-21
-  type: vless
-  server: 150.241.68.208
-  port: 443
-  uuid: b8201bab-fa6c-4f6e-b289-b5da660c6f69
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: GetXConfig-23
-  type: vless
-  server: pipesell.seminar-mrz.ir
-  port: 49210
-  uuid: 69cc696c-4140-4e3d-bf9f-d7d7fd8c4b2a
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-25
-  type: vless
-  server: dashboard.xavino-shop.ir
-  port: 26153
-  uuid: 4f1fbb96-4978-4799-ba50-4add49819898
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-27
-  type: vless
-  server: 35.180.170.215
-  port: 22222
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-29
-  type: vless
-  server: 35.180.170.215
-  port: 22224
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-31
-  type: vless
   server: 35.180.170.215
   port: 22223
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   udp: true
   tls: false
   skip-cert-verify: true
-- name: 'ایران 🇮🇷 | @GetXConfig | #5487-33'
+- name: 'ایران 🇮🇷 | @GetXConfig | #5487-5'
   type: vmess
   server: 94.184.21.218
   port: 80
@@ -146,7 +30,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: 'انگلستان 🇬🇧 | @GetXConfig | #5488-35'
+- name: 'انگلستان 🇬🇧 | @GetXConfig | #5488-7'
   type: vmess
   server: 212.74.39.88
   port: 8080
@@ -156,7 +40,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-37
+- name: GetXConfig-9
   type: vless
   server: 5.182.86.59
   port: 36809
@@ -164,13 +48,137 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-39
+- name: GetXConfig-11
   type: vless
   server: 78.141.219.108
   port: 4083
   uuid: 0f856f56-822f-49f6-b059-1dfb17466755
   udp: true
   tls: false
+  skip-cert-verify: true
+- name: GetXConfig-13
+  type: vless
+  server: 31.76.83.49
+  port: 443
+  uuid: 70e46815-9cae-46e5-8224-d35f6bd7897d
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-15
+  type: vless
+  server: 45.91.138.141
+  port: 443
+  uuid: 92f33eb3-8f05-469f-98a0-95e902fd9dce
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: GetXConfig-17
+  type: vless
+  server: 195.211.124.132
+  port: 80
+  uuid: 403a8cee-4156-4603-a163-0a4d007d582b
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-19
+  type: vless
+  server: 31.76.66.173
+  port: 8443
+  uuid: 70e46815-9cae-46e5-8224-d35f6bd7897d
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-21
+  type: vless
+  server: 45.137.43.138
+  port: 443
+  uuid: 92f33eb3-8f05-469f-98a0-95e902fd9dce
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: GetXConfig-23
+  type: vless
+  server: 193.57.9.120
+  port: 443
+  uuid: e8dac4fa-295c-4232-8279-2fe14b312a42
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-25
+  type: vless
+  server: sew.cloudbashz.ir
+  port: 2087
+  uuid: b541ff83-0157-44b1-b707-33f89914042d
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 'نامشخص 🏳️ | @GetXConfig | #5498-27'
+  type: vmess
+  server: tun-1.veraspeed.ir
+  port: 1001
+  uuid: 8605b8dd-5b4c-4f2f-96c1-a01495cbc37e
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 'نامشخص 🏳️ | @GetXConfig | #5499-29'
+  type: vmess
+  server: tun-1.veraspeed.ir
+  port: 1002
+  uuid: 8605b8dd-5b4c-4f2f-96c1-a01495cbc37e
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 'نامشخص 🏳️ | @GetXConfig | #5500-31'
+  type: vmess
+  server: tun-1.veraspeed.ir
+  port: 2001
+  uuid: 8605b8dd-5b4c-4f2f-96c1-a01495cbc37e
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 'نامشخص 🏳️ | @GetXConfig | #5501-33'
+  type: vmess
+  server: tun-1.veraspeed.ir
+  port: 2002
+  uuid: 8605b8dd-5b4c-4f2f-96c1-a01495cbc37e
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 'نامشخص 🏳️ | @GetXConfig | #5502-35'
+  type: vmess
+  server: tun-1.veraspeed.ir
+  port: 1003
+  uuid: 8605b8dd-5b4c-4f2f-96c1-a01495cbc37e
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 'نامشخص 🏳️ | @GetXConfig | #5503-37'
+  type: vmess
+  server: tun-1.veraspeed.ir
+  port: 2003
+  uuid: 8605b8dd-5b4c-4f2f-96c1-a01495cbc37e
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-39
+  type: vless
+  server: 192.71.82.2
+  port: 8443
+  uuid: 034dc045-b53c-4e3e-8a4b-6d93f233350e
+  udp: true
+  tls: true
   skip-cert-verify: true
 - name: Farah_VPN-41
   type: vless
@@ -2912,25 +2920,25 @@ proxy-groups:
 - name: AUTO
   type: url-test
   proxies:
-  - 'ترکیه 🇹🇷 | @GetXConfig | #5471-1'
+  - GetXConfig-1
   - GetXConfig-3
-  - GetXConfig-5
-  - GetXConfig-7
+  - 'ایران 🇮🇷 | @GetXConfig | #5487-5'
+  - 'انگلستان 🇬🇧 | @GetXConfig | #5488-7'
   - GetXConfig-9
   - GetXConfig-11
   - GetXConfig-13
   - GetXConfig-15
-  - 'هلند 🇳🇱 | @GetXConfig | #5479-17'
+  - GetXConfig-17
   - GetXConfig-19
   - GetXConfig-21
   - GetXConfig-23
   - GetXConfig-25
-  - GetXConfig-27
-  - GetXConfig-29
-  - GetXConfig-31
-  - 'ایران 🇮🇷 | @GetXConfig | #5487-33'
-  - 'انگلستان 🇬🇧 | @GetXConfig | #5488-35'
-  - GetXConfig-37
+  - 'نامشخص 🏳️ | @GetXConfig | #5498-27'
+  - 'نامشخص 🏳️ | @GetXConfig | #5499-29'
+  - 'نامشخص 🏳️ | @GetXConfig | #5500-31'
+  - 'نامشخص 🏳️ | @GetXConfig | #5501-33'
+  - 'نامشخص 🏳️ | @GetXConfig | #5502-35'
+  - 'نامشخص 🏳️ | @GetXConfig | #5503-37'
   - GetXConfig-39
   - Farah_VPN-41
   - Farah_VPN-42
