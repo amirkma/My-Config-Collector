@@ -5,112 +5,6 @@ mode: rule
 log-level: silent
 proxies:
 - name: GetXConfig-1
-  type: vless
-  server: 194.87.59.7
-  port: 2085
-  uuid: d6e792d5-ea82-4e6c-b679-89f49ff7996e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-3
-  type: vless
-  server: 85.90.197.120
-  port: 443
-  uuid: d6b59299-2f48-4e9b-9130-b9e9cb5d0a51
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-5
-  type: vless
-  server: 104.143.223.66
-  port: 2085
-  uuid: d6e792d5-ea82-4e6c-b679-89f49ff7996e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-7
-  type: vless
-  server: 204.168.195.30
-  port: 51185
-  uuid: 12af43c3-84b4-4248-878b-b75f35835487
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-9
-  type: vless
-  server: 45.74.159.233
-  port: 56659
-  uuid: 12af43c3-84b4-4248-878b-b75f35835487
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-11
-  type: vless
-  server: 132.243.162.30
-  port: 46280
-  uuid: 12af43c3-84b4-4248-878b-b75f35835487
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-13
-  type: vless
-  server: 104.143.223.69
-  port: 2085
-  uuid: d6e792d5-ea82-4e6c-b679-89f49ff7996e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-15
-  type: vless
-  server: 104.143.223.80
-  port: 2085
-  uuid: d6e792d5-ea82-4e6c-b679-89f49ff7996e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-17
-  type: vless
-  server: 104.16.72.251
-  port: 2096
-  uuid: 12af43c3-84b4-4248-878b-b75f35835487
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: 'فرانسه 🇫🇷 | @GetXConfig | #5860-19'
-  type: vmess
-  server: 51.103.28.247
-  port: 54555
-  uuid: e57e9bb4-a442-44dd-a4bb-2aac72cfd1f2
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-23
-  type: vless
-  server: 188.132.237.20
-  port: 2095
-  uuid: 3b9e513e-30d9-4ca8-8340-8f33fc6710de
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-25
-  type: vless
-  server: 78.159.247.246
-  port: 443
-  uuid: 1852b02c-1828-40eb-81ff-4de3d097cb35
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: GetXConfig-27
-  type: vless
-  server: 89.125.147.199
-  port: 443
-  uuid: cabd9303-ae32-4d25-86b9-26b312d0f044
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: GetXConfig-29
   type: trojan
   server: 185.204.168.28
   port: 1819
@@ -118,7 +12,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: GetXConfig-30
+- name: GetXConfig-2
   type: vless
   server: 154.211.8.109
   port: 443
@@ -126,7 +20,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: GetXConfig-32
+- name: GetXConfig-4
   type: vless
   server: 103.116.7.246
   port: 443
@@ -134,7 +28,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: GetXConfig-34
+- name: GetXConfig-6
   type: vless
   server: 114.129.43.26
   port: 443
@@ -142,13 +36,119 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: 'ترکیه 🇹🇷 | @GetXConfig | #5870-36'
+- name: 'ترکیه 🇹🇷 | @GetXConfig | #5870-8'
   type: vmess
   server: 206.1.96.187
   port: 443
   uuid: 32c017e7-2fa6-4a43-98ef-b21bb63d92e6
   alterId: 0
   cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-10
+  type: vless
+  server: s98.cdn.tbotapi.ru
+  port: 443
+  uuid: 624208cf-54e0-4341-823b-1bee6595fce9
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-12
+  type: vless
+  server: upload.tbotapi.ru
+  port: 443
+  uuid: 624208cf-54e0-4341-823b-1bee6595fce9
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-14
+  type: vless
+  server: 46.224.111.17
+  port: 443
+  uuid: deee2828-ad68-4637-8e2e-64db7a36ad25
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-16
+  type: vless
+  server: logs.medic-ml.ru
+  port: 443
+  uuid: 7e083480-e6f2-44ef-bc3b-c254a7f8bb83
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-18
+  type: vless
+  server: www.speedtest.net
+  port: 2053
+  uuid: c8f3f81a-5276-48e9-af6b-c537fb4c7856
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: GetXConfig-20
+  type: vless
+  server: 140.235.168.2
+  port: 443
+  uuid: dca76b88-b038-e82b-45e1-1d76b476d7ca
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-22
+  type: vless
+  server: 140.235.168.2
+  port: 8443
+  uuid: dca76b88-b038-e82b-45e1-1d76b476d7ca
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-24
+  type: vless
+  server: 64.49.38.3
+  port: 8443
+  uuid: dca76b88-b038-e82b-45e1-1d76b476d7ca
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-26
+  type: vless
+  server: tr.iramssmoth.ir
+  port: 8443
+  uuid: f1505323-ecb6-4152-9a5b-d37b3ae1cacf
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-28
+  type: vless
+  server: 144.225.65.166
+  port: 26109
+  uuid: 8d0a82ca-41cf-4661-a9d7-ea2e192c5f64
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 'ایالات متحده آمریکا 🇺🇸 | @GetXConfig | #5881-30'
+  type: vmess
+  server: 47.85.188.30
+  port: 12004
+  uuid: 8b5552bd-4cc7-4cac-af08-81c21686fd4f
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-34
+  type: vless
+  server: 37.221.110.4
+  port: 2085
+  uuid: a1d1b142-17c5-4472-99de-df220df4d4fb
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-36
+  type: vless
+  server: 37.221.110.3
+  port: 2085
+  uuid: a1d1b142-17c5-4472-99de-df220df4d4fb
   udp: true
   tls: false
   skip-cert-verify: true
@@ -3288,111 +3288,15 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-802
+- name: proxy_kafee-802
   type: vless
-  server: 38.58.180.136
-  port: 3087
-  uuid: 5efabea4-f6d4-91fd-b8f0-17e004c89c68
+  server: tr.iramssmoth.ir
+  port: 8443
+  uuid: f1505323-ecb6-4152-9a5b-d37b3ae1cacf
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-803
-  type: vless
-  server: nl1.cnyvpn.com
-  port: 2096
-  uuid: 60e2a548-96aa-4850-a279-1edab743c39b
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: anotherme_night-804
-  type: vless
-  server: 150.40.126.22
-  port: 443
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: anotherme_night-805
-  type: vless
-  server: dey.lnmarketplace.net
-  port: 443
-  uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: anotherme_night-806
-  type: vless
-  server: 150.40.126.19
-  port: 443
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: anotherme_night-807
-  type: vless
-  server: rs2.univesalsrv.com
-  port: 443
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: anotherme_night-808
-  type: vless
-  server: 150.40.126.21
-  port: 443
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: anotherme_night-809
-  type: vless
-  server: 144.31.183.177
-  port: 443
-  uuid: 06a70256-5acc-4a79-bd73-cc8e3c4c204b
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: anotherme_night-810
-  type: vless
-  server: 31.76.106.36
-  port: 10443
-  uuid: f77fdea5-e50f-4766-89b1-d0cd6ada7dae
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: anotherme_night-811
-  type: vless
-  server: v5p.sabermusic.ir
-  port: 443
-  uuid: eaeb9077-b90c-45e3-a52c-da847f5f86d7
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: anotherme_night-822
-  type: vless
-  server: 45.9.156.24
-  port: 443
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: anotherme_night-823
-  type: vless
-  server: rs4.univesalsrv.com
-  port: 443
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: anotherme_night-824
-  type: vless
-  server: bg2.univesalsrv.com
-  port: 443
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: anotherme_night-825
+- name: proxy_kafee-803
   type: vless
   server: 45.9.156.28
   port: 443
@@ -3400,33 +3304,145 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-826
+- name: proxy_kafee-804
   type: vless
-  server: 62.171.228.244
+  server: 151.101.56.11
   port: 443
-  uuid: 05bfcbaa-cba0-4bce-9103-09fe3f5f0667
+  uuid: '%5BV2XNET%5D'
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: proxy_kafee-805
+  type: vless
+  server: 151.101.56.6
+  port: 443
+  uuid: 88b44962-7f99-4846-9113-6b0624b5a6a4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: proxy_kafee-806
+  type: vless
+  server: 38.107.233.95
+  port: 9090
+  uuid: Channel%3Atelegram%3ATurboConfigs
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-827
+- name: proxy_kafee-807
   type: vless
-  server: 194.110.207.89
+  server: 188.225.27.78
   port: 443
-  uuid: a9ad5751-32e3-4fdc-b250-36b594bed2be
+  uuid: 3b6a9df3-f1d1-4bc1-94a5-0d8f2d5512b1
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-828
+- name: proxy_kafee-808
+  type: trojan
+  server: 188.114.96.2
+  port: 443
+  password: hhxmk%2BoOw2kX8woq
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: anotherme_night-815
   type: vless
-  server: bg4.univesalsrv.com
+  server: 38.58.180.136
+  port: 3087
+  uuid: 5efabea4-f6d4-91fd-b8f0-17e004c89c68
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: anotherme_night-816
+  type: vless
+  server: nl1.cnyvpn.com
+  port: 2096
+  uuid: 60e2a548-96aa-4850-a279-1edab743c39b
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: anotherme_night-817
+  type: vless
+  server: 150.40.126.22
   port: 443
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-829
+- name: anotherme_night-818
   type: vless
-  server: rs1.univesalsrv.com
+  server: dey.lnmarketplace.net
+  port: 443
+  uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: anotherme_night-819
+  type: vless
+  server: 150.40.126.19
+  port: 443
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: anotherme_night-820
+  type: vless
+  server: rs2.univesalsrv.com
+  port: 443
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: anotherme_night-821
+  type: vless
+  server: 150.40.126.21
+  port: 443
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: anotherme_night-822
+  type: vless
+  server: 144.31.183.177
+  port: 443
+  uuid: 06a70256-5acc-4a79-bd73-cc8e3c4c204b
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: anotherme_night-823
+  type: vless
+  server: 31.76.106.36
+  port: 10443
+  uuid: f77fdea5-e50f-4766-89b1-d0cd6ada7dae
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: anotherme_night-824
+  type: vless
+  server: v5p.sabermusic.ir
+  port: 443
+  uuid: eaeb9077-b90c-45e3-a52c-da847f5f86d7
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: anotherme_night-835
+  type: vless
+  server: 45.9.156.24
+  port: 443
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: anotherme_night-836
+  type: vless
+  server: rs4.univesalsrv.com
+  port: 443
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: anotherme_night-837
+  type: vless
+  server: bg2.univesalsrv.com
   port: 443
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   udp: true
@@ -3434,31 +3450,31 @@ proxies:
   skip-cert-verify: true
 - name: anotherme_night-838
   type: vless
-  server: 206.71.158.125
+  server: 45.9.156.28
   port: 443
-  uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
 - name: anotherme_night-839
   type: vless
-  server: 89.35.14.33
+  server: 62.171.228.244
   port: 443
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  uuid: 05bfcbaa-cba0-4bce-9103-09fe3f5f0667
   udp: true
   tls: false
   skip-cert-verify: true
 - name: anotherme_night-840
   type: vless
-  server: md3.univesalsrv.com
+  server: 194.110.207.89
   port: 443
-  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  uuid: a9ad5751-32e3-4fdc-b250-36b594bed2be
   udp: true
   tls: false
   skip-cert-verify: true
 - name: anotherme_night-841
   type: vless
-  server: 89.35.14.31
+  server: bg4.univesalsrv.com
   port: 443
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   udp: true
@@ -3466,13 +3482,53 @@ proxies:
   skip-cert-verify: true
 - name: anotherme_night-842
   type: vless
+  server: rs1.univesalsrv.com
+  port: 443
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: anotherme_night-851
+  type: vless
+  server: 206.71.158.125
+  port: 443
+  uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: anotherme_night-852
+  type: vless
+  server: 89.35.14.33
+  port: 443
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: anotherme_night-853
+  type: vless
+  server: md3.univesalsrv.com
+  port: 443
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: anotherme_night-854
+  type: vless
+  server: 89.35.14.31
+  port: 443
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: anotherme_night-855
+  type: vless
   server: md4.univesalsrv.com
   port: 443
   uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-843
+- name: anotherme_night-856
   type: vless
   server: 2.27.132.119
   port: 8881
@@ -3480,7 +3536,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: anotherme_night-844
+- name: anotherme_night-857
   type: trojan
   server: 104.21.64.165
   port: 443
@@ -3488,7 +3544,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: anotherme_night-845
+- name: anotherme_night-858
   type: trojan
   server: 172.67.152.243
   port: 443
@@ -3501,23 +3557,23 @@ proxy-groups:
   type: url-test
   proxies:
   - GetXConfig-1
-  - GetXConfig-3
-  - GetXConfig-5
-  - GetXConfig-7
-  - GetXConfig-9
-  - GetXConfig-11
-  - GetXConfig-13
-  - GetXConfig-15
-  - GetXConfig-17
-  - 'فرانسه 🇫🇷 | @GetXConfig | #5860-19'
-  - GetXConfig-23
-  - GetXConfig-25
-  - GetXConfig-27
-  - GetXConfig-29
-  - GetXConfig-30
-  - GetXConfig-32
+  - GetXConfig-2
+  - GetXConfig-4
+  - GetXConfig-6
+  - 'ترکیه 🇹🇷 | @GetXConfig | #5870-8'
+  - GetXConfig-10
+  - GetXConfig-12
+  - GetXConfig-14
+  - GetXConfig-16
+  - GetXConfig-18
+  - GetXConfig-20
+  - GetXConfig-22
+  - GetXConfig-24
+  - GetXConfig-26
+  - GetXConfig-28
+  - 'ایالات متحده آمریکا 🇺🇸 | @GetXConfig | #5881-30'
   - GetXConfig-34
-  - 'ترکیه 🇹🇷 | @GetXConfig | #5870-36'
+  - GetXConfig-36
   - 🇫🇮 Join+Telegram:@Farah_VPN 🇫🇮-38
   - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-39
   - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-40
@@ -3900,32 +3956,39 @@ proxy-groups:
   - proxy_kafee-791
   - proxy_kafee-792
   - proxy_kafee-793
-  - anotherme_night-802
-  - anotherme_night-803
-  - anotherme_night-804
-  - anotherme_night-805
-  - anotherme_night-806
-  - anotherme_night-807
-  - anotherme_night-808
-  - anotherme_night-809
-  - anotherme_night-810
-  - anotherme_night-811
+  - proxy_kafee-802
+  - proxy_kafee-803
+  - proxy_kafee-804
+  - proxy_kafee-805
+  - proxy_kafee-806
+  - proxy_kafee-807
+  - proxy_kafee-808
+  - anotherme_night-815
+  - anotherme_night-816
+  - anotherme_night-817
+  - anotherme_night-818
+  - anotherme_night-819
+  - anotherme_night-820
+  - anotherme_night-821
   - anotherme_night-822
   - anotherme_night-823
   - anotherme_night-824
-  - anotherme_night-825
-  - anotherme_night-826
-  - anotherme_night-827
-  - anotherme_night-828
-  - anotherme_night-829
+  - anotherme_night-835
+  - anotherme_night-836
+  - anotherme_night-837
   - anotherme_night-838
   - anotherme_night-839
   - anotherme_night-840
   - anotherme_night-841
   - anotherme_night-842
-  - anotherme_night-843
-  - anotherme_night-844
-  - anotherme_night-845
+  - anotherme_night-851
+  - anotherme_night-852
+  - anotherme_night-853
+  - anotherme_night-854
+  - anotherme_night-855
+  - anotherme_night-856
+  - anotherme_night-857
+  - anotherme_night-858
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:
