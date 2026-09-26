@@ -7,20 +7,12 @@ proxies:
 - name: GetXConfig-1
   type: vless
   server: cdnxv.xvcloud.shop
-  port: 443
-  uuid: b3425365-9251-4d70-860c-cc8caa23c9f4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: GetXConfig-3
-  type: vless
-  server: cdnxv.xvcloud.shop
   port: 2083
   uuid: b3425365-9251-4d70-860c-cc8caa23c9f4
   udp: true
   tls: true
   skip-cert-verify: true
-- name: GetXConfig-5
+- name: GetXConfig-3
   type: vless
   server: 13.39.231.13
   port: 22224
@@ -28,7 +20,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-7
+- name: GetXConfig-5
   type: trojan
   server: xhop-production.up.railway.app
   port: 443
@@ -36,7 +28,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: GetXConfig-8
+- name: GetXConfig-6
   type: vless
   server: 163.128.99.14
   port: 443
@@ -44,7 +36,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-10
+- name: GetXConfig-8
   type: vless
   server: 37.221.79.226
   port: 18443
@@ -52,7 +44,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-12
+- name: GetXConfig-10
   type: vless
   server: 64.188.126.56
   port: 43000
@@ -60,7 +52,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-14
+- name: GetXConfig-12
   type: vless
   server: 153.76.185.91
   port: 3090
@@ -68,7 +60,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-16
+- name: GetXConfig-14
   type: vless
   server: 185.249.153.108
   port: 443
@@ -76,7 +68,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-18
+- name: GetXConfig-16
   type: vless
   server: 13.143.166.112
   port: 443
@@ -84,7 +76,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-20
+- name: GetXConfig-18
   type: vless
   server: 45.164.20.114
   port: 10226
@@ -92,7 +84,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-22
+- name: GetXConfig-20
   type: vless
   server: 31.56.184.137
   port: 44450
@@ -100,7 +92,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: 'آلمان 🇩🇪 | @GetXConfig | #7393-24'
+- name: 'آلمان 🇩🇪 | @GetXConfig | #7393-22'
   type: vmess
   server: 5.45.97.147
   port: 10803
@@ -110,7 +102,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-26
+- name: GetXConfig-24
   type: vless
   server: 177.3.214.196
   port: 4443
@@ -118,7 +110,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-28
+- name: GetXConfig-26
   type: vless
   server: 5.253.29.16
   port: 40443
@@ -126,7 +118,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-30
+- name: GetXConfig-28
   type: vless
   server: 124.156.230.31
   port: 48795
@@ -134,7 +126,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-32
+- name: GetXConfig-30
   type: vless
   server: 103.137.215.122
   port: 443
@@ -142,7 +134,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-34
+- name: GetXConfig-32
   type: vless
   server: 193.56.135.233
   port: 9543
@@ -150,7 +142,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-36
+- name: GetXConfig-34
   type: vless
   server: 5.42.114.41
   port: 9892
@@ -158,13 +150,21 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-38
+- name: GetXConfig-36
   type: vless
   server: k2.cloud--vpn.site
   port: 443
   uuid: 64c2bc5c-7534-4359-9b1e-e1dce5a380cd
   udp: true
   tls: true
+  skip-cert-verify: true
+- name: GetXConfig-38
+  type: vless
+  server: p1real2.greewebservices.ir
+  port: 1240
+  uuid: a11cb858-4a42-4735-b40b-4cba1560b959
+  udp: true
+  tls: false
   skip-cert-verify: true
 - name: Farah_VPN-40
   type: vless
@@ -2873,7 +2873,7 @@ proxy-groups:
   - GetXConfig-1
   - GetXConfig-3
   - GetXConfig-5
-  - GetXConfig-7
+  - GetXConfig-6
   - GetXConfig-8
   - GetXConfig-10
   - GetXConfig-12
@@ -2881,8 +2881,8 @@ proxy-groups:
   - GetXConfig-16
   - GetXConfig-18
   - GetXConfig-20
-  - GetXConfig-22
-  - 'آلمان 🇩🇪 | @GetXConfig | #7393-24'
+  - 'آلمان 🇩🇪 | @GetXConfig | #7393-22'
+  - GetXConfig-24
   - GetXConfig-26
   - GetXConfig-28
   - GetXConfig-30
