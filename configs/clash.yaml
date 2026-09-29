@@ -4,321 +4,309 @@ allow-lan: true
 mode: rule
 log-level: silent
 proxies:
-- name: GetXConfig-1
+- name: GetXConfig-2
   type: vless
-  server: nl2.hkvn.space
-  port: 37951
-  uuid: 25284368-40d5-4abe-9f56-54a07e88a7af
+  server: 31.76.11.83
+  port: 26085
+  uuid: e676c6c8-44a8-4a1d-82cc-821a1f70f0c0
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-3
+- name: GetXConfig-4
   type: vless
-  server: 199.232.78.170
-  port: 443
-  uuid: d6962b1a-4701-4456-ba61-deb28c913a66
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: GetXConfig-5
-  type: vless
-  server: netcraft.com
-  port: 2053
-  uuid: 1f45f651-6409-4401-9d10-22f24aae3cfd
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: GetXConfig-7
-  type: vless
-  server: 91.218.230.224
-  port: 443
-  uuid: dc4d4d46-d4ae-4b54-ba30-f8e241f22969
+  server: ubsoft155.ie96.ir
+  port: 2051
+  uuid: 1e2ee9ec-d2fd-4175-902a-70298100d6f1
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-9
+- name: GetXConfig-6
   type: vless
-  server: 95.85.241.239
-  port: 443
-  uuid: 78571e63-1236-4c60-862a-70b7624dfa36
+  server: softkar153.ie96.ir
+  port: 36963
+  uuid: 1e2ee9ec-d2fd-4175-902a-70298100d6f1
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-11
+- name: GetXConfig-8
   type: vless
-  server: nice.iranapplecenter.com
-  port: 443
-  uuid: 6ba68c69-e108-502d-7b1c-e806fbc3cccd
+  server: snapp.ir
+  port: 8880
+  uuid: 994d399b-64ca-4ef2-9474-6e6e7a5a2d72
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-- name: GetXConfig-13
-  type: trojan
-  server: 151.101.56.90
+- name: GetXConfig-10
+  type: vless
+  server: 45.87.251.229
   port: 443
-  password: 2223970e6a0b8ad289d3c43dd85dd2c9
+  uuid: 2b3a7680-27bc-4530-b123-c930ea504385
   udp: true
-  tls: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-12
+  type: vless
+  server: 31.76.252.118
+  port: 443
+  uuid: 98a7c6c3-9a2c-4ebd-a945-0e979abc9232
+  udp: true
+  tls: false
   skip-cert-verify: true
 - name: GetXConfig-14
-  type: trojan
-  server: 151.101.56.9
-  port: 443
-  password: 2223970e6a0b8ad289d3c43dd85dd2c9
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: GetXConfig-15
   type: vless
-  server: 199.232.78.160
+  server: 13.143.141.136
   port: 443
-  uuid: 6ba68c69-e108-502d-7b1c-e806fbc3cccd
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: GetXConfig-17
-  type: vless
-  server: 23.88.109.180
-  port: 8443
-  uuid: 37295fde-89c0-4d4a-83f7-7c0b10877c82
+  uuid: 8878cbc9-0e35-408f-be5f-2f8e382042f1
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-19
+- name: GetXConfig-16
   type: vless
-  server: 93.190.9.60
-  port: 3090
-  uuid: cbbc93ef-6d35-463a-a856-64265c42e66d
+  server: 179.254.163.11
+  port: 443
+  uuid: aef06aad-8e97-4452-9257-6142b5b1ceb7
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-21
+- name: GetXConfig-18
   type: vless
-  server: 65.109.28.164
-  port: 443
-  uuid: 8df2e661-6f46-471b-9133-7fc13a0daa35
+  server: 194.58.41.190
+  port: 1443
+  uuid: 46b3a70b-b99f-4c6e-aa83-df6d842bb954
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-23
+- name: GetXConfig-20
   type: vless
-  server: 151.101.56.9
-  port: 443
-  uuid: 6ba68c69-e108-502d-7b1c-e806fbc3cccd
+  server: 179.254.163.11
+  port: 5443
+  uuid: aef06aad-8e97-4452-9257-6142b5b1ceb7
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-- name: 'ایالات متحده آمریکا 🇺🇸 | @GetXConfig | #7810-25'
-  type: vmess
-  server: 199.232.78.170
-  port: 443
-  uuid: 6ba68c69-e108-502d-7b1c-e806fbc3cccd
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: 'ایالات متحده آمریکا 🇺🇸 | @GetXConfig | #7811-27'
-  type: vmess
-  server: 151.101.56.90
-  port: 443
-  uuid: 6ba68c69-e108-502d-7b1c-e806fbc3cccd
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: GetXConfig-29
-  type: trojan
-  server: 199.232.78.160
-  port: 443
-  password: 2223970e6a0b8ad289d3c43dd85dd2c9
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: 'نامشخص 🏳️ | @GetXConfig | #7813-30'
-  type: vmess
-  server: nice.iranapplecenter.com
-  port: 443
-  uuid: 6ba68c69-e108-502d-7b1c-e806fbc3cccd
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: GetXConfig-32
+- name: GetXConfig-22
   type: vless
-  server: 94.249.225.106
+  server: 179.254.163.11
+  port: 6443
+  uuid: aef06aad-8e97-4452-9257-6142b5b1ceb7
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-24
+  type: vless
+  server: 176.109.104.246
+  port: 4443
+  uuid: 7ff2525f-63ef-4641-9d55-b39de536bf6c
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-26
+  type: vless
+  server: 85.155.228.185
   port: 443
   uuid: ca5ffe64-81e0-42f0-a136-03cc4f662a4f
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-34
+- name: GetXConfig-28
   type: vless
-  server: nl2.404vn.space
-  port: 37951
-  uuid: 25284368-40d5-4abe-9f56-54a07e88a7af
+  server: 153.76.185.100
+  port: 3090
+  uuid: e8b3f952-cd1b-4881-872e-b8d03399a6df
   udp: true
   tls: false
   skip-cert-verify: true
-- name: GetXConfig-36
+- name: GetXConfig-30
   type: vless
-  server: 31.41.33.28
+  server: india.letsconnectpoint.com
   port: 443
-  uuid: 5dff1842-c02f-4dd4-b1ad-2e597b99dc31
+  uuid: 914f3806-07a1-4158-9624-e183de065a38
   udp: true
   tls: false
   skip-cert-verify: true
-- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-38
-  type: vmess
-  server: i2psm3knof5qjjix.v.3dns.vip
+- name: GetXConfig-32
+  type: vless
+  server: 5.253.42.159
   port: 443
-  uuid: f23bb427c1f94373876c2f43e9f790f3
-  alterId: 0
-  cipher: auto
+  uuid: a368752a-32fc-42f3-980a-6b049218b23f
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-35
+  type: vless
+  server: 185.244.48.183
+  port: 8443
+  uuid: 228ecfd3-9bf0-42fd-a50e-581f84022513
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: GetXConfig-37
+  type: vless
+  server: 199.232.78.160
+  port: 443
+  uuid: XpnTeam-49
   udp: true
   tls: true
   skip-cert-verify: true
-- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-39
+- name: 🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-39
   type: vmess
-  server: 84.17.41.2
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  server: 198.57.27.190
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Farah_VPN-40
-  type: vless
-  server: 176.109.104.195
-  port: 9873
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-40
+  type: vmess
+  server: 216.106.185.141
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
 - name: Farah_VPN-41
   type: vless
-  server: 104.21.70.21
-  port: 8080
-  uuid: 6cc29a05-4828-4e48-a34a-20b7ada60e85
+  server: 169.40.42.133
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
   udp: true
   tls: false
   skip-cert-verify: true
 - name: Farah_VPN-42
   type: vless
-  server: 15.204.97.197
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  server: 95.163.232.171
+  port: 14443
+  uuid: 365de9e9-ba29-4819-af2d-766f9638e3be
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
 - name: Farah_VPN-43
   type: vless
-  server: 104.17.148.22
-  port: 443
-  uuid: 4ccf70f9-7632-4b5a-9557-10d2dd347bb2
+  server: 45.88.12.110
+  port: 2083
+  uuid: 7e5b1e82-73db-429a-93b2-7839a0bf4dc0
   udp: true
   tls: true
   skip-cert-verify: true
 - name: Farah_VPN-44
   type: vless
-  server: 172.67.213.26
-  port: 2053
-  uuid: 52450a53-ac49-42ff-be36-0899178d34b9
+  server: 185.95.231.233
+  port: 443
+  uuid: 1ffa8e68-3378-4cf4-b8f6-44bf3d46d106
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
 - name: Farah_VPN-45
   type: vless
-  server: 104.21.39.30
-  port: 80
-  uuid: 7201b2cd-0675-4c1a-9c76-07ca14ffcf08
+  server: 158.69.112.254
+  port: 443
+  uuid: 661f395d-b153-4199-a04b-693f5fe7f261
   udp: true
   tls: false
   skip-cert-verify: true
 - name: Farah_VPN-46
   type: vless
-  server: 103.102.228.113
-  port: 443
-  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+  server: 198.251.78.29
+  port: 2053
+  uuid: c423cc1b-f88e-421c-9a16-c480d84da20f
   udp: true
-  tls: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-47
+  type: vless
+  server: 172.235.38.85
+  port: 42942
+  uuid: bca46025-bf43-40c0-895b-054a6fbcfd32
+  udp: true
+  tls: false
   skip-cert-verify: true
 - name: Farah_VPN-57
   type: vless
-  server: 162.159.39.218
-  port: 8080
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-58
-  type: vless
-  server: 104.20.37.53
-  port: 8080
-  uuid: 50414e45-4c5f-5a45-5553-b52a90ada6ab
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-59
-  type: vless
-  server: 77.239.104.82
+  server: 188.114.97.6
   port: 443
-  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+  uuid: daf485ba-60fc-4166-a72c-8d2a5407cbc5
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-60
-  type: vless
-  server: 193.160.208.137
-  port: 443
-  uuid: a08b9c24-3252-4f7f-afa9-4a37040950fd
+- name: 🇵🇱 Join+Telegram:@Farah_VPN 🇵🇱-59
+  type: vmess
+  server: 188.114.96.19
+  port: 80
+  uuid: aed88e79-5762-4d2f-86fa-f438f32a7654
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
+- name: Farah_VPN-60
+  type: vless
+  server: 23.141.12.134
+  port: 8443
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  udp: true
+  tls: true
+  skip-cert-verify: true
 - name: Farah_VPN-61
   type: vless
-  server: 155.103.70.53
-  port: 30303
-  uuid: d18c6897-2849-456a-8c46-d7ecece47c20
+  server: 188.114.97.6
+  port: 443
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
   udp: true
   tls: true
   skip-cert-verify: true
 - name: Farah_VPN-62
   type: vless
-  server: 164.90.217.130
-  port: 443
-  uuid: 8525fe74-67e6-4a55-8a26-95f227bd1384
+  server: skk.moe
+  port: 8880
+  uuid: 0de87762-7d50-49e7-a5ae-7ac85760e083
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
 - name: Farah_VPN-63
   type: vless
-  server: 80.240.18.227
-  port: 10051
-  uuid: 73996ef7-544c-45e7-abc0-973218c727e2
+  server: 188.114.96.2
+  port: 2096
+  uuid: 8d82944e-17b9-473f-a456-dec9a6e21471
   udp: true
   tls: true
   skip-cert-verify: true
 - name: Farah_VPN-64
   type: vless
-  server: 15.204.97.219
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  server: 179.198.49.43
+  port: 443
+  uuid: d72f05b0-b182-4783-a6f2-21cecc7d841a
   udp: true
   tls: false
   skip-cert-verify: true
 - name: Farah_VPN-65
   type: vless
-  server: 116.204.164.17
-  port: 7443
-  uuid: ef8907eb-8bb5-4735-80f2-1d0068500d95
+  server: private.netraidly.ru
+  port: 40443
+  uuid: 5e3f974b-06fc-4555-907a-6681391b7c17
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-66
+  type: vless
+  server: 85.90.197.53
+  port: 443
+  uuid: 0250424c-ae75-4b6b-890f-3fe26fae36c3
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-66
+- name: Farah_VPN-67
+  type: vless
+  server: 5.253.30.99
+  port: 40443
+  uuid: 511c1563-2cb6-4064-abc6-a59ee49818a8
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-68
   type: vless
   server: 172.64.150.28
   port: 2082
@@ -326,7 +314,911 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-77
+- name: Farah_VPN-79
+  type: vless
+  server: 152.228.139.33
+  port: 35108
+  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-80
+  type: vless
+  server: 188.114.97.6
+  port: 8080
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-81
+  type: vless
+  server: 46.101.196.101
+  port: 2096
+  uuid: 8525fe74-67e6-4a55-8a26-95f227bd1384
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-82
+  type: vless
+  server: 185.223.57.10
+  port: 33743
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-83
+  type: vless
+  server: server.slavkiti.monster
+  port: 443
+  uuid: d84c13b2-c2b9-4a7c-838f-05ac09ee422e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-84
+  type: vless
+  server: 172.64.149.192
+  port: 443
+  uuid: 5dc15e15-f285-4a9d-959b-0e4fbdd77b63
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-85
+  type: vless
+  server: 91.193.58.117
+  port: 443
+  uuid: 9419f782-b18e-4c4b-ae95-a7a279fd021f
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-96
+  type: vless
+  server: 46.101.196.101
+  port: 2096
+  uuid: 8525fe74-67e6-4a55-8a26-95f227bd1384
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-97
+  type: vless
+  server: 162.159.39.218
+  port: 80
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-98
+  type: vless
+  server: 108.162.198.178
+  port: 8080
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-99
+  type: vless
+  server: 82.39.171.142
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-100
+  type: vless
+  server: 150.241.101.80
+  port: 8443
+  uuid: 47d9b534-8a0a-4bd2-90f1-1d6ade14427e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-101
+  type: vless
+  server: dorado.yokkastars.com
+  port: 40443
+  uuid: af5eac96-e478-488a-bc8c-45269d7e8847
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-102
+  type: vless
+  server: 72.56.41.33
+  port: 40443
+  uuid: 5be7fb02-b6a5-450f-b041-3243b98e8420
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-103
+  type: vless
+  server: 45.12.30.30
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵-114
+  type: vmess
+  server: 45.32.57.118
+  port: 4433
+  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇮🇳 Join+Telegram:@Farah_VPN 🇮🇳-115
+  type: vmess
+  server: 152.67.8.205
+  port: 80
+  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-116
+  type: vless
+  server: 169.40.42.16
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-117
+  type: vless
+  server: 169.40.42.232
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-118
+  type: vless
+  server: 173.242.63.235
+  port: 8443
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-119
+  type: vless
+  server: 162.159.39.218
+  port: 80
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇦🇹 Join+Telegram:@Farah_VPN 🇦🇹-130
+  type: vmess
+  server: zfd-boardv2.kunlun01dns.com
+  port: 16308
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-131
+  type: vmess
+  server: 158.51.121.63
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: 🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵-132
+  type: vmess
+  server: 172.111.146.64
+  port: 80
+  uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-133
+  type: vless
+  server: 178.236.16.98
+  port: 35728
+  uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-134
+  type: vless
+  server: onhit.shalana.xyz
+  port: 443
+  uuid: 408fbae6-a40b-4f0b-9723-0b4ce8e3d035
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-135
+  type: vless
+  server: platform108.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-136
+  type: vless
+  server: 31.56.184.132
+  port: 8443
+  uuid: 11f21602-47aa-42e2-9149-69120f2e6df6
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-137
+  type: vless
+  server: platform109.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧-148
+  type: vmess
+  server: zfd-hkv2.kunlun01dns.com
+  port: 16116
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇰🇷 Join+Telegram:@Farah_VPN 🇰🇷-149
+  type: vmess
+  server: 140.238.2.250
+  port: 443
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-150
+  type: vless
+  server: 3.0.111.82
+  port: 12972
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-151
+  type: vless
+  server: platform118.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-152
+  type: vless
+  server: platform113.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-153
+  type: vless
+  server: 152.53.1.40
+  port: 443
+  uuid: edde565e-41f5-400e-84ea-7b87a3e84488
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-154
+  type: vless
+  server: surstreming.vvzzkontaktezzvv.garden
+  port: 443
+  uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-155
+  type: vless
+  server: 89.218.15.90
+  port: 10002
+  uuid: 392fcc7e-b995-11f1-a6b7-1b2272a86bd5
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-166
+  type: vmess
+  server: 167.17.68.89
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇳🇱 Join+Telegram:@Farah_VPN 🇳🇱-167
+  type: vmess
+  server: pahobac.org
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-168
+  type: vmess
+  server: 47.86.167.194
+  port: 800
+  uuid: f2c67cae-c09d-4739-947d-f5302d87a3c0
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-169
+  type: vless
+  server: 47.239.6.251
+  port: 13779
+  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-170
+  type: vless
+  server: 91.193.58.108
+  port: 2096
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-171
+  type: vless
+  server: 188.114.98.112
+  port: 80
+  uuid: 0991a0c4-0ee5-4213-af89-7ad589f853f3
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-172
+  type: vless
+  server: 141.11.87.48
+  port: 8443
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-173
+  type: vless
+  server: 57.131.38.163
+  port: 2053
+  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-174
+  type: vless
+  server: 31.76.101.39
+  port: 443
+  uuid: d72f05b0-b182-4783-a6f2-21cecc7d841a
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-175
+  type: vless
+  server: 212.227.235.66
+  port: 2053
+  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-186
+  type: vmess
+  server: vspeedfast.org
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-187
+  type: vmess
+  server: 172.111.38.100
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-188
+  type: vless
+  server: 188.114.97.6
+  port: 80
+  uuid: 57bd62cf-5550-4075-8fa3-d4519aae8df0
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-189
+  type: vless
+  server: conge.ggisopi.su
+  port: 443
+  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-190
+  type: vless
+  server: 144.31.27.215
+  port: 43000
+  uuid: 47f79fc1-0646-40e8-8a58-73e85d183d5a
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-191
+  type: vless
+  server: 193.169.229.145
+  port: 443
+  uuid: 46b3a70b-b99f-4c6e-aa83-df6d842bb954
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-192
+  type: vless
+  server: 107.181.151.241
+  port: 443
+  uuid: 455cfdc6-9abf-4e40-863f-5ff6cc63457c
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-203
+  type: vless
+  server: 195.58.144.56
+  port: 11907
+  uuid: 07cb07b9-0c4d-46c1-a15a-b147511b6b07
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-204
+  type: vless
+  server: 146.70.124.85
+  port: 443
+  uuid: 40abbe13-f02e-4da2-9b19-966c2c3eb4ee
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-205
+  type: vless
+  server: 188.114.97.6
+  port: 8080
+  uuid: 934f2038-17f8-4ec5-9204-8381e19fc6e3
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-206
+  type: vless
+  server: 13.231.19.51
+  port: 11690
+  uuid: e2b8b217-cffb-4d66-9b8b-eca6e4334032
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-207
+  type: vless
+  server: 172.67.148.180
+  port: 443
+  uuid: 02e6ad71-7f85-4c3a-aac7-6171762bce87
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-208
+  type: vless
+  server: q2-phbest7v2a8iuowpr.g0xigfh41wwnv39y-b3rzmht.workers.dev
+  port: 443
+  uuid: 709b1cf4-a386-4cbf-bcf4-46f03c4788a8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-209
+  type: vless
+  server: platform106.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-210
+  type: vless
+  server: 3.39.4.109
+  port: 13672
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-221
+  type: vmess
+  server: 172.67.167.78
+  port: 8443
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-222
+  type: vless
+  server: 194.76.154.31
+  port: 40443
+  uuid: 9f0baff8-bdee-4de9-9515-bcc4932b41fa
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-223
+  type: vless
+  server: 176.123.162.100
+  port: 9880
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-224
+  type: vless
+  server: 176.108.241.137
+  port: 9891
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-225
+  type: vless
+  server: 162.159.38.127
+  port: 2052
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-226
+  type: vless
+  server: 45.8.173.250
+  port: 443
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-227
+  type: vless
+  server: 176.123.161.222
+  port: 9892
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-228
+  type: vless
+  server: 196.245.52.148
+  port: 25155
+  uuid: 441a29b2-d9aa-47d5-9209-0a9191479f9f
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-229
+  type: vless
+  server: platform107.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-230
+  type: vless
+  server: test.keoplentuio.xyz
+  port: 2053
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇫🇷 Join+Telegram:@Farah_VPN 🇫🇷-241
+  type: vmess
+  server: 188.114.96.19
+  port: 80
+  uuid: 479526cd-5011-43cf-a788-504da95e07c2
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-242
+  type: vmess
+  server: 169.197.143.116
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-243
+  type: vmess
+  server: 169.197.142.22
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-244
+  type: vmess
+  server: 216.152.152.187
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-245
+  type: vless
+  server: 80.240.18.227
+  port: 10051
+  uuid: 73996ef7-544c-45e7-abc0-973218c727e2
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-246
+  type: vless
+  server: uae.unixzone.us
+  port: 22573
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-247
+  type: vless
+  server: 148.113.5.44
+  port: 443
+  uuid: 72ea5a91-ffcc-43d2-9297-5993c3abf186
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-248
+  type: vless
+  server: 217.217.254.126
+  port: 2053
+  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-249
+  type: trojan
+  server: 185.255.179.166
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-250
+  type: trojan
+  server: 185.220.100.168
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-259
+  type: vless
+  server: platform115.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-260
+  type: vless
+  server: 162.159.45.19
+  port: 80
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-261
+  type: vless
+  server: 172.67.219.21
+  port: 443
+  uuid: 49c0ae46-767c-47d1-9703-8740e0c4b15a
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-262
+  type: vless
+  server: 108.162.198.178
+  port: 2086
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-263
+  type: vless
+  server: 193.163.203.199
+  port: 443
+  uuid: 3e2591b2-4739-4c59-b540-344f0b6505ac
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-264
+  type: vless
+  server: 134.122.154.210
+  port: 443
+  uuid: 7f549a50-4655-46b6-962d-183cfc532fc9
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-265
+  type: trojan
+  server: 104.21.70.21
+  port: 443
+  password: 018b8e7b-7813-4dcb-84a5-3c98f1521e00
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-266
+  type: trojan
+  server: 188.42.145.180
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: 🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧-273
+  type: vmess
+  server: 66.163.117.58
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧-274
+  type: vmess
+  server: 188.114.96.19
+  port: 80
+  uuid: af4be52a-aab3-4db1-a6bb-c23700dcb9c2
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-275
+  type: vless
+  server: 54.37.136.194
+  port: 2053
+  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-276
+  type: vless
+  server: ww9.levikogjgfdd.ir
+  port: 36925
+  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-277
+  type: vless
+  server: 31.77.227.10
+  port: 52006
+  uuid: bc659d88-a1e0-4c65-a49a-7b51b26a7a7f
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-278
+  type: vless
+  server: 169.40.42.179
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-279
+  type: vless
+  server: 15.204.97.219
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-290
+  type: vless
+  server: 188.114.97.6
+  port: 8080
+  uuid: a22bff60-a40a-4250-bde2-4c660e363b47
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-291
+  type: vless
+  server: 169.40.42.15
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-292
+  type: vless
+  server: 78.111.89.171
+  port: 443
+  uuid: 0370b162-baff-4757-86cc-cce4bf07f6f1
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-293
+  type: vless
+  server: 31.77.13.19
+  port: 2063
+  uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-294
+  type: vless
+  server: 104.21.39.30
+  port: 80
+  uuid: 7201b2cd-0675-4c1a-9c76-07ca14ffcf08
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-295
+  type: trojan
+  server: 188.114.97.3
+  port: 443
+  password: Telegram_healer_config
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-296
+  type: trojan
+  server: 104.16.72.41
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-297
+  type: trojan
+  server: 109.206.241.10
+  port: 449
+  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-298
+  type: trojan
+  server: 188.114.97.6
+  port: 443
+  password: Telegram_healer_config
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: Farah_VPN-299
+  type: trojan
+  server: 212.183.88.136
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-305
+  type: vmess
+  server: 38.91.107.49
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-306
   type: vmess
   server: 6jdvarazgu3qqr6q.v.3dns.vip
   port: 443
@@ -336,263 +1228,49 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-78
+- name: Farah_VPN-307
   type: vless
-  server: 169.40.42.179
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-79
-  type: vless
-  server: 54.37.136.194
-  port: 2053
-  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-80
-  type: vless
-  server: 169.40.42.15
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-81
-  type: vless
-  server: 104.21.6.186
-  port: 8443
-  uuid: c07346da-5799-40c1-9d5a-5ea3ca3ac9e2
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-82
-  type: vless
-  server: 162.159.39.218
-  port: 2052
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-83
-  type: vless
-  server: 94.130.178.194
-  port: 443
-  uuid: 9e3132b8-b595-444a-833a-2de44789f9d7
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-84
-  type: trojan
-  server: 47.250.84.25
-  port: 443
-  password: 5931134d1cde66bf83a54acdfebe7ab2
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-94
-  type: vless
-  server: 103.177.249.40
-  port: 2083
-  uuid: 97532b08-357e-4140-a6f0-8e07f2ed3327
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-95
-  type: vless
-  server: 150.251.113.34
-  port: 443
-  uuid: d7d724b5-17ce-4f3c-877d-dfbf0f07afa1
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-96
-  type: vless
-  server: 132.243.203.214
-  port: 8443
-  uuid: 9e3132b8-b595-444a-833a-2de44789f9d7
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: 🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧-107
-  type: vmess
-  server: 186.190.211.67
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-108
-  type: vless
-  server: 104.27.52.69
-  port: 443
-  uuid: 73796e63-0000-4000-8000-000000000000
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-109
-  type: vless
-  server: 85.208.86.91
-  port: 9872
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-110
-  type: vless
-  server: 172.64.32.108
-  port: 8880
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-111
-  type: vless
-  server: www.iplocation.net
-  port: 8080
-  uuid: 5c4ce4e3-d4cd-43ff-8eb0-9aa553410bff
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-112
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  uuid: 33918b20-9e02-4dc6-8b30-79b2d4b2e0e6
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-113
-  type: vless
-  server: e33xr.qzz.io
-  port: 80
-  uuid: e081da45-9fae-4687-9376-f9a6a0dbbe83
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-123
-  type: vless
-  server: 82.39.171.12
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-124
-  type: vless
-  server: 185.207.197.12
-  port: 80
-  uuid: 080fad7c-ff4b-499f-ab5d-52d69ea5745a
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-125
-  type: vless
-  server: 46.101.196.101
-  port: 2096
-  uuid: 8525fe74-67e6-4a55-8a26-95f227bd1384
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-126
-  type: vless
-  server: 15.204.97.209
+  server: 15.204.97.197
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   udp: true
   tls: false
   skip-cert-verify: true
-- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-137
-  type: vmess
-  server: aksai.org
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-138
+- name: Farah_VPN-308
   type: vless
-  server: sg2-8sb.6121999.dpdns.org
-  port: 19825
-  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-139
-  type: vless
-  server: 167.172.183.195
-  port: 2096
-  uuid: bba95b1f-f48c-454b-897b-a6c6bc307df1
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-140
-  type: vless
-  server: 172.64.229.170
-  port: 2082
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-141
-  type: vless
-  server: 172.64.32.108
+  server: 108.162.198.178
   port: 2086
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Farah_VPN-142
+- name: Farah_VPN-309
   type: vless
-  server: 185.47.254.251
+  server: 104.19.154.200
   port: 443
-  uuid: 878fb7f7-fc65-465e-a352-17c7216c6f3d
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-143
-  type: vless
-  server: prep.wwwinternetvideo.click
-  port: 443
-  uuid: 1c332eae-7e02-4acd-996d-4eb3e652401c
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-144
-  type: vless
-  server: 151.241.226.201
-  port: 2053
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-145
-  type: vless
-  server: 169.40.42.52
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-156
-  type: vmess
-  server: 93ucrn4i0pffuabk.v.3dns.vip
-  port: 443
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  alterId: 0
-  cipher: auto
+  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
   udp: true
   tls: true
   skip-cert-verify: true
-- name: 🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-157
+- name: Farah_VPN-310
+  type: vless
+  server: 104.18.46.234
+  port: 2082
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-311
+  type: vless
+  server: 72.4.65.116
+  port: 443
+  uuid: 0dca2cfe-98eb-4f9d-9a47-cf87510c558b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-321
   type: vmess
-  server: 23.162.200.198
+  server: 84.17.41.2
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
@@ -600,197 +1278,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Farah_VPN-158
-  type: vless
-  server: cf-socks.caoyuwu.eu.org
-  port: 443
-  uuid: 9cdcbaf0-d244-4f37-b227-90166e43f5b5
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-159
-  type: vless
-  server: 185.79.138.71
-  port: 448
-  uuid: 0b0915d7-6800-4580-a44b-77d84f105e6a
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-170
-  type: vless
-  server: germa12.ggisopi.su
-  port: 443
-  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-171
-  type: vless
-  server: 172.64.154.8
-  port: 2052
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-172
-  type: vless
-  server: 204.216.216.23
-  port: 10086
-  uuid: 9f0285ee-20ca-4953-bcdb-86a920652923
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-173
-  type: vless
-  server: 45.62.106.145
-  port: 8443
-  uuid: a3054186-5e1d-4c95-a849-a79ee1e447b2
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-174
-  type: vless
-  server: 66.90.105.211
-  port: 2083
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-175
-  type: vless
-  server: 104.27.2.172
-  port: 80
-  uuid: 234c52f2-0d7b-dc4a-0d6b-b0b300000025
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-176
-  type: vless
-  server: 104.26.12.227
-  port: 2096
-  uuid: 73bcd72f-9545-4cb8-8daf-7d004501880d
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-177
-  type: vless
-  server: 45.149.172.80
-  port: 443
-  uuid: 91d28760-ecf1-450b-9170-d310111a0e6d
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-188
-  type: vless
-  server: 15.204.97.195
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-189
-  type: vless
-  server: www.speedtest.net
-  port: 443
-  uuid: b19419fa-8009-455b-b059-765e2856883a
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-190
-  type: vless
-  server: 60.248.219.54
-  port: 443
-  uuid: 06e177f7-240d-4687-bd85-235505801a5e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-201
-  type: vless
-  server: 186.190.211.188
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-202
-  type: vless
-  server: 5dktcuajb2a1jxix7csnrmeucg.mahrademami.workers.dev
-  port: 443
-  uuid: 5934b979-e128-4c90-a600-744b97bffc8c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-203
-  type: vless
-  server: 188.114.97.3
-  port: 443
-  uuid: c5db14f6-2a21-401c-8160-a8093ff4ffd3
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-204
-  type: vless
-  server: 104.21.0.87
-  port: 443
-  uuid: 5da16620-0386-4da3-a252-12a6380ed1a6
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-205
-  type: vless
-  server: 188.114.97.6
-  port: 2095
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-216
-  type: vless
-  server: 172.65.90.53
-  port: 8880
-  uuid: 121c3728-2b6b-4b69-bac6-170b13658d74
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-217
-  type: vless
-  server: 82.24.203.20
-  port: 2087
-  uuid: 5fcdc9b7-e70f-4a5c-85c3-e018ad818326
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 🇫🇷 Join+Telegram:@Farah_VPN 🇫🇷-237
-  type: vmess
-  server: 45.80.215.8
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 🇪🇸 Join+Telegram:@Farah_VPN 🇪🇸-238
-  type: vmess
-  server: 85.90.217.42
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 🇪🇸 Join+Telegram:@Farah_VPN 🇪🇸-239
-  type: vmess
-  server: 66.163.118.73
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 🇩🇪 Join+Telegram:@Farah_VPN 🇩🇪-240
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-322
   type: vmess
   server: aidrivercat.org
   port: 443
@@ -800,325 +1288,35 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Farah_VPN-241
-  type: vless
-  server: 104.21.70.21
-  port: 443
-  uuid: 8525fe74-67e6-4a55-8a26-95f227bd1384
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-242
-  type: vless
-  server: 104.21.70.21
-  port: 443
-  uuid: d9abc6e3-83bf-4c28-ae68-72465e2abe39
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-243
-  type: vless
-  server: 46.101.253.244
-  port: 2083
-  uuid: bba95b1f-f48c-454b-897b-a6c6bc307df1
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-244
-  type: vless
-  server: 3.9.135.156
-  port: 51847
-  uuid: 391a01e9-b664-407b-9158-610fab3f5920
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-245
-  type: vless
-  server: 83.147.18.3
-  port: 443
-  uuid: 9f61cdf4-810d-4052-bbc7-2da0c8e20104
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-256
-  type: vless
-  server: 66.90.104.42
-  port: 2083
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-257
-  type: vless
-  server: tomaz1337shellbuy.vvzzkontaktezzvv.garden
-  port: 443
-  uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-258
-  type: vless
-  server: 104.19.230.21
-  port: 443
-  uuid: 615d9f74-4d51-bad3-f240-2a8400000011
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-259
-  type: vless
-  server: arcturus.yokkastars.com
-  port: 40443
-  uuid: bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-260
-  type: vless
-  server: 87.120.216.144
-  port: 443
-  uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-261
-  type: vless
-  server: 152.228.162.19
-  port: 80
-  uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-262
-  type: vless
-  server: 172.67.213.218
-  port: 2096
-  uuid: e6b59d15-364c-4025-899a-84efa291d651
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-272
-  type: vmess
-  server: zfd-hkv2.kunlun01dns.com
-  port: 16115
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧-273
-  type: vmess
-  server: zfd-hkv2.kunlun01dns.com
-  port: 16113
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧-274
-  type: vmess
-  server: zfd-hkv2.kunlun01dns.com
-  port: 16112
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-275
-  type: vless
-  server: 31.76.245.63
-  port: 443
-  uuid: d72f05b0-b182-4783-a6f2-21cecc7d841a
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-276
-  type: vless
-  server: 172.65.90.53
-  port: 8880
-  uuid: 812b1aeb-c6f7-43cb-8d8b-981711fea21a
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-277
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-278
-  type: vless
-  server: 15.204.97.206
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-279
-  type: vless
-  server: 94.183.170.135
-  port: 8443
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: 🇸🇬 Join+Telegram:@Farah_VPN 🇸🇬-290
-  type: vmess
-  server: ww11.levikogjgfdd.ir
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 🇲🇾 Join+Telegram:@Farah_VPN 🇲🇾-291
-  type: vmess
-  server: 47.250.135.244
-  port: 10000
-  uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-292
-  type: vmess
-  server: 129.146.77.248
-  port: 39495
-  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵-293
-  type: vmess
-  server: 168.138.43.75
-  port: 80
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-294
-  type: vmess
-  server: 134.195.196.211
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-295
-  type: vless
-  server: 162.159.81.177
-  port: 80
-  uuid: 4b00d726-e072-429b-997e-f07affea3b7f
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-296
-  type: vless
-  server: 172.67.142.2
-  port: 443
-  uuid: 36d9003c-7240-40bc-af62-07c39f7a0b94
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-297
-  type: vless
-  server: 172.64.53.55
-  port: 2095
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-298
-  type: vless
-  server: 188.114.97.6
-  port: 8080
-  uuid: ad40a583-2d59-44ff-88cf-b5db0e1e00a7
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 🇹🇼 Join+Telegram:@Farah_VPN 🇹🇼-309
-  type: vmess
-  server: 165.154.195.38
-  port: 35034
-  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-310
-  type: vmess
-  server: nycqg19zkwacpm1b.v.3dns.vip
-  port: 443
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-311
-  type: vless
-  server: 68.183.65.82
-  port: 2083
-  uuid: 8525fe74-67e6-4a55-8a26-95f227bd1384
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-312
-  type: vless
-  server: 46.28.67.55
-  port: 443
-  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-313
-  type: vless
-  server: 2.26.30.216
-  port: 443
-  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-314
-  type: vless
-  server: 104.17.147.22
-  port: 443
-  uuid: 518de0d4-6ce8-4404-80db-23c4a8806128
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-315
-  type: vless
-  server: 164.90.176.31
-  port: 2083
-  uuid: a747c516-34bd-41b8-8590-a9d1edb79e95
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-316
+- name: Farah_VPN-323
   type: trojan
-  server: 185.114.72.31
-  port: 2053
-  password: humanity
+  server: 47.250.84.25
+  port: 443
+  password: 5931134d1cde66bf83a54acdfebe7ab2
   udp: true
   tls: true
   skip-cert-verify: true
-- name: 🇮🇹 Join+Telegram:@Farah_VPN 🇮🇹-325
+- name: Farah_VPN-324
+  type: trojan
+  server: 45.32.157.84
+  port: 443
+  password: Tg3RnK7Xp8B1
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-333
   type: vmess
-  server: 89.41.172.85
+  server: 47.85.188.30
+  port: 12004
+  uuid: 8b5552bd-4cc7-4cac-af08-81c21686fd4f
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-334
+  type: vmess
+  server: 67.220.72.237
   port: 22324
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
@@ -1126,177 +1324,63 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Farah_VPN-326
+- name: Farah_VPN-335
   type: vless
-  server: 176.108.246.58
-  port: 9881
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  server: 23.81.34.204
+  port: 443
+  uuid: 99955907-9070-46f0-a200-9c7a0b9d74fe
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Farah_VPN-327
+- name: Farah_VPN-336
   type: vless
-  server: 104.21.70.21
-  port: 443
-  uuid: efe19c5a-0ea1-4666-8a4c-4a33f4670775
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-328
-  type: vless
-  server: 108.162.198.178
-  port: 2052
+  server: 172.64.158.146
+  port: 8880
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Farah_VPN-329
+- name: Farah_VPN-337
   type: vless
-  server: 45.8.173.250
+  server: www.visa.com.sg
+  port: 8880
+  uuid: 35b94b2c-1b46-4209-a04b-32ecf159b632
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: Farah_VPN-338
+  type: vless
+  server: 150.251.113.34
   port: 443
-  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-330
-  type: vless
-  server: 173.242.63.235
-  port: 8443
-  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: Farah_VPN-331
-  type: vless
-  server: 103.86.49.57
-  port: 80
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
+  uuid: d7d724b5-17ce-4f3c-877d-dfbf0f07afa1
   udp: true
   tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-332
-  type: vless
-  server: 15.204.97.216
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-333
-  type: vless
-  server: 54.251.9.130
-  port: 24146
-  uuid: 9d9a048b-3aea-4b3e-b106-1106bf301feb
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-334
-  type: trojan
-  server: 8.47.69.0
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: 🇰🇿 Join+Telegram:@Farah_VPN 🇰🇿-344
-  type: vmess
-  server: 38.107.234.57
-  port: 80
-  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-345
-  type: vless
-  server: 108.162.198.178
-  port: 80
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-346
-  type: vless
-  server: 162.159.38.127
-  port: 2052
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-347
-  type: vless
-  server: 46.29.238.88
-  port: 40443
-  uuid: db320947-adfb-400d-b60b-383b8324bffe
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-348
-  type: vless
-  server: 3h-unitedstates3.09vpn.com
-  port: 8443
-  uuid: 48572af1-d091-457b-a86e-4a457e99927f
-  udp: true
-  tls: true
   skip-cert-verify: true
 - name: Farah_VPN-349
   type: vless
-  server: 176.108.246.110
-  port: 9830
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  server: 79.141.174.147
+  port: 33743
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
   udp: true
   tls: false
   skip-cert-verify: true
 - name: Farah_VPN-350
   type: vless
-  server: 169.40.42.104
+  server: 82.39.171.12
   port: 443
   uuid: d65cc14c-f53f-4fe2-b262-97856601319c
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Farah_VPN-351
+- name: meliproxyy-360
   type: vless
-  server: 108.162.198.178
-  port: 2086
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  server: 91.107.162.148
+  port: 1819
+  uuid: 9ef511af-41a3-4c92-afa6-3139016f8e93
   udp: true
   tls: false
-  skip-cert-verify: true
-- name: Farah_VPN-352
-  type: trojan
-  server: 172.64.145.158
-  port: 443
-  password: xhl549341
-  udp: true
-  tls: true
   skip-cert-verify: true
 - name: meliproxyy-361
-  type: vless
-  server: netcraft.com
-  port: 2053
-  uuid: ac5a37a9-6238-45c2-a8ba-3d18f58e6be0
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: meliproxyy-362
-  type: vless
-  server: 199.232.78.159
-  port: 443
-  uuid: 9e9fd625-e4d7-4944-ae7e-4145342fa5db
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: meliproxyy-363
-  type: vless
-  server: 104.16.107.139
-  port: 8880
-  uuid: 24c2a873-4584-4c53-8679-61029682d0bb
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: meliproxyy-364
   type: vless
   server: 104.18.4.130
   port: 80
@@ -1304,27 +1388,51 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
+- name: meliproxyy-362
+  type: vless
+  server: 209.38.53.131
+  port: 8039
+  uuid: 969a990d-5289-7ae1-5e71-90476928f93a
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: meliproxyy-363
+  type: vless
+  server: 18.171.3.214
+  port: 22222
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: meliproxyy-364
+  type: vless
+  server: 129.101.120.5
+  port: 37951
+  uuid: 25284368-40d5-4abe-9f56-54a07e88a7af
+  udp: true
+  tls: false
+  skip-cert-verify: true
 - name: meliproxyy-365
   type: vless
-  server: str.paydayloansmesquitetx.com
-  port: 2565
-  uuid: 5463f486-3cbf-4d68-9054-b8d12b89d8fd
+  server: 15.236.236.185
+  port: 22222
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   udp: true
   tls: false
   skip-cert-verify: true
 - name: meliproxyy-366
   type: vless
-  server: 192.248.179.81
-  port: 80
-  uuid: 2787849c-1a49-4457-9db7-efcdb2578268
+  server: 31.130.149.165
+  port: 875
+  uuid: 4a9d6057-985a-4531-851c-5b4db77b0409
   udp: true
   tls: false
   skip-cert-verify: true
 - name: meliproxyy-367
   type: vless
-  server: 178.105.120.168
-  port: 80
-  uuid: 1d9cbbf4-bb99-4b09-8750-1cc22d510018
+  server: 178.104.219.134
+  port: 9443
+  uuid: e9938bd6-4ee5-4ec1-a3b4-1b212406a8f0
   udp: true
   tls: false
   skip-cert-verify: true
@@ -1338,183 +1446,13 @@ proxies:
   skip-cert-verify: true
 - name: meliproxyy-369
   type: trojan
-  server: 151.101.56.7
-  port: 443
-  password: MiTiVPN
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: meliproxyy-370
-  type: trojan
-  server: 172.67.149.60
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: meliproxyy-371
-  type: trojan
-  server: 188.114.97.7
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: meliproxyy-372
-  type: trojan
-  server: render.com
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: meliproxyy-373
-  type: trojan
-  server: www.speedtest.net
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: '@meliproxyy-381'
-  type: vmess
-  server: 66.163.118.73
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: meliproxyy-382
-  type: vless
-  server: kazartip.thewalkingded.life
-  port: 443
-  uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: meliproxyy-383
-  type: vless
-  server: 169.40.42.133
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: meliproxyy-384
-  type: vless
-  server: 122.8.45.2
-  port: 443
-  uuid: 3ae00194-1bc0-0bf4-9564-3c55b1c6d485
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: meliproxyy-385
-  type: vless
-  server: fra.loozerp.wiki
-  port: 443
-  uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: meliproxyy-386
-  type: vless
-  server: 89.185.81.95
-  port: 8765
-  uuid: df9f5aca-eda0-428f-a752-e53866153d12
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: meliproxyy-387
-  type: trojan
-  server: 151.101.56.7
-  port: 443
-  password: MiTiVPN
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: meliproxyy-394
-  type: vless
-  server: 91.107.162.148
-  port: 1819
-  uuid: 9ef511af-41a3-4c92-afa6-3139016f8e93
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: meliproxyy-395
-  type: vless
-  server: 104.18.4.130
-  port: 80
-  uuid: 66fb823b-3de8-45a3-9060-1dc992c38cc9
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: meliproxyy-396
-  type: vless
-  server: 209.38.53.131
-  port: 8039
-  uuid: 969a990d-5289-7ae1-5e71-90476928f93a
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: meliproxyy-397
-  type: vless
-  server: 18.171.3.214
-  port: 22222
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: meliproxyy-398
-  type: vless
-  server: 129.101.120.5
-  port: 37951
-  uuid: 25284368-40d5-4abe-9f56-54a07e88a7af
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: meliproxyy-399
-  type: vless
-  server: 15.236.236.185
-  port: 22222
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: meliproxyy-400
-  type: vless
-  server: 31.130.149.165
-  port: 875
-  uuid: 4a9d6057-985a-4531-851c-5b4db77b0409
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: meliproxyy-401
-  type: vless
-  server: 178.104.219.134
-  port: 9443
-  uuid: e9938bd6-4ee5-4ec1-a3b4-1b212406a8f0
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: meliproxyy-402
-  type: trojan
-  server: 167.82.76.7
-  port: 443
-  password: MiTiVPN
-  udp: true
-  tls: true
-  skip-cert-verify: true
-- name: meliproxyy-403
-  type: trojan
   server: 199.232.78.188
   port: 443
   password: MiTiVPN
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-413
+- name: meliproxyy-379
   type: vless
   server: 5.223.74.174
   port: 2053
@@ -1522,7 +1460,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-414
+- name: meliproxyy-380
   type: vless
   server: 209.38.53.131
   port: 1161
@@ -1530,7 +1468,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-415
+- name: meliproxyy-381
   type: vless
   server: 144.31.90.228
   port: 443
@@ -1538,7 +1476,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-416
+- name: meliproxyy-382
   type: vless
   server: 62.152.58.182
   port: 443
@@ -1546,7 +1484,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-417
+- name: meliproxyy-383
   type: vless
   server: 122.8.45.3
   port: 8443
@@ -1554,7 +1492,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-418
+- name: meliproxyy-384
   type: vless
   server: 199.232.78.159
   port: 443
@@ -1562,7 +1500,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-419
+- name: meliproxyy-385
   type: vless
   server: 178.104.219.134
   port: 9443
@@ -1570,7 +1508,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-420
+- name: meliproxyy-386
   type: trojan
   server: 199.232.78.188
   port: 443
@@ -1578,7 +1516,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-421
+- name: meliproxyy-387
   type: trojan
   server: 167.82.76.7
   port: 443
@@ -1586,7 +1524,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-429
+- name: meliproxyy-395
   type: vless
   server: www.gameturk.bestvnxv.org
   port: 21710
@@ -1594,7 +1532,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-430
+- name: meliproxyy-396
   type: vless
   server: 194.55.235.176
   port: 443
@@ -1602,7 +1540,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-431
+- name: meliproxyy-397
   type: vless
   server: admin.betust.net
   port: 443
@@ -1610,7 +1548,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-432
+- name: meliproxyy-398
   type: vless
   server: iran.mstr.pingxoxo.info
   port: 36171
@@ -1618,7 +1556,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-433
+- name: meliproxyy-399
   type: vless
   server: morteza0966-production.up.railway.app
   port: 443
@@ -1626,7 +1564,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-434
+- name: meliproxyy-400
   type: vless
   server: sw.bmbrvpn.cc
   port: 443
@@ -1634,7 +1572,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-435
+- name: meliproxyy-401
   type: vless
   server: iranibestv.pingxoxo.info
   port: 10210
@@ -1642,7 +1580,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-436
+- name: meliproxyy-402
   type: vless
   server: 122.8.45.3
   port: 8443
@@ -1650,7 +1588,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-437
+- name: meliproxyy-403
   type: vless
   server: node-production-ccd3.up.railway.app
   port: 443
@@ -1658,7 +1596,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-438
+- name: meliproxyy-404
   type: vless
   server: tickets.betust.net
   port: 443
@@ -1666,7 +1604,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-439
+- name: meliproxyy-405
   type: vless
   server: k2.cloud--vpn.site
   port: 443
@@ -1674,7 +1612,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: '@meliproxyy-452'
+- name: '@meliproxyy-418'
   type: vmess
   server: 57.129.132.223
   port: 80
@@ -1684,7 +1622,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@meliproxyy-453'
+- name: '@meliproxyy-419'
   type: vmess
   server: 186.190.211.67
   port: 443
@@ -1694,7 +1632,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-454
+- name: meliproxyy-420
   type: vless
   server: rubifen.adaspoloandco.com
   port: 443
@@ -1702,7 +1640,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-455
+- name: meliproxyy-421
   type: vless
   server: 62.152.58.182
   port: 443
@@ -1710,7 +1648,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-456
+- name: meliproxyy-422
   type: vless
   server: 31.76.245.63
   port: 443
@@ -1718,7 +1656,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-457
+- name: meliproxyy-423
   type: vless
   server: 64.188.126.56
   port: 43000
@@ -1726,7 +1664,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-458
+- name: meliproxyy-424
   type: vless
   server: rfr2svuxvm.paslanmaz.ir
   port: 4060
@@ -1734,7 +1672,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-459
+- name: meliproxyy-425
   type: vless
   server: finporkzov.com
   port: 443
@@ -1742,7 +1680,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-460
+- name: meliproxyy-426
   type: vless
   server: 178.105.120.168
   port: 80
@@ -1750,7 +1688,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-461
+- name: meliproxyy-427
   type: vless
   server: cosw.ggisopi.su
   port: 443
@@ -1758,7 +1696,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-462
+- name: meliproxyy-428
   type: vless
   server: 179.254.109.54
   port: 443
@@ -1766,7 +1704,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-463
+- name: meliproxyy-429
   type: vless
   server: 188.225.77.241
   port: 443
@@ -1774,7 +1712,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-464
+- name: meliproxyy-430
   type: vless
   server: gerwai1488.vvzzkontaktezzvv.garden
   port: 443
@@ -1782,7 +1720,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-465
+- name: meliproxyy-431
   type: vless
   server: 209.200.246.148
   port: 443
@@ -1790,7 +1728,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-466
+- name: meliproxyy-432
   type: vless
   server: 199.232.78.159
   port: 443
@@ -1798,7 +1736,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-467
+- name: meliproxyy-433
   type: vless
   server: dl2.musicworldtg.com
   port: 2018
@@ -1806,7 +1744,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-484
+- name: meliproxyy-450
   type: vless
   server: files.noneok.com
   port: 443
@@ -1814,7 +1752,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-485
+- name: meliproxyy-451
   type: vless
   server: 150.241.101.80
   port: 8443
@@ -1822,7 +1760,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-486
+- name: meliproxyy-452
   type: vless
   server: 195.133.73.65
   port: 443
@@ -1830,7 +1768,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-487
+- name: meliproxyy-453
   type: vless
   server: xn--gabjkk-hta.bizimoglan.ir
   port: 4060
@@ -1838,7 +1776,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-488
+- name: meliproxyy-454
   type: vless
   server: 185.171.202.106
   port: 443
@@ -1846,7 +1784,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-489
+- name: meliproxyy-455
   type: vless
   server: 91.210.169.181
   port: 443
@@ -1854,7 +1792,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-490
+- name: meliproxyy-456
   type: vless
   server: 31.57.24.177
   port: 443
@@ -1862,7 +1800,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-498
+- name: meliproxyy-464
   type: vless
   server: 162.159.82.123
   port: 2053
@@ -1870,7 +1808,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-499
+- name: meliproxyy-465
   type: vless
   server: 151.101.56.6
   port: 443
@@ -1878,7 +1816,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-500
+- name: meliproxyy-466
   type: vless
   server: 94.26.228.10
   port: 443
@@ -1886,7 +1824,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-501
+- name: meliproxyy-467
   type: vless
   server: 45.9.156.24
   port: 443
@@ -1894,7 +1832,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-502
+- name: meliproxyy-468
   type: vless
   server: 31.76.68.210
   port: 443
@@ -1902,7 +1840,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-503
+- name: meliproxyy-469
   type: vless
   server: 107.181.151.241
   port: 443
@@ -1910,7 +1848,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-504
+- name: meliproxyy-470
   type: vless
   server: 148.113.5.44
   port: 443
@@ -1918,7 +1856,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-505
+- name: meliproxyy-471
   type: vless
   server: 62.152.58.182
   port: 443
@@ -1926,7 +1864,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-506
+- name: meliproxyy-472
   type: vless
   server: 185.171.202.106
   port: 443
@@ -1934,7 +1872,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-507
+- name: meliproxyy-473
   type: vless
   server: 150.241.101.80
   port: 8443
@@ -1942,7 +1880,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-508
+- name: meliproxyy-474
   type: vless
   server: 195.133.73.65
   port: 443
@@ -1950,7 +1888,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-509
+- name: meliproxyy-475
   type: vless
   server: sof.edgeptr.org
   port: 443
@@ -1958,7 +1896,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-510
+- name: meliproxyy-476
   type: vless
   server: 87.120.107.246
   port: 443
@@ -1966,7 +1904,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-511
+- name: meliproxyy-477
   type: vless
   server: 104.21.18.141
   port: 443
@@ -1974,7 +1912,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-512
+- name: meliproxyy-478
   type: vless
   server: 188.114.97.6
   port: 443
@@ -1982,7 +1920,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-513
+- name: meliproxyy-479
   type: vless
   server: 172.67.182.80
   port: 443
@@ -1990,7 +1928,15 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-514
+- name: meliproxyy-480
+  type: trojan
+  server: 167.82.76.7
+  port: 443
+  password: MiTiVPN
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: meliproxyy-481
   type: trojan
   server: 151.101.56.255
   port: 443
@@ -1998,7 +1944,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-515
+- name: meliproxyy-482
   type: trojan
   server: www.speedtest.net
   port: 443
@@ -2006,7 +1952,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-516
+- name: meliproxyy-483
   type: trojan
   server: 172.67.149.60
   port: 443
@@ -2014,7 +1960,15 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-533
+- name: meliproxyy-484
+  type: trojan
+  server: 172.67.149.60
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: meliproxyy-501
   type: vless
   server: meow-fin.nethcloud.top
   port: 8443
@@ -2022,7 +1976,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-534
+- name: meliproxyy-502
   type: vless
   server: 188.225.77.241
   port: 443
@@ -2030,7 +1984,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-535
+- name: meliproxyy-503
   type: vless
   server: k2.cloud--vpn.site
   port: 443
@@ -2038,7 +1992,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-536
+- name: meliproxyy-504
   type: vless
   server: dey.lnmarketplace.net
   port: 443
@@ -2046,7 +2000,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-537
+- name: meliproxyy-505
   type: vless
   server: 179.254.109.54
   port: 443
@@ -2054,7 +2008,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-543
+- name: meliproxyy-511
   type: vless
   server: 188.114.97.6
   port: 443
@@ -2062,7 +2016,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-544
+- name: meliproxyy-512
   type: vless
   server: port2.axiomed.ir
   port: 443
@@ -2070,7 +2024,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-545
+- name: meliproxyy-513
   type: vless
   server: 172.67.159.238
   port: 443
@@ -2078,7 +2032,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-546
+- name: meliproxyy-514
   type: vless
   server: 69.46.46.91
   port: 443
@@ -2086,7 +2040,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-547
+- name: meliproxyy-515
   type: vless
   server: cdn.vravio.ir
   port: 443
@@ -2094,7 +2048,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-548
+- name: meliproxyy-516
   type: vless
   server: 199.247.25.212
   port: 443
@@ -2102,7 +2056,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-549
+- name: meliproxyy-517
   type: vless
   server: fs.koomeh.net
   port: 443
@@ -2110,7 +2064,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-557
+- name: meliproxyy-525
   type: vless
   server: dn2.pconnectq.ir
   port: 443
@@ -2118,7 +2072,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-558
+- name: meliproxyy-526
   type: vless
   server: 94.237.40.197
   port: 443
@@ -2126,7 +2080,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-559
+- name: meliproxyy-527
   type: vless
   server: 178.215.238.39
   port: 443
@@ -2134,7 +2088,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-560
+- name: meliproxyy-528
   type: vless
   server: 91.107.249.200
   port: 443
@@ -2142,7 +2096,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-561
+- name: meliproxyy-529
   type: vless
   server: 142.228.52.45
   port: 443
@@ -2150,7 +2104,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-562
+- name: meliproxyy-530
   type: vless
   server: 176.108.244.178
   port: 9881
@@ -2158,7 +2112,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-563
+- name: meliproxyy-531
   type: vless
   server: 5.75.202.157
   port: 443
@@ -2166,7 +2120,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-564
+- name: meliproxyy-532
   type: vless
   server: 176.108.244.38
   port: 9881
@@ -2174,7 +2128,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-565
+- name: meliproxyy-533
   type: vless
   server: 188.114.97.6
   port: 8080
@@ -2182,7 +2136,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-566
+- name: meliproxyy-534
   type: trojan
   server: 199.232.78.188
   port: 443
@@ -2190,7 +2144,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-567
+- name: meliproxyy-535
   type: trojan
   server: 151.101.56.9
   port: 443
@@ -2198,7 +2152,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-568
+- name: meliproxyy-536
   type: trojan
   server: 151.101.56.255
   port: 443
@@ -2206,7 +2160,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: '@meliproxyy-579'
+- name: '@meliproxyy-547'
   type: vmess
   server: 158.160.211.200
   port: 11556
@@ -2216,7 +2170,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-580
+- name: meliproxyy-548
   type: vless
   server: england-d1.parsi.sbs
   port: 2087
@@ -2224,7 +2178,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-581
+- name: meliproxyy-549
   type: vless
   server: holand1.parsiweb.sbs
   port: 15006
@@ -2232,7 +2186,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-582
+- name: meliproxyy-550
   type: vless
   server: france1.parsiweb.sbs
   port: 15004
@@ -2240,7 +2194,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-583
+- name: meliproxyy-551
   type: vless
   server: 151.101.213.199
   port: 443
@@ -2248,7 +2202,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-590
+- name: meliproxyy-558
   type: vless
   server: 213.108.23.184
   port: 443
@@ -2256,7 +2210,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-591
+- name: meliproxyy-559
   type: vless
   server: 176.108.244.38
   port: 9881
@@ -2264,7 +2218,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-592
+- name: meliproxyy-560
   type: vless
   server: 18.139.227.162
   port: 28243
@@ -2272,7 +2226,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-593
+- name: meliproxyy-561
   type: vless
   server: 18.140.238.157
   port: 31870
@@ -2280,7 +2234,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-594
+- name: meliproxyy-562
   type: vless
   server: 18.140.72.106
   port: 23070
@@ -2288,7 +2242,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-595
+- name: meliproxyy-563
   type: vless
   server: 94.183.154.216
   port: 1001
@@ -2296,7 +2250,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-596
+- name: meliproxyy-564
   type: vless
   server: 212.127.90.70
   port: 443
@@ -2304,7 +2258,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-597
+- name: meliproxyy-565
   type: vless
   server: 176.108.244.178
   port: 9881
@@ -2312,7 +2266,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-598
+- name: meliproxyy-566
   type: vless
   server: 54.251.239.81
   port: 26415
@@ -2320,7 +2274,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-599
+- name: meliproxyy-567
   type: vless
   server: 89.105.197.202
   port: 443
@@ -2328,7 +2282,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-600
+- name: meliproxyy-568
   type: vless
   server: 185.143.233.130
   port: 2052
@@ -2336,7 +2290,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-612
+- name: meliproxyy-580
   type: vless
   server: 178.104.219.134
   port: 8881
@@ -2344,7 +2298,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-613
+- name: meliproxyy-581
   type: vless
   server: 151.101.129.194
   port: 443
@@ -2352,7 +2306,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-614
+- name: meliproxyy-582
   type: vless
   server: 91.107.174.119
   port: 8881
@@ -2360,7 +2314,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-615
+- name: meliproxyy-583
   type: trojan
   server: 188.114.97.6
   port: 443
@@ -2368,7 +2322,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-619
+- name: meliproxyy-587
   type: vless
   server: 103.71.22.26
   port: 443
@@ -2376,7 +2330,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-620
+- name: meliproxyy-588
   type: vless
   server: 54.251.239.81
   port: 26415
@@ -2384,7 +2338,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-621
+- name: meliproxyy-589
   type: vless
   server: 132.243.203.214
   port: 8443
@@ -2392,7 +2346,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-622
+- name: meliproxyy-590
   type: vless
   server: 109.122.198.83
   port: 8443
@@ -2400,7 +2354,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-623
+- name: meliproxyy-591
   type: vless
   server: 94.130.178.194
   port: 443
@@ -2408,7 +2362,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: '@meliproxyy-629'
+- name: '@meliproxyy-597'
   type: vmess
   server: 45.80.215.8
   port: 22324
@@ -2418,7 +2372,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@meliproxyy-630'
+- name: '@meliproxyy-598'
   type: vmess
   server: 186.190.211.67
   port: 443
@@ -2428,7 +2382,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: '@meliproxyy-631'
+- name: '@meliproxyy-599'
   type: vmess
   server: 66.163.118.73
   port: 22324
@@ -2438,7 +2392,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '@meliproxyy-632'
+- name: '@meliproxyy-600'
   type: vmess
   server: mygptagent.org
   port: 443
@@ -2448,7 +2402,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-633
+- name: meliproxyy-601
   type: vless
   server: p2real33.greewebservices.ir
   port: 1330
@@ -2456,7 +2410,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-634
+- name: meliproxyy-602
   type: vless
   server: arcturus.yokkastars.com
   port: 40443
@@ -2464,7 +2418,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-635
+- name: meliproxyy-603
   type: vless
   server: p2real22.greewebservices.ir
   port: 1320
@@ -2472,7 +2426,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-636
+- name: meliproxyy-604
   type: vless
   server: 158.69.112.254
   port: 443
@@ -2480,7 +2434,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-637
+- name: meliproxyy-605
   type: vless
   server: 188.114.98.0
   port: 80
@@ -2488,7 +2442,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-638
+- name: meliproxyy-606
   type: vless
   server: pl4.moritech.net
   port: 443
@@ -2496,7 +2450,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-639
+- name: meliproxyy-607
   type: vless
   server: server.slavkiti.monster
   port: 443
@@ -2504,7 +2458,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-640
+- name: meliproxyy-608
   type: vless
   server: server.slavkiti.monster
   port: 443
@@ -2512,7 +2466,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-641
+- name: meliproxyy-609
   type: trojan
   server: 188.42.145.180
   port: 443
@@ -2520,7 +2474,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-655
+- name: meliproxyy-623
   type: vless
   server: 31.77.13.19
   port: 2063
@@ -2528,7 +2482,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-656
+- name: meliproxyy-624
   type: vless
   server: 152.228.139.33
   port: 35108
@@ -2536,7 +2490,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-657
+- name: meliproxyy-625
   type: vless
   server: 169.40.42.225
   port: 443
@@ -2544,7 +2498,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-658
+- name: meliproxyy-626
   type: vless
   server: 91.107.191.188
   port: 8443
@@ -2552,7 +2506,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-659
+- name: meliproxyy-627
   type: vless
   server: victoryprovpn-production-e95a.up.railway.app
   port: 443
@@ -2560,7 +2514,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-665
+- name: meliproxyy-633
   type: vless
   server: 199.232.78.159
   port: 443
@@ -2568,7 +2522,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-666
+- name: meliproxyy-634
   type: vless
   server: 199.232.78.159
   port: 443
@@ -2576,7 +2530,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-667
+- name: meliproxyy-635
   type: vless
   server: 199.232.78.159
   port: 443
@@ -2584,7 +2538,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-668
+- name: meliproxyy-636
   type: vless
   server: 178.104.219.134
   port: 9443
@@ -2592,7 +2546,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-669
+- name: meliproxyy-637
   type: vless
   server: 176.108.247.104
   port: 9881
@@ -2600,7 +2554,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-670
+- name: meliproxyy-638
   type: vless
   server: 195.189.98.120
   port: 443
@@ -2608,7 +2562,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-671
+- name: meliproxyy-639
   type: vless
   server: 199.232.78.101
   port: 443
@@ -2616,7 +2570,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-672
+- name: meliproxyy-640
   type: vless
   server: 199.232.78.159
   port: 443
@@ -2624,7 +2578,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-673
+- name: meliproxyy-641
   type: vless
   server: 167.233.182.218
   port: 80
@@ -2632,7 +2586,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: meliproxyy-674
+- name: meliproxyy-642
   type: trojan
   server: 188.114.97.7
   port: 443
@@ -2640,7 +2594,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-675
+- name: meliproxyy-643
   type: trojan
   server: 172.67.149.60
   port: 443
@@ -2648,7 +2602,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: meliproxyy-676
+- name: meliproxyy-644
   type: trojan
   server: www.speedtest.net
   port: 443
@@ -2656,15 +2610,159 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: proxy_kafee-687
-  type: vless
-  server: tickets.betust.net
+- name: meliproxyy-645
+  type: trojan
+  server: 188.114.97.7
   port: 443
-  uuid: 94877739-3af6-4fbb-85b6-ca6fe86c7696
+  password: humanity
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: meliproxyy-656
+  type: vless
+  server: 94.183.154.216
+  port: 1003
+  uuid: 576b2dd6-f31a-4cc9-acea-54882247d507
   udp: true
   tls: false
   skip-cert-verify: true
-- name: proxy_kafee-688
+- name: meliproxyy-657
+  type: vless
+  server: 94.183.154.216
+  port: 1001
+  uuid: 576b2dd6-f31a-4cc9-acea-54882247d507
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: meliproxyy-658
+  type: vless
+  server: 5.78.45.230
+  port: 443
+  uuid: 576b2dd6-f31a-4cc9-acea-54882247d507
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: meliproxyy-659
+  type: vless
+  server: 85.155.228.185
+  port: 443
+  uuid: ca5ffe64-81e0-42f0-a136-03cc4f662a4f
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: meliproxyy-660
+  type: vless
+  server: 153.76.185.100
+  port: 3090
+  uuid: e8b3f952-cd1b-4881-872e-b8d03399a6df
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: meliproxyy-661
+  type: vless
+  server: 5.253.42.159
+  port: 443
+  uuid: a368752a-32fc-42f3-980a-6b049218b23f
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: meliproxyy-662
+  type: vless
+  server: 147.45.61.31
+  port: 443
+  uuid: 98a7c6c3-9a2c-4ebd-a945-0e979abc9232
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: meliproxyy-672
+  type: vless
+  server: rubifen.adaspoloandco.com
+  port: 443
+  uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: meliproxyy-673
+  type: vless
+  server: host.taghvimtime.ir
+  port: 8443
+  uuid: 9f44d517-29f2-4c6d-cc06-a1268f13da58
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: meliproxyy-674
+  type: vless
+  server: nasnet-162191099-direct.mbghalibaf.com
+  port: 443
+  uuid: nasnet
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: meliproxyy-675
+  type: vless
+  server: kala.fortresshost.ir
+  port: 443
+  uuid: 9eb6abc0-8423-4ff6-efb3-7603ddfb9636
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: meliproxyy-676
+  type: vless
+  server: 169.40.42.75
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: meliproxyy-677
+  type: vless
+  server: 169.40.42.235
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: meliproxyy-678
+  type: vless
+  server: 169.40.42.179
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: meliproxyy-679
+  type: vless
+  server: 45.130.254.193
+  port: 443
+  uuid: 7b50da93-0841-4044-af6a-99bb9dcda6fc
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: meliproxyy-680
+  type: vless
+  server: 45.130.254.193
+  port: 443
+  uuid: 7b50da93-0841-4044-af6a-99bb9dcda6fc
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: meliproxyy-681
+  type: vless
+  server: 47.253.226.114
+  port: 443
+  uuid: 055a1ce8-2a16-4a0d-a2c2-22826c9b2413
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: proxy_kafee-692
+  type: vless
+  server: 65.109.28.164
+  port: 443
+  uuid: 8df2e661-6f46-471b-9133-7fc13a0daa35
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: proxy_kafee-693
   type: vless
   server: 188.114.97.6
   port: 443
@@ -2672,63 +2770,31 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: proxy_kafee-689
-  type: vless
-  server: 31.56.222.98
-  port: 57779
-  uuid: 1431cdcd-2ce1-4982-9a33-5e67299cdb07
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: proxy_kafee-690
-  type: vless
-  server: 31.56.222.98
-  port: 57779
-  uuid: 1431cdcd-2ce1-4982-9a33-5e67299cdb07
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: proxy_kafee-691
-  type: vless
-  server: 31.56.222.98
-  port: 57779
-  uuid: 5168cf48-d959-439a-b65c-b1c08bfdb188
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: proxy_kafee-692
-  type: vless
-  server: cosw.ggisopi.su
-  port: 443
-  uuid: d0f0a880-0df1-0003-bdf1-5669fb9483ce
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: proxy_kafee-693
-  type: vless
-  server: 176.108.244.178
-  port: 9881
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
-  udp: true
-  tls: false
-  skip-cert-verify: true
 - name: proxy_kafee-694
   type: vless
-  server: 176.108.244.178
-  port: 9881
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  server: 188.114.97.6
+  port: 443
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
 - name: proxy_kafee-695
   type: vless
-  server: 158.160.160.21
-  port: 443
-  uuid: 06d05a0a-f298-0001-8fab-3de32e3fb770
+  server: s8596.paslanmaz.ir
+  port: 6645
+  uuid: 162ff214-21c8-4963-a80a-6200cbad787e
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '- Irancell 🟡 - [ 1 ] @Spotify_Porteghali-705'
+- name: proxy_kafee-696
+  type: trojan
+  server: 172.67.149.60
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: '- Irancell 🟡 - [ 1 ] @Spotify_Porteghali-702'
   type: vmess
   server: 165.140.217.53
   port: 443
@@ -2738,7 +2804,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: '- WiFi 🟢 - [ 3 ] @Spotify_Porteghali-706'
+- name: '- WiFi 🟢 - [ 3 ] @Spotify_Porteghali-703'
   type: vmess
   server: 165.140.217.53
   port: 443
@@ -2748,7 +2814,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Spotify_Porteghali-707
+- name: Spotify_Porteghali-704
   type: vless
   server: 150.40.126.28
   port: 443
@@ -2756,7 +2822,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Spotify_Porteghali-708
+- name: Spotify_Porteghali-705
   type: vless
   server: 51.38.70.192
   port: 443
@@ -2764,7 +2830,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Spotify_Porteghali-709
+- name: Spotify_Porteghali-706
   type: vless
   server: 93.94.52.23
   port: 40443
@@ -2772,7 +2838,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Spotify_Porteghali-710
+- name: Spotify_Porteghali-707
   type: vless
   server: 144.31.5.64
   port: 443
@@ -2780,7 +2846,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Spotify_Porteghali-711
+- name: Spotify_Porteghali-708
   type: vless
   server: 212.92.101.89
   port: 9889
@@ -2788,7 +2854,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Spotify_Porteghali-712
+- name: Spotify_Porteghali-709
   type: vless
   server: 45.95.169.47
   port: 443
@@ -2796,7 +2862,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Spotify_Porteghali-713
+- name: Spotify_Porteghali-710
   type: vless
   server: 31.56.184.132
   port: 8443
@@ -2804,7 +2870,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Spotify_Porteghali-714
+- name: Spotify_Porteghali-711
   type: vless
   server: 47.74.3.200
   port: 443
@@ -2812,7 +2878,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Spotify_Porteghali-715
+- name: Spotify_Porteghali-712
   type: vless
   server: 91.107.144.211
   port: 443
@@ -2820,7 +2886,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: Spotify_Porteghali-716
+- name: Spotify_Porteghali-713
   type: vless
   server: 179.61.138.133
   port: 443
@@ -2828,7 +2894,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-- name: Spotify_Porteghali-717
+- name: Spotify_Porteghali-714
   type: trojan
   server: 5.75.171.12
   port: 1080
@@ -2840,38 +2906,35 @@ proxy-groups:
 - name: AUTO
   type: url-test
   proxies:
-  - GetXConfig-1
-  - GetXConfig-3
-  - GetXConfig-5
-  - GetXConfig-7
-  - GetXConfig-9
-  - GetXConfig-11
-  - GetXConfig-13
+  - GetXConfig-2
+  - GetXConfig-4
+  - GetXConfig-6
+  - GetXConfig-8
+  - GetXConfig-10
+  - GetXConfig-12
   - GetXConfig-14
-  - GetXConfig-15
-  - GetXConfig-17
-  - GetXConfig-19
-  - GetXConfig-21
-  - GetXConfig-23
-  - 'ایالات متحده آمریکا 🇺🇸 | @GetXConfig | #7810-25'
-  - 'ایالات متحده آمریکا 🇺🇸 | @GetXConfig | #7811-27'
-  - GetXConfig-29
-  - 'نامشخص 🏳️ | @GetXConfig | #7813-30'
+  - GetXConfig-16
+  - GetXConfig-18
+  - GetXConfig-20
+  - GetXConfig-22
+  - GetXConfig-24
+  - GetXConfig-26
+  - GetXConfig-28
+  - GetXConfig-30
   - GetXConfig-32
-  - GetXConfig-34
-  - GetXConfig-36
-  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-38
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-39
-  - Farah_VPN-40
+  - GetXConfig-35
+  - GetXConfig-37
+  - 🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-39
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-40
   - Farah_VPN-41
   - Farah_VPN-42
   - Farah_VPN-43
   - Farah_VPN-44
   - Farah_VPN-45
   - Farah_VPN-46
+  - Farah_VPN-47
   - Farah_VPN-57
-  - Farah_VPN-58
-  - Farah_VPN-59
+  - 🇵🇱 Join+Telegram:@Farah_VPN 🇵🇱-59
   - Farah_VPN-60
   - Farah_VPN-61
   - Farah_VPN-62
@@ -2879,76 +2942,98 @@ proxy-groups:
   - Farah_VPN-64
   - Farah_VPN-65
   - Farah_VPN-66
-  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-77
-  - Farah_VPN-78
+  - Farah_VPN-67
+  - Farah_VPN-68
   - Farah_VPN-79
   - Farah_VPN-80
   - Farah_VPN-81
   - Farah_VPN-82
   - Farah_VPN-83
   - Farah_VPN-84
-  - Farah_VPN-94
-  - Farah_VPN-95
+  - Farah_VPN-85
   - Farah_VPN-96
-  - 🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧-107
-  - Farah_VPN-108
-  - Farah_VPN-109
-  - Farah_VPN-110
-  - Farah_VPN-111
-  - Farah_VPN-112
-  - Farah_VPN-113
-  - Farah_VPN-123
-  - Farah_VPN-124
-  - Farah_VPN-125
-  - Farah_VPN-126
-  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-137
-  - Farah_VPN-138
-  - Farah_VPN-139
-  - Farah_VPN-140
-  - Farah_VPN-141
-  - Farah_VPN-142
-  - Farah_VPN-143
-  - Farah_VPN-144
-  - Farah_VPN-145
-  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-156
-  - 🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-157
-  - Farah_VPN-158
-  - Farah_VPN-159
+  - Farah_VPN-97
+  - Farah_VPN-98
+  - Farah_VPN-99
+  - Farah_VPN-100
+  - Farah_VPN-101
+  - Farah_VPN-102
+  - Farah_VPN-103
+  - 🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵-114
+  - 🇮🇳 Join+Telegram:@Farah_VPN 🇮🇳-115
+  - Farah_VPN-116
+  - Farah_VPN-117
+  - Farah_VPN-118
+  - Farah_VPN-119
+  - 🇦🇹 Join+Telegram:@Farah_VPN 🇦🇹-130
+  - 🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-131
+  - 🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵-132
+  - Farah_VPN-133
+  - Farah_VPN-134
+  - Farah_VPN-135
+  - Farah_VPN-136
+  - Farah_VPN-137
+  - 🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧-148
+  - 🇰🇷 Join+Telegram:@Farah_VPN 🇰🇷-149
+  - Farah_VPN-150
+  - Farah_VPN-151
+  - Farah_VPN-152
+  - Farah_VPN-153
+  - Farah_VPN-154
+  - Farah_VPN-155
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-166
+  - 🇳🇱 Join+Telegram:@Farah_VPN 🇳🇱-167
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-168
+  - Farah_VPN-169
   - Farah_VPN-170
   - Farah_VPN-171
   - Farah_VPN-172
   - Farah_VPN-173
   - Farah_VPN-174
   - Farah_VPN-175
-  - Farah_VPN-176
-  - Farah_VPN-177
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-186
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-187
   - Farah_VPN-188
   - Farah_VPN-189
   - Farah_VPN-190
-  - Farah_VPN-201
-  - Farah_VPN-202
+  - Farah_VPN-191
+  - Farah_VPN-192
   - Farah_VPN-203
   - Farah_VPN-204
   - Farah_VPN-205
-  - Farah_VPN-216
-  - Farah_VPN-217
-  - 🇫🇷 Join+Telegram:@Farah_VPN 🇫🇷-237
-  - 🇪🇸 Join+Telegram:@Farah_VPN 🇪🇸-238
-  - 🇪🇸 Join+Telegram:@Farah_VPN 🇪🇸-239
-  - 🇩🇪 Join+Telegram:@Farah_VPN 🇩🇪-240
-  - Farah_VPN-241
-  - Farah_VPN-242
-  - Farah_VPN-243
-  - Farah_VPN-244
+  - Farah_VPN-206
+  - Farah_VPN-207
+  - Farah_VPN-208
+  - Farah_VPN-209
+  - Farah_VPN-210
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-221
+  - Farah_VPN-222
+  - Farah_VPN-223
+  - Farah_VPN-224
+  - Farah_VPN-225
+  - Farah_VPN-226
+  - Farah_VPN-227
+  - Farah_VPN-228
+  - Farah_VPN-229
+  - Farah_VPN-230
+  - 🇫🇷 Join+Telegram:@Farah_VPN 🇫🇷-241
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-242
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-243
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-244
   - Farah_VPN-245
-  - Farah_VPN-256
-  - Farah_VPN-257
-  - Farah_VPN-258
+  - Farah_VPN-246
+  - Farah_VPN-247
+  - Farah_VPN-248
+  - Farah_VPN-249
+  - Farah_VPN-250
   - Farah_VPN-259
   - Farah_VPN-260
   - Farah_VPN-261
   - Farah_VPN-262
-  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-272
+  - Farah_VPN-263
+  - Farah_VPN-264
+  - Farah_VPN-265
+  - Farah_VPN-266
   - 🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧-273
   - 🇬🇧 Join+Telegram:@Farah_VPN 🇬🇧-274
   - Farah_VPN-275
@@ -2956,42 +3041,36 @@ proxy-groups:
   - Farah_VPN-277
   - Farah_VPN-278
   - Farah_VPN-279
-  - 🇸🇬 Join+Telegram:@Farah_VPN 🇸🇬-290
-  - 🇲🇾 Join+Telegram:@Farah_VPN 🇲🇾-291
-  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-292
-  - 🇯🇵 Join+Telegram:@Farah_VPN 🇯🇵-293
-  - 🇨🇦 Join+Telegram:@Farah_VPN 🇨🇦-294
+  - Farah_VPN-290
+  - Farah_VPN-291
+  - Farah_VPN-292
+  - Farah_VPN-293
+  - Farah_VPN-294
   - Farah_VPN-295
   - Farah_VPN-296
   - Farah_VPN-297
   - Farah_VPN-298
-  - 🇹🇼 Join+Telegram:@Farah_VPN 🇹🇼-309
-  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-310
+  - Farah_VPN-299
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-305
+  - 🇭🇰 Join+Telegram:@Farah_VPN 🇭🇰-306
+  - Farah_VPN-307
+  - Farah_VPN-308
+  - Farah_VPN-309
+  - Farah_VPN-310
   - Farah_VPN-311
-  - Farah_VPN-312
-  - Farah_VPN-313
-  - Farah_VPN-314
-  - Farah_VPN-315
-  - Farah_VPN-316
-  - 🇮🇹 Join+Telegram:@Farah_VPN 🇮🇹-325
-  - Farah_VPN-326
-  - Farah_VPN-327
-  - Farah_VPN-328
-  - Farah_VPN-329
-  - Farah_VPN-330
-  - Farah_VPN-331
-  - Farah_VPN-332
-  - Farah_VPN-333
-  - Farah_VPN-334
-  - 🇰🇿 Join+Telegram:@Farah_VPN 🇰🇿-344
-  - Farah_VPN-345
-  - Farah_VPN-346
-  - Farah_VPN-347
-  - Farah_VPN-348
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-321
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-322
+  - Farah_VPN-323
+  - Farah_VPN-324
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-333
+  - 🇺🇸 Join+Telegram:@Farah_VPN 🇺🇸-334
+  - Farah_VPN-335
+  - Farah_VPN-336
+  - Farah_VPN-337
+  - Farah_VPN-338
   - Farah_VPN-349
   - Farah_VPN-350
-  - Farah_VPN-351
-  - Farah_VPN-352
+  - meliproxyy-360
   - meliproxyy-361
   - meliproxyy-362
   - meliproxyy-363
@@ -3001,18 +3080,15 @@ proxy-groups:
   - meliproxyy-367
   - meliproxyy-368
   - meliproxyy-369
-  - meliproxyy-370
-  - meliproxyy-371
-  - meliproxyy-372
-  - meliproxyy-373
-  - '@meliproxyy-381'
+  - meliproxyy-379
+  - meliproxyy-380
+  - meliproxyy-381
   - meliproxyy-382
   - meliproxyy-383
   - meliproxyy-384
   - meliproxyy-385
   - meliproxyy-386
   - meliproxyy-387
-  - meliproxyy-394
   - meliproxyy-395
   - meliproxyy-396
   - meliproxyy-397
@@ -3022,81 +3098,81 @@ proxy-groups:
   - meliproxyy-401
   - meliproxyy-402
   - meliproxyy-403
-  - meliproxyy-413
-  - meliproxyy-414
-  - meliproxyy-415
-  - meliproxyy-416
-  - meliproxyy-417
-  - meliproxyy-418
-  - meliproxyy-419
+  - meliproxyy-404
+  - meliproxyy-405
+  - '@meliproxyy-418'
+  - '@meliproxyy-419'
   - meliproxyy-420
   - meliproxyy-421
+  - meliproxyy-422
+  - meliproxyy-423
+  - meliproxyy-424
+  - meliproxyy-425
+  - meliproxyy-426
+  - meliproxyy-427
+  - meliproxyy-428
   - meliproxyy-429
   - meliproxyy-430
   - meliproxyy-431
   - meliproxyy-432
   - meliproxyy-433
-  - meliproxyy-434
-  - meliproxyy-435
-  - meliproxyy-436
-  - meliproxyy-437
-  - meliproxyy-438
-  - meliproxyy-439
-  - '@meliproxyy-452'
-  - '@meliproxyy-453'
+  - meliproxyy-450
+  - meliproxyy-451
+  - meliproxyy-452
+  - meliproxyy-453
   - meliproxyy-454
   - meliproxyy-455
   - meliproxyy-456
-  - meliproxyy-457
-  - meliproxyy-458
-  - meliproxyy-459
-  - meliproxyy-460
-  - meliproxyy-461
-  - meliproxyy-462
-  - meliproxyy-463
   - meliproxyy-464
   - meliproxyy-465
   - meliproxyy-466
   - meliproxyy-467
+  - meliproxyy-468
+  - meliproxyy-469
+  - meliproxyy-470
+  - meliproxyy-471
+  - meliproxyy-472
+  - meliproxyy-473
+  - meliproxyy-474
+  - meliproxyy-475
+  - meliproxyy-476
+  - meliproxyy-477
+  - meliproxyy-478
+  - meliproxyy-479
+  - meliproxyy-480
+  - meliproxyy-481
+  - meliproxyy-482
+  - meliproxyy-483
   - meliproxyy-484
-  - meliproxyy-485
-  - meliproxyy-486
-  - meliproxyy-487
-  - meliproxyy-488
-  - meliproxyy-489
-  - meliproxyy-490
-  - meliproxyy-498
-  - meliproxyy-499
-  - meliproxyy-500
   - meliproxyy-501
   - meliproxyy-502
   - meliproxyy-503
   - meliproxyy-504
   - meliproxyy-505
-  - meliproxyy-506
-  - meliproxyy-507
-  - meliproxyy-508
-  - meliproxyy-509
-  - meliproxyy-510
   - meliproxyy-511
   - meliproxyy-512
   - meliproxyy-513
   - meliproxyy-514
   - meliproxyy-515
   - meliproxyy-516
+  - meliproxyy-517
+  - meliproxyy-525
+  - meliproxyy-526
+  - meliproxyy-527
+  - meliproxyy-528
+  - meliproxyy-529
+  - meliproxyy-530
+  - meliproxyy-531
+  - meliproxyy-532
   - meliproxyy-533
   - meliproxyy-534
   - meliproxyy-535
   - meliproxyy-536
-  - meliproxyy-537
-  - meliproxyy-543
-  - meliproxyy-544
-  - meliproxyy-545
-  - meliproxyy-546
-  - meliproxyy-547
+  - '@meliproxyy-547'
   - meliproxyy-548
   - meliproxyy-549
-  - meliproxyy-557
+  - meliproxyy-550
+  - meliproxyy-551
   - meliproxyy-558
   - meliproxyy-559
   - meliproxyy-560
@@ -3108,35 +3184,33 @@ proxy-groups:
   - meliproxyy-566
   - meliproxyy-567
   - meliproxyy-568
-  - '@meliproxyy-579'
   - meliproxyy-580
   - meliproxyy-581
   - meliproxyy-582
   - meliproxyy-583
+  - meliproxyy-587
+  - meliproxyy-588
+  - meliproxyy-589
   - meliproxyy-590
   - meliproxyy-591
-  - meliproxyy-592
-  - meliproxyy-593
-  - meliproxyy-594
-  - meliproxyy-595
-  - meliproxyy-596
-  - meliproxyy-597
-  - meliproxyy-598
-  - meliproxyy-599
-  - meliproxyy-600
-  - meliproxyy-612
-  - meliproxyy-613
-  - meliproxyy-614
-  - meliproxyy-615
-  - meliproxyy-619
-  - meliproxyy-620
-  - meliproxyy-621
-  - meliproxyy-622
+  - '@meliproxyy-597'
+  - '@meliproxyy-598'
+  - '@meliproxyy-599'
+  - '@meliproxyy-600'
+  - meliproxyy-601
+  - meliproxyy-602
+  - meliproxyy-603
+  - meliproxyy-604
+  - meliproxyy-605
+  - meliproxyy-606
+  - meliproxyy-607
+  - meliproxyy-608
+  - meliproxyy-609
   - meliproxyy-623
-  - '@meliproxyy-629'
-  - '@meliproxyy-630'
-  - '@meliproxyy-631'
-  - '@meliproxyy-632'
+  - meliproxyy-624
+  - meliproxyy-625
+  - meliproxyy-626
+  - meliproxyy-627
   - meliproxyy-633
   - meliproxyy-634
   - meliproxyy-635
@@ -3146,34 +3220,37 @@ proxy-groups:
   - meliproxyy-639
   - meliproxyy-640
   - meliproxyy-641
-  - meliproxyy-655
+  - meliproxyy-642
+  - meliproxyy-643
+  - meliproxyy-644
+  - meliproxyy-645
   - meliproxyy-656
   - meliproxyy-657
   - meliproxyy-658
   - meliproxyy-659
-  - meliproxyy-665
-  - meliproxyy-666
-  - meliproxyy-667
-  - meliproxyy-668
-  - meliproxyy-669
-  - meliproxyy-670
-  - meliproxyy-671
+  - meliproxyy-660
+  - meliproxyy-661
+  - meliproxyy-662
   - meliproxyy-672
   - meliproxyy-673
   - meliproxyy-674
   - meliproxyy-675
   - meliproxyy-676
-  - proxy_kafee-687
-  - proxy_kafee-688
-  - proxy_kafee-689
-  - proxy_kafee-690
-  - proxy_kafee-691
+  - meliproxyy-677
+  - meliproxyy-678
+  - meliproxyy-679
+  - meliproxyy-680
+  - meliproxyy-681
   - proxy_kafee-692
   - proxy_kafee-693
   - proxy_kafee-694
   - proxy_kafee-695
-  - '- Irancell 🟡 - [ 1 ] @Spotify_Porteghali-705'
-  - '- WiFi 🟢 - [ 3 ] @Spotify_Porteghali-706'
+  - proxy_kafee-696
+  - '- Irancell 🟡 - [ 1 ] @Spotify_Porteghali-702'
+  - '- WiFi 🟢 - [ 3 ] @Spotify_Porteghali-703'
+  - Spotify_Porteghali-704
+  - Spotify_Porteghali-705
+  - Spotify_Porteghali-706
   - Spotify_Porteghali-707
   - Spotify_Porteghali-708
   - Spotify_Porteghali-709
@@ -3182,9 +3259,6 @@ proxy-groups:
   - Spotify_Porteghali-712
   - Spotify_Porteghali-713
   - Spotify_Porteghali-714
-  - Spotify_Porteghali-715
-  - Spotify_Porteghali-716
-  - Spotify_Porteghali-717
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:
